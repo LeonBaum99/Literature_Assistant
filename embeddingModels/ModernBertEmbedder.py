@@ -6,7 +6,7 @@ from typing import Union, List, Any
 from tqdm import tqdm
 import gc
 
-from EmbeddingModels.BaseEmbeddingModel import BaseEmbeddingModel
+from embeddingModels.BaseEmbeddingModel import BaseEmbeddingModel
 
 
 class ModernBertEmbedder(BaseEmbeddingModel):

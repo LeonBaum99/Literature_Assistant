@@ -7,7 +7,7 @@ from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer
 import gc
 
-from EmbeddingModels.BaseEmbeddingModel import BaseEmbeddingModel
+from embeddingModels.BaseEmbeddingModel import BaseEmbeddingModel
 
 
 class QwenEmbedder(BaseEmbeddingModel):
