@@ -38,3 +38,6 @@ mkdir -p data/testPDFs
 ├── requirements.txt
 | ...
 ```
+### 4. Run Notebook
+Go to `backend/pipelineTest.ipynb` and run the notebook. 
+Running it for first time will take some time because the models have to be downloaded.
