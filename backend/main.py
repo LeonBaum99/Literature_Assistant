@@ -9,7 +9,9 @@ from backend.dependencies import get_db_service, get_embedding_service, get_pdf_
 # Import Internal Modules
 from backend.schemas import (
     QueryRequest, QueryResponse, IngestResponse, SearchResult,
-    DeleteRequest, ResetRequest, StatusResponse
+    DeleteRequest, ResetRequest, StatusResponse,
+    StatsResponse, InspectResponse, IDListResponse,
+    EmbedDebugRequest, EmbedDebugResponse
 )
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService
@@ -170,3 +172,127 @@ async def reset_collection(
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/stats", response_model=StatsResponse)
+async def get_database_stats(
+        model_name: str = "bert",  # Defaults to 'bert' if not provided
+        db_service: VectorDBService = Depends(get_db_service)
+):
+    """
+    Returns the total number of chunks for the specified model's collection.
+    """
+    try:
+        count = db_service.get_stats(model_name)
+        return {
+            "model_name": model_name,
+            "count": count
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/inspect", response_model=InspectResponse)
+async def inspect_document(
+        doc_id: str,
+        model_name: str = "bert",
+        db_service: VectorDBService = Depends(get_db_service)
+):
+    """
+    Retrieve raw text/metadata.
+    Usage: /inspect?doc_id=some_id&model_name=bert
+    """
+    try:
+        data = db_service.get_chunk(model_name, doc_id)
+        if not data:
+            raise HTTPException(status_code=404, detail=f"ID '{doc_id}' not found in model '{model_name}'")
+        return data
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/list-ids", response_model=IDListResponse)
+async def list_document_ids(
+        model_name: str = "bert",
+        limit: int = 100,
+        offset: int = 0,
+        db_service: VectorDBService = Depends(get_db_service)
+):
+    """
+    Get a list of IDs to use with /inspect or /delete.
+    """
+    try:
+        ids = db_service.list_ids(model_name, limit, offset)
+        return {
+            "model_name": model_name,
+            "ids": ids,
+            "total_in_batch": len(ids)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/debug/embed", response_model=EmbedDebugResponse)
+async def debug_embedding(
+        request: EmbedDebugRequest,
+        embed_service: EmbeddingService = Depends(get_embedding_service)
+):
+    """
+    Generate an embedding for a raw text string.
+    Useful to check vector dimensions or determinism.
+    """
+    try:
+        # encode returns a numpy array, usually shape (1, dim) for a single string
+        vector_np = embed_service.encode([request.text], model_name=request.model_name)
+
+        # Flatten to a simple list
+        vector_list = vector_np[0].tolist()
+
+        return {
+            "model_name": request.model_name,
+            "vector_preview": vector_list,
+            "dimension": len(vector_list)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/debug/parse-pdf")
+async def debug_pdf_parsing(
+        file: UploadFile = File(...),
+        pdf_service: PDFProcessorService = Depends(get_pdf_service)
+):
+    """
+    Parses a PDF and returns the raw JSON (Metadata + Sections).
+    Does NOT save to ChromaDB. Use this to test Docling extraction.
+    """
+    if not file.filename.endswith(".pdf"):
+        raise HTTPException(400, "File must be a PDF")
+
+    # 1. Save to temp file (Reusing logic from ingest)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+        shutil.copyfileobj(file.file, tmp)
+        tmp_path = tmp.name
+
+    try:
+        # 2. Run Docling Processing
+        metadata, sections = pdf_service.process_pdf(tmp_path)
+
+        # 3. Return Raw Data
+        return {
+            "filename": file.filename,
+            "metadata_extracted": metadata,
+            "section_count": len(sections),
+            "sections": sections
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        # Cleanup
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)

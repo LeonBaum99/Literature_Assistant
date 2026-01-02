@@ -61,3 +61,35 @@ class VectorDBService:
             del self._collections[model_key]
 
         print(f"Collection '{name}' deleted and cache cleared.")
+
+    def get_stats(self, model_key: str) -> int:
+        """Returns the count of documents for a specific collection."""
+        name = self.collection_names.get(model_key)
+        if not name:
+            raise ValueError(f"Unknown model key: {model_key}")
+
+        try:
+            coll = self.client.get_collection(name)
+            return coll.count()
+        except ValueError:
+            return 0
+
+    def get_chunk(self, model_key: str, doc_id: str):
+        """Fetches a single chunk's data by ID."""
+        collection = self.get_collection(model_key)
+        result = collection.get(ids=[doc_id])
+
+        if not result["ids"]:
+            return None
+
+        return {
+            "id": result["ids"][0],
+            "document": result["documents"][0],
+            "metadata": result["metadatas"][0] if result["metadatas"] else {}
+        }
+
+    def list_ids(self, model_key: str, limit: int = 100, offset: int = 0):
+        """Lists IDs from a collection with pagination."""
+        collection = self.get_collection(model_key)
+        result = collection.get(limit=limit, offset=offset, include=[])
+        return result["ids"]
