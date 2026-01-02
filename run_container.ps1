@@ -1,52 +1,60 @@
 param (
-    [Switch]$Rebuild  # Allows you to force a rebuild using: .\run_container.ps1 -Rebuild
+    [Switch]$Rebuild  # Use: .\run_container.ps1 -Rebuild
 )
 
 $APP_NAME = "paper-rag-app"
 
-# 1. Detect GPU and determine Tag
+# --- 1. Detect Hardware ---
 if (Get-Command "nvidia-smi" -ErrorAction SilentlyContinue) {
     $TAG = "gpu"
     $BUILD_ARG = "gpu"
-    $GPU_FLAG = "--gpus all"
-    Write-Host "✅ NVIDIA GPU Detected (Mode: GPU)" -ForegroundColor Green
+    Write-Host "NVIDIA GPU Detected (Mode: GPU)" -ForegroundColor Green
 } else {
     $TAG = "cpu"
     $BUILD_ARG = "cpu"
-    $GPU_FLAG = ""
-    Write-Host "⚠️  No NVIDIA GPU found (Mode: CPU)" -ForegroundColor Yellow
+    Write-Host "No NVIDIA GPU found (Mode: CPU)" -ForegroundColor Yellow
 }
 
 $IMAGE_FULL_NAME = "$($APP_NAME):$($TAG)"
 
-# 2. Check if image exists
+# --- 2. Build Strategy ---
 $ImageExists = docker images -q $IMAGE_FULL_NAME
 $ShouldBuild = (-not $ImageExists) -or $Rebuild
 
-# 3. Build only if necessary
 if ($ShouldBuild) {
-    Write-Host "🛠️  Building Image ($IMAGE_FULL_NAME)..." -ForegroundColor Cyan
-    
-    # We use -f Dockerfile to be safe, assuming you renamed it back to standard
+    Write-Host "Building Image ($IMAGE_FULL_NAME)..." -ForegroundColor Cyan
     docker build -t $IMAGE_FULL_NAME -f Dockerfile --build-arg DEVICE_TYPE=$BUILD_ARG .
-    
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "❌ Build Failed!" -ForegroundColor Red
-        exit
-    }
+    if ($LASTEXITCODE -ne 0) { Write-Host "Build Failed!" -ForegroundColor Red; exit }
 } else {
-    Write-Host "⏩ Image found! Skipping build. (Use -Rebuild to force update)" -ForegroundColor Gray
+    Write-Host "Image found! Skipping build. (Use -Rebuild to force update)" -ForegroundColor Gray
 }
 
-# 4. Run the Container
-Write-Host "🚀 Starting Container..." -ForegroundColor Green
+# --- 3. Run Container (Dev Mode) ---
+Write-Host "Starting Container with Hot Reload..." -ForegroundColor Green
 
-# We allow $GPU_FLAG to be empty for CPU mode
-# Invoke-Expression is used here to handle the dynamic GPU flag cleanly
-$RunCmd = "docker run --rm -it -p 8000:8000 -v `"${PWD}/chroma_db:/app/chroma_db`"
+$DockerArgs = @(
+    "run", "--rm", "-it",
+    "-p", "8000:8000",
+    # MOUNT 1: Persist the Database
+    "-v", "${PWD}/chroma_db:/app/chroma_db",
+    # MOUNT 2: Sync Source Code (Host -> Container)
+    "-v", "${PWD}:/app"
+)
+
 if ($TAG -eq "gpu") {
-    $RunCmd += " --gpus all"
+    $DockerArgs += "--gpus"
+    $DockerArgs += "all"
 }
-$RunCmd += " $IMAGE_FULL_NAME"
 
-Invoke-Expression $RunCmd
+$DockerArgs += $IMAGE_FULL_NAME
+
+# OVERRIDE COMMAND: Add --reload so Uvicorn restarts on file save
+$DockerArgs += "uvicorn"
+$DockerArgs += "backend.main:app"
+$DockerArgs += "--host"
+$DockerArgs += "0.0.0.0"
+$DockerArgs += "--port"
+$DockerArgs += "8000"
+$DockerArgs += "--reload"
+
+& docker @DockerArgs

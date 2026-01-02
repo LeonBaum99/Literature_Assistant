@@ -17,10 +17,10 @@ ARG DEVICE_TYPE=cpu
 
 # ... (Rest of the file remains exactly the same)
 RUN if [ "$DEVICE_TYPE" = "gpu" ]; then \
-        echo "🔥 Building for NVIDIA GPU (CUDA Support)"; \
+        echo "Building for NVIDIA GPU (CUDA Support)"; \
         pip install torch torchvision torchaudio; \
     else \
-        echo "🧊 Building for CPU (Lightweight)"; \
+        echo "Building for CPU (Lightweight)"; \
         pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu; \
     fi
 

@@ -2,7 +2,7 @@ from pdfProcessing.doclingTest import setup_docling_converter, extract_sections_
 
 class PDFProcessorService:
     def __init__(self):
-        print("🔧 Initializing PDF Converter...")
+        print("Initializing PDF Converter...")
         self.converter = setup_docling_converter()
 
     def process_pdf(self, file_path: str):

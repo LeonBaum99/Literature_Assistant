@@ -11,7 +11,7 @@ class EmbeddingService:
         if model_name in self._models:
             return self._models[model_name]
 
-        print(f"🧠 Loading Embedding Model: {model_name}...")
+        print(f"Loading Embedding Model: {model_name}...")
         if model_name == "bert":
             self._models[model_name] = ModernBertEmbedder(
                 model_name="Alibaba-NLP/gte-modernbert-base", normalize=True
