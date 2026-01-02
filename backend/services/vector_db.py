@@ -35,9 +35,29 @@ class VectorDBService:
         return collection.query(query_embeddings=[query_embedding], n_results=n_results)
 
     def delete_chunks(self, model_key: str, ids: List[str]):
+        """Deletes specific chunks by ID."""
         collection = self.get_collection(model_key)
         collection.delete(ids=ids)
 
     def clear_collection(self, model_key: str):
-        collection = self.get_collection(model_key)
-        collection.delete()
+        """
+        Deletes the entire collection from the DB and clears the local cache.
+        """
+        # 1. Get the actual name (e.g., "scientific_papers_bert")
+        name = self.collection_names.get(model_key)
+        if not name:
+            return
+
+        # 2. Delete via the Client (not the collection object)
+        try:
+            self.client.delete_collection(name)
+        except ValueError:
+            # Chroma raises ValueError if collection doesn't exist, which is fine
+            pass
+
+        # 3. IMPORTANT: Invalidating the cache
+        # If we don't do this, self.get_collection() will return a dead object
+        if model_key in self._collections:
+            del self._collections[model_key]
+
+        print(f"Collection '{name}' deleted and cache cleared.")

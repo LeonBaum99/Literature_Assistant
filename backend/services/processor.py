@@ -1,15 +1,13 @@
-from pdfProcessing.doclingTest import setup_docling_converter, extract_sections_from_doc, extract_metadata
+# Updated Import
+from pdfProcessing.docling_PDF_processor import DoclingPDFProcessor
 
 class PDFProcessorService:
     def __init__(self):
-        print("Initializing PDF Converter...")
-        self.converter = setup_docling_converter()
+        self.processor = DoclingPDFProcessor()
 
     def process_pdf(self, file_path: str):
         """
-        Returns a structured dictionary with metadata and sections.
+        Delegates processing to the DoclingPDFProcessor.
         """
-        result = self.converter.convert(file_path)
-        sections = extract_sections_from_doc(result.document)
-        metadata = extract_metadata(sections)
+        metadata, sections = self.processor.process_pdf(file_path)
         return metadata, sections

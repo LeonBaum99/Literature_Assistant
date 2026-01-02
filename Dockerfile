@@ -33,7 +33,8 @@ RUN pip install \
     fastapi \
     uvicorn \
     python-multipart \
-    requests
+    requests \
+    pyyaml
 
 COPY . .
 

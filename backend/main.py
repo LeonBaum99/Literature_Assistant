@@ -7,7 +7,10 @@ from fastapi import FastAPI, UploadFile, File, Form, Depends, HTTPException
 
 from backend.dependencies import get_db_service, get_embedding_service, get_pdf_service
 # Import Internal Modules
-from backend.schemas import QueryRequest, QueryResponse, IngestResponse, SearchResult
+from backend.schemas import (
+    QueryRequest, QueryResponse, IngestResponse, SearchResult,
+    DeleteRequest, ResetRequest, StatusResponse
+)
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService
 from backend.services.vector_db import VectorDBService
@@ -97,6 +100,16 @@ async def search(
         embed_service: EmbeddingService = Depends(get_embedding_service),
         db_service: VectorDBService = Depends(get_db_service),
 ):
+    """
+    Search for relevant document chunks based on a query.
+    1. Embed the query text.
+    2. Search the vector database for nearest neighbors.
+    3. Format and return the results.
+    :param request:
+    :param embed_service:
+    :param db_service:
+    :return:
+    """
     # 1. Embed Query
     query_vec_np = embed_service.encode([request.query_text], model_name=request.model_name)
 
@@ -119,3 +132,41 @@ async def search(
             ))
 
     return {"results": formatted}
+
+
+@app.post("/delete", response_model=StatusResponse)
+async def delete_documents(
+        request: DeleteRequest,
+        db_service: VectorDBService = Depends(get_db_service),
+):
+    """
+    Delete specific chunks by their IDs.
+    """
+    try:
+        db_service.delete_chunks(request.model_name, request.doc_ids)
+        return {
+            "status": "success",
+            "message": f"Deleted {len(request.doc_ids)} chunks from {request.model_name}",
+            "count": len(request.doc_ids)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/reset", response_model=StatusResponse)
+async def reset_collection(
+        request: ResetRequest,
+        db_service: VectorDBService = Depends(get_db_service),
+):
+    """
+    DANGER: Completely wipes the vector database for the selected model.
+    """
+    try:
+        db_service.clear_collection(request.model_name)
+        return {
+            "status": "success",
+            "message": f"All data in '{request.model_name}' has been wiped.",
+            "count": 0
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

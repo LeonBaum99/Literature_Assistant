@@ -20,3 +20,15 @@ class IngestResponse(BaseModel):
     message: str
     chunks_added: int
     parent_id: str
+
+class DeleteRequest(BaseModel):
+    model_name: str = "bert"
+    doc_ids: List[str]
+
+class ResetRequest(BaseModel):
+    model_name: str = "bert"
+
+class StatusResponse(BaseModel):
+    status: str
+    message: str
+    count: Optional[int] = 0
