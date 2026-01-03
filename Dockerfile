@@ -34,7 +34,8 @@ RUN pip install \
     uvicorn \
     python-multipart \
     requests \
-    pyyaml
+    pyyaml \
+    python-dotenv
 
 COPY . .
 
