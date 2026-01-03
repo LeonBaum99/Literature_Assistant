@@ -13,7 +13,7 @@ from docling.datamodel.pipeline_options import (
 
 # --- 1. Regex Configuration ---
 # Matches: arXiv:1706.03762 or arXiv:1706.03762v1
-
+# TODO: turn into class
 def setup_docling_converter():
     """Configures Docling with GPU if available."""
     pipeline_options = PdfPipelineOptions()

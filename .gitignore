@@ -2,3 +2,14 @@
 backend/chroma_db
 data/testPDFOutput/pipelineTest
 data/testPDFs
+pycache/
+__pycache__/
+*.pyc
+env/
+venv/
+*.sqlite3
+.DS_Store
+.env
+.env.*.local
+.vscode/
+logs/
