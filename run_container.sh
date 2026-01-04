@@ -1,86 +1,91 @@
 #!/bin/bash
 
-# Define colors for output
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-CYAN='\033[0;36m'
-RED='\033[0;31m'
-GRAY='\033[1;30m'
-NC='\033[0m' # No Color
-
-APP_NAME="paper-rag-app"
+# Initialize variables
 REBUILD=false
+APP_NAME="paper-rag-app"
 
-# Parse arguments (Check for -Rebuild or --rebuild)
+# Check for arguments
 for arg in "$@"
 do
-    case $arg in
-        -Rebuild|--rebuild)
+    if [ "$arg" == "-Rebuild" ] || [ "$arg" == "--rebuild" ]; then
         REBUILD=true
-        shift # Remove --rebuild from processing
-        ;;
-    esac
+    fi
 done
 
 # --- 1. Detect Hardware ---
 if command -v nvidia-smi &> /dev/null; then
     TAG="gpu"
     BUILD_ARG="gpu"
-    echo -e "${GREEN}NVIDIA GPU Detected (Mode: GPU)${NC}"
+    echo -e "\033[0;32m✅ NVIDIA GPU Detected (Mode: GPU)\033[0m"
 else
     TAG="cpu"
     BUILD_ARG="cpu"
-    echo -e "${YELLOW}No NVIDIA GPU found (Mode: CPU)${NC}"
+    echo -e "\033[0;33m⚠️  No NVIDIA GPU found (Mode: CPU)\033[0m"
 fi
 
 IMAGE_FULL_NAME="${APP_NAME}:${TAG}"
 
 # --- 2. Build Strategy ---
-# Check if image exists
-if [[ "$(docker images -q $IMAGE_FULL_NAME 2> /dev/null)" == "" ]]; then
-    IMAGE_EXISTS=false
-else
-    IMAGE_EXISTS=true
-fi
+IMAGE_EXISTS=$(docker images -q "$IMAGE_FULL_NAME" 2> /dev/null)
 
-# Determine if we should build
-if [ "$IMAGE_EXISTS" = false ] || [ "$REBUILD" = true ]; then
-    echo -e "${CYAN}Building Image ($IMAGE_FULL_NAME)...${NC}"
-
+if [ "$REBUILD" = true ] || [ -z "$IMAGE_EXISTS" ]; then
+    echo -e "\033[0;36m🛠️  Building Image ($IMAGE_FULL_NAME)...\033[0m"
     docker build -t "$IMAGE_FULL_NAME" -f Dockerfile --build-arg DEVICE_TYPE="$BUILD_ARG" .
-
-    # Check if build succeeded
     if [ $? -ne 0 ]; then
-        echo -e "${RED}Build Failed!${NC}"
+        echo -e "\033[0;31m❌ Build Failed!\033[0m"
         exit 1
     fi
 else
-    echo -e "${GRAY}Image found! Skipping build. (Use --rebuild to force update)${NC}"
+    echo -e "\033[0;37m⏩ Image found! Skipping build. (Use -Rebuild to force update)\033[0m"
 fi
 
-# --- 3. Run Container (Dev Mode) ---
-echo -e "${GREEN}Starting Container with Hot Reload...${NC}"
+# --- 3. Determine Paths & OS ---
+echo -e "\033[0;32m🚀 Starting Container with Hot Reload...\033[0m"
 
-# Construct Docker Arguments Array
-DOCKER_ARGS=(
-    run --rm -it
-    -p 8000:8000
-    # MOUNT 1: Persist the Database
-    -v "$(pwd)/chroma_db:/app/chroma_db"
-    # MOUNT 2: Sync Source Code (Host -> Container)
-    -v "$(pwd):/app"
+# Default (Linux/Mac) settings
+WORK_DIR=$(pwd)
+CONTAINER_PATH_DB="/app/chroma_db"
+CONTAINER_PATH_APP="/app"
+USE_WINPTY=false
+
+# Windows (Git Bash) detection
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
+    WORK_DIR=$(pwd -W)
+    CONTAINER_PATH_DB="//app/chroma_db"
+    CONTAINER_PATH_APP="//app"
+    USE_WINPTY=true
+    echo -e "\033[0;36m🪟 Windows Git Bash detected: Adjusting paths...\033[0m"
+fi
+
+CMD_ARGS=(
+    "run" "--rm" "-it"
+    "-p" "8000:8000"
+    "-v" "${WORK_DIR}:${CONTAINER_PATH_DB}"
+    "-v" "${WORK_DIR}:${CONTAINER_PATH_APP}"
 )
 
-# Add GPU flags if necessary
-if [ "$TAG" == "gpu" ]; then
-    DOCKER_ARGS+=(--gpus all)
+# --- NEW: Inject .env file if it exists ---
+if [ -f ".env" ]; then
+    echo -e "\033[0;36m📄 Found .env file, injecting environment variables...\033[0m"
+    CMD_ARGS+=("--env-file" ".env")
 fi
 
-# Add Image Name
-DOCKER_ARGS+=("$IMAGE_FULL_NAME")
+if [ "$TAG" == "gpu" ]; then
+    CMD_ARGS+=("--gpus" "all")
+fi
 
-# OVERRIDE COMMAND: Add --reload so Uvicorn restarts on file save
-DOCKER_ARGS+=(uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload)
+CMD_ARGS+=("$IMAGE_FULL_NAME")
+CMD_ARGS+=(
+    "uvicorn"
+    "backend.main:app"
+    "--host" "0.0.0.0"
+    "--port" "8000"
+    "--reload"
+)
 
-# Execute Docker
-docker "${DOCKER_ARGS[@]}"
+# --- 4. Execute ---
+if [ "$USE_WINPTY" = true ] && command -v winpty &> /dev/null; then
+    MSYS_NO_PATHCONV=1 winpty docker "${CMD_ARGS[@]}"
+else
+    docker "${CMD_ARGS[@]}"
+fi

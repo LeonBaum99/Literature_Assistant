@@ -5,16 +5,17 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, UploadFile, File, Form, Depends, HTTPException
 
-from backend.dependencies import get_db_service, get_embedding_service, get_pdf_service
+from backend.dependencies import get_db_service, get_embedding_service, get_pdf_service, get_recommendation_service
 # Import Internal Modules
 from backend.schemas import (
     QueryRequest, QueryResponse, IngestResponse, SearchResult,
     DeleteRequest, ResetRequest, StatusResponse,
     StatsResponse, InspectResponse, IDListResponse,
-    EmbedDebugRequest, EmbedDebugResponse
+    EmbedDebugRequest, EmbedDebugResponse, RecommendationRequest, RecommendationResponse, PaperSearchResponse
 )
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService
+from backend.services.recommendation import SemanticScholarService
 from backend.services.vector_db import VectorDBService
 
 
@@ -296,3 +297,40 @@ async def debug_pdf_parsing(
         # Cleanup
         if os.path.exists(tmp_path):
             os.remove(tmp_path)
+
+
+@app.post("/recommend", response_model=RecommendationResponse)
+async def recommend_papers(
+        request: RecommendationRequest,
+        rec_service: SemanticScholarService = Depends(get_recommendation_service)
+):
+    """
+    Get paper recommendations based on positive and negative examples
+    using the Semantic Scholar API.
+    """
+    try:
+        results = await rec_service.get_recommendations(
+            positive_ids=request.positive_paper_ids,
+            negative_ids=request.negative_paper_ids,
+            limit=request.limit
+        )
+        return {"recommendations": results}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/paper/search", response_model=PaperSearchResponse)
+async def search_paper_id_endpoint(
+        query: str,
+        rec_service: SemanticScholarService = Depends(get_recommendation_service)
+):
+    """
+    Search for a paper ID using its title or a search query.
+    """
+    try:
+        paper_id = await rec_service.search_paper_id(query)
+        return {"query": query, "paperId": paper_id}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

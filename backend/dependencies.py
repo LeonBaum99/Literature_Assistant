@@ -5,6 +5,7 @@ import chromadb
 from backend.config import settings
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService
+from backend.services.recommendation import SemanticScholarService
 from backend.services.vector_db import VectorDBService
 from embeddingModels.ModernBertEmbedder import ModernBertEmbedder
 from embeddingModels.QwenEmbedder import QwenEmbedder
@@ -74,3 +75,7 @@ def get_embedding_service() -> EmbeddingService:
 @lru_cache()
 def get_pdf_service() -> PDFProcessorService:
     return PDFProcessorService()
+
+@lru_cache()
+def get_recommendation_service() -> SemanticScholarService:
+    return SemanticScholarService(api_key=settings.semantic_scholar_api_key)
