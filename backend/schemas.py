@@ -20,6 +20,23 @@ class QueryResponse(BaseModel):
     results: List[SearchResult]
 
 
+class RagRequest(BaseModel):
+    question: str
+    n_results: int = 4
+    model_name: str = "bert"
+    include_sources: bool = True
+    llm_model: Optional[str] = None
+    temperature: Optional[float] = None
+
+
+class RagResponse(BaseModel):
+    answer: str
+    template: str
+    status: str
+    needs_search: bool
+    sources: Optional[List[SearchResult]] = None
+
+
 class IngestResponse(BaseModel):
     filename: str
     message: str
@@ -66,3 +83,27 @@ class EmbedDebugResponse(BaseModel):
     model_name: str
     vector_preview: List[float]
     dimension: int
+
+class RecommendationRequest(BaseModel):
+    positive_paper_ids: List[str]
+    negative_paper_ids: List[str] = []
+    limit: int = 10
+
+class AuthorInfo(BaseModel):
+    authorId: Optional[str]
+    name: str
+
+class RecommendedPaper(BaseModel):
+    paperId: str
+    title: str
+    year: Optional[int] = None
+    url: Optional[str] = None
+    authors: List[AuthorInfo] = []
+    abstract: Optional[str] = None
+
+class RecommendationResponse(BaseModel):
+    recommendations: List[RecommendedPaper]
+
+class PaperSearchResponse(BaseModel):
+    query: str
+    paperId: Optional[str] = None

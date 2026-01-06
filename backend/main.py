@@ -5,16 +5,19 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, UploadFile, File, Form, Depends, HTTPException
 
-from backend.dependencies import get_db_service, get_embedding_service, get_pdf_service
+from backend.dependencies import get_db_service, get_embedding_service, get_pdf_service, get_recommendation_service
 # Import Internal Modules
 from backend.schemas import (
     QueryRequest, QueryResponse, IngestResponse, SearchResult,
     DeleteRequest, ResetRequest, StatusResponse,
     StatsResponse, InspectResponse, IDListResponse,
-    EmbedDebugRequest, EmbedDebugResponse
+    EmbedDebugRequest, EmbedDebugResponse, RecommendationRequest, RecommendationResponse, PaperSearchResponse,
+    RagRequest, RagResponse
 )
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService
+from backend.services.recommendation import SemanticScholarService
+from backend.services.rag_answer_service import run_rag_answer
 from backend.services.vector_db import VectorDBService
 
 
@@ -134,6 +137,46 @@ async def search(
             ))
 
     return {"results": formatted}
+
+
+@app.post("/rag", response_model=RagResponse)
+async def rag_answer(
+        request: RagRequest,
+        embed_service: EmbeddingService = Depends(get_embedding_service),
+        db_service: VectorDBService = Depends(get_db_service),
+):
+    """
+    Run the RAG pipeline using the existing embedding + Chroma services.
+    """
+    response = run_rag_answer(
+        question=request.question,
+        model_name=request.model_name,
+        n_results=request.n_results,
+        include_sources=request.include_sources,
+        llm_model=request.llm_model,
+        temperature=request.temperature,
+        embed_service=embed_service,
+        db_service=db_service,
+    )
+
+    sources = None
+    if response.sources:
+        sources = []
+        for doc in response.sources:
+            sources.append(SearchResult(
+                doc_id=doc.metadata.get("id", "") if doc.metadata else "",
+                score=doc.metadata.get("score", 0.0) if doc.metadata else 0.0,
+                content=doc.page_content,
+                metadata=doc.metadata or {}
+            ))
+
+    return {
+        "answer": response.answer,
+        "template": response.template,
+        "status": response.status,
+        "needs_search": response.needs_search,
+        "sources": sources
+    }
 
 
 @app.post("/delete", response_model=StatusResponse)
@@ -296,3 +339,40 @@ async def debug_pdf_parsing(
         # Cleanup
         if os.path.exists(tmp_path):
             os.remove(tmp_path)
+
+
+@app.post("/recommend", response_model=RecommendationResponse)
+async def recommend_papers(
+        request: RecommendationRequest,
+        rec_service: SemanticScholarService = Depends(get_recommendation_service)
+):
+    """
+    Get paper recommendations based on positive and negative examples
+    using the Semantic Scholar API.
+    """
+    try:
+        results = await rec_service.get_recommendations(
+            positive_ids=request.positive_paper_ids,
+            negative_ids=request.negative_paper_ids,
+            limit=request.limit
+        )
+        return {"recommendations": results}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/paper/search", response_model=PaperSearchResponse)
+async def search_paper_id_endpoint(
+        query: str,
+        rec_service: SemanticScholarService = Depends(get_recommendation_service)
+):
+    """
+    Search for a paper ID using its title or a search query.
+    """
+    try:
+        paper_id = await rec_service.search_paper_id(query)
+        return {"query": query, "paperId": paper_id}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

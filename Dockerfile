@@ -30,11 +30,14 @@ RUN pip install \
     docling \
     numpy \
     transformers \
+    langchain-core \
+    langchain-ollama \
     fastapi \
     uvicorn \
     python-multipart \
     requests \
-    pyyaml
+    pyyaml \
+    python-dotenv
 
 COPY . .
 
