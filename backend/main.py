@@ -13,6 +13,7 @@ from backend.schemas import (
     StatsResponse, InspectResponse, IDListResponse,
     EmbedDebugRequest, EmbedDebugResponse, RecommendationRequest, RecommendationResponse, PaperSearchResponse,
     RagRequest, RagResponse
+    EmbedDebugRequest, EmbedDebugResponse, RecommendationRequest, RecommendationResponse, PaperSearchResponse
 )
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService

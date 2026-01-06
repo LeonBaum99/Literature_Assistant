@@ -107,3 +107,4 @@ class RecommendationResponse(BaseModel):
 class PaperSearchResponse(BaseModel):
     query: str
     paperId: Optional[str] = None
+    paperId: Optional[str] = None

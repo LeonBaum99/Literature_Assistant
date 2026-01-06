@@ -66,7 +66,12 @@ The project includes a FastAPI backend that serves the RAG pipeline. You can run
 inside a Docker container.
 
 ## Setup
+## 0. Add `.env` file to root folder
+Create a `.env` file in the root folder of the project with the following content:
 
+```
+SEMANTIC_SCHOLAR_API_KEY=your_openai_api_key_here
+```
 ## 1. Install Docker (if not already installed)
 
 Follow the instructions on the official [Docker Installation Guide](https://docs.docker.com/get-docker/) to install

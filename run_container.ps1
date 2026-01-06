@@ -8,11 +8,11 @@ $APP_NAME = "paper-rag-app"
 if (Get-Command "nvidia-smi" -ErrorAction SilentlyContinue) {
     $TAG = "gpu"
     $BUILD_ARG = "gpu"
-    Write-Host "NVIDIA GPU Detected (Mode: GPU)" -ForegroundColor Green
+    Write-Host "✅ NVIDIA GPU Detected (Mode: GPU)" -ForegroundColor Green
 } else {
     $TAG = "cpu"
     $BUILD_ARG = "cpu"
-    Write-Host "No NVIDIA GPU found (Mode: CPU)" -ForegroundColor Yellow
+    Write-Host "⚠️  No NVIDIA GPU found (Mode: CPU)" -ForegroundColor Yellow
 }
 
 $IMAGE_FULL_NAME = "$($APP_NAME):$($TAG)"
@@ -22,24 +22,29 @@ $ImageExists = docker images -q $IMAGE_FULL_NAME
 $ShouldBuild = (-not $ImageExists) -or $Rebuild
 
 if ($ShouldBuild) {
-    Write-Host "Building Image ($IMAGE_FULL_NAME)..." -ForegroundColor Cyan
+    Write-Host "🛠️  Building Image ($IMAGE_FULL_NAME)..." -ForegroundColor Cyan
     docker build -t $IMAGE_FULL_NAME -f Dockerfile --build-arg DEVICE_TYPE=$BUILD_ARG .
-    if ($LASTEXITCODE -ne 0) { Write-Host "Build Failed!" -ForegroundColor Red; exit }
+    if ($LASTEXITCODE -ne 0) { Write-Host "❌ Build Failed!" -ForegroundColor Red; exit }
 } else {
-    Write-Host "Image found! Skipping build. (Use -Rebuild to force update)" -ForegroundColor Gray
+    Write-Host "⏩ Image found! Skipping build. (Use -Rebuild to force update)" -ForegroundColor Gray
 }
 
 # --- 3. Run Container (Dev Mode) ---
-Write-Host "Starting Container with Hot Reload..." -ForegroundColor Green
+Write-Host "🚀 Starting Container with Hot Reload..." -ForegroundColor Green
 
 $DockerArgs = @(
     "run", "--rm", "-it",
     "-p", "8000:8000",
-    # MOUNT 1: Persist the Database
     "-v", "${PWD}/chroma_db:/app/chroma_db",
-    # MOUNT 2: Sync Source Code (Host -> Container)
     "-v", "${PWD}:/app"
 )
+
+# --- NEW: Inject .env file if it exists ---
+if (Test-Path ".env") {
+    Write-Host "📄 Found .env file, injecting environment variables..." -ForegroundColor Cyan
+    $DockerArgs += "--env-file"
+    $DockerArgs += ".env"
+}
 
 if ($TAG -eq "gpu") {
     $DockerArgs += "--gpus"
@@ -48,7 +53,6 @@ if ($TAG -eq "gpu") {
 
 $DockerArgs += $IMAGE_FULL_NAME
 
-# OVERRIDE COMMAND: Add --reload so Uvicorn restarts on file save
 $DockerArgs += "uvicorn"
 $DockerArgs += "backend.main:app"
 $DockerArgs += "--host"
