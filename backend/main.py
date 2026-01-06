@@ -11,11 +11,14 @@ from backend.schemas import (
     QueryRequest, QueryResponse, IngestResponse, SearchResult,
     DeleteRequest, ResetRequest, StatusResponse,
     StatsResponse, InspectResponse, IDListResponse,
+    EmbedDebugRequest, EmbedDebugResponse, RecommendationRequest, RecommendationResponse, PaperSearchResponse,
+    RagRequest, RagResponse
     EmbedDebugRequest, EmbedDebugResponse, RecommendationRequest, RecommendationResponse, PaperSearchResponse
 )
 from backend.services.embedder import EmbeddingService
 from backend.services.processor import PDFProcessorService
 from backend.services.recommendation import SemanticScholarService
+from backend.services.rag_answer_service import run_rag_answer
 from backend.services.vector_db import VectorDBService
 
 
@@ -135,6 +138,46 @@ async def search(
             ))
 
     return {"results": formatted}
+
+
+@app.post("/rag", response_model=RagResponse)
+async def rag_answer(
+        request: RagRequest,
+        embed_service: EmbeddingService = Depends(get_embedding_service),
+        db_service: VectorDBService = Depends(get_db_service),
+):
+    """
+    Run the RAG pipeline using the existing embedding + Chroma services.
+    """
+    response = run_rag_answer(
+        question=request.question,
+        model_name=request.model_name,
+        n_results=request.n_results,
+        include_sources=request.include_sources,
+        llm_model=request.llm_model,
+        temperature=request.temperature,
+        embed_service=embed_service,
+        db_service=db_service,
+    )
+
+    sources = None
+    if response.sources:
+        sources = []
+        for doc in response.sources:
+            sources.append(SearchResult(
+                doc_id=doc.metadata.get("id", "") if doc.metadata else "",
+                score=doc.metadata.get("score", 0.0) if doc.metadata else 0.0,
+                content=doc.page_content,
+                metadata=doc.metadata or {}
+            ))
+
+    return {
+        "answer": response.answer,
+        "template": response.template,
+        "status": response.status,
+        "needs_search": response.needs_search,
+        "sources": sources
+    }
 
 
 @app.post("/delete", response_model=StatusResponse)

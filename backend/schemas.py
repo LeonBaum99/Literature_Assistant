@@ -20,6 +20,23 @@ class QueryResponse(BaseModel):
     results: List[SearchResult]
 
 
+class RagRequest(BaseModel):
+    question: str
+    n_results: int = 4
+    model_name: str = "bert"
+    include_sources: bool = True
+    llm_model: Optional[str] = None
+    temperature: Optional[float] = None
+
+
+class RagResponse(BaseModel):
+    answer: str
+    template: str
+    status: str
+    needs_search: bool
+    sources: Optional[List[SearchResult]] = None
+
+
 class IngestResponse(BaseModel):
     filename: str
     message: str
@@ -89,4 +106,5 @@ class RecommendationResponse(BaseModel):
 
 class PaperSearchResponse(BaseModel):
     query: str
+    paperId: Optional[str] = None
     paperId: Optional[str] = None
