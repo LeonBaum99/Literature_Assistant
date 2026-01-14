@@ -55,7 +55,9 @@ async def ingest_pdf(
         metadata, sections = pdf_service.process_pdf(tmp_path)
 
         # 3. Prepare Data
-        parent_id = metadata.get("arxiv_id", file.filename).replace(" ", "_")
+        # Use 'or' to handle None values properly
+        parent_id = metadata.get("arxiv_id") or file.filename or "unknown_doc"
+        parent_id = parent_id.replace(" ", "_").replace(":", "_").replace("-", "_")
         docs, metas, ids = [], [], []
 
         base_meta = {
