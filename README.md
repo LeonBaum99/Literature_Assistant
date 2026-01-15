@@ -4,6 +4,8 @@
 
 ## Setup
 
+Preferable Python Version: 3.11.14
+
 Follow these steps to get your development environment running.
 
 ### 1. Install PyTorch Optional if Docker is used
