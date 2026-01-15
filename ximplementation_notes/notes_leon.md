@@ -19,3 +19,14 @@
 ## LLM part
 - prompt template seems nonsensical
 - understand how this works; improve
+
+## Evaluation
+- Parameters for eval:
+    - use bert model (qwen is too slow)
+    - document top_k used for eval
+- Use actual updated chunks
+- Evaluate with facts from just one paper; is the paper found?
+    - Make x (e.g. 5) example queries
+    - Determine "ground truth"; what paper/chunk should be found?
+    - Calculate metric (ground truth against model)
+- 1 or two examples with not just 1 paper; synthesis of 2 papers; (different difficulties)

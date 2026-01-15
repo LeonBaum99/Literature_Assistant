@@ -2,7 +2,7 @@
 
 DEFAULT_MODEL = "mistral-nemo"
 DEFAULT_TEMPERATURE = 0.2
-DEFAULT_MAX_CONTEXT_CHARS = 2000
+DEFAULT_MAX_CONTEXT_CHARS = 100000 # ! was 2000; this was much too little for the default of 5 chunks at a max chunk size of 2500 chars
 
 ANSWER_SYSTEM_PROMPT = (
     "You are a RAG assistant answering questions about scientific PDFs using only the "

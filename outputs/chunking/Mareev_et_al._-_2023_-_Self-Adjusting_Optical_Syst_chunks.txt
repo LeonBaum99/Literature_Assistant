@@ -1,0 +1,917 @@
+====================================================================================================
+CHUNKING ANALYSIS: Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+====================================================================================================
+
+PAPER METADATA:
+----------------------------------------------------------------------------------------------------
+Title:    Self-Adjusting Optical Systems Based on Reinforcement Learning
+ArXiv ID: None
+Authors:  Evgenii Mareev 1, * , Alena Garmatina 1,2 , Timur Semenov 1,2 , Nika Asharchuk 1 , Vladimir Rovenko 1 and Irina Dyachkova 1, 1 Federal Scientific Research Center 'Crystallography and Photonics', Russian Academy of Sciences, Leninskiy Prospect 59, 119333 Moscow, Russia; alga009@mail.ru (A.G.); timur.phys@mail.ru (T.S.); nikaasharchuk@yandex.ru (N.A.); rovenko.vladimir@physics.msu.ru (V.R.); sig74@mail.ru (I.D.), 2 National Research Center «Kurchatov Institute», Academic Kurchatov Sq. 1, 123182 Moscow, Russia, Correspondence: mareev.evgeniy@physics.msu.ru, Abstract: Progress in the field of machine learning has enhanced the development of self-adjusting optical systems capable of autonomously adapting to changing environmental conditions. This study demonstrates the concept of self-adjusting optical systems and presents a new approach based on reinforcement learning methods. We integrated reinforcement learning algorithms into the setup for tuning the laser radiation into the fiber, as well as into the complex for controlling the laser-plasma source. That reduced the dispersion of the generated X-ray signal by 2-3 times through automatic adjustment of the position of the rotating copper target and completely eliminated the linear trend arising from the ablation of the target surface. The adjustment of the system was performed based on feedback signals obtained from the spectrometer, and the movement of the target was achieved using a neural network-controlled stepper motor. As feedback, the second harmonic of femtosecond laser radiation was used, the intensity of which has a square root dependence on the X-ray yield. The developed machine learning methodology allows the considered systems to optimize their performance and adapt in real time, leading to increased efficiency, accuracy, and reliability., Keywords: reinforcement learning; laser-plasma X-ray source; laser-matter interaction; femtosecond
+
+Total Chunks: 26
+Avg Chunk Size: 1814 chars
+Min/Max Size: 453 / 2295 chars
+
+====================================================================================================
+
+
+====================================================================================================
+CHUNK 1 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#Self-Adjusting_Optical_Systems_Based_on_Reinforcem
+Section:      Self-Adjusting Optical Systems Based on Reinforcement Learning
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1924 chars, 261 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Evgenii Mareev 1, * , Alena Garmatina 1,2 , Timur Semenov 1,2 , Nika Asharchuk 1 , Vladimir Rovenko 1 and Irina Dyachkova 1 1 Federal Scientific Research Center 'Crystallography and Photonics', Russian Academy of Sciences, Leninskiy Prospect 59, 119333 Moscow, Russia; alga009@mail.ru (A.G.); timur.phys@mail.ru (T.S.); nikaasharchuk@yandex.ru (N.A.); rovenko.vladimir@physics.msu.ru (V.R.); sig74@mail.ru (I.D.) 2 National Research Center «Kurchatov Institute», Academic Kurchatov Sq. 1, 123182 Moscow, Russia Correspondence: mareev.evgeniy@physics.msu.ru Abstract: Progress in the field of machine learning has enhanced the development of self-adjusting optical systems capable of autonomously adapting to changing environmental conditions. This study demonstrates the concept of self-adjusting optical systems and presents a new approach based on reinforcement learning methods. We integrated reinforcement learning algorithms into the setup for tuning the laser radiation into the fiber, as well as into the complex for controlling the laser-plasma source. That reduced the dispersion of the generated X-ray signal by 2-3 times through automatic adjustment of the position of the rotating copper target and completely eliminated the linear trend arising from the ablation of the target surface. The adjustment of the system was performed based on feedback signals obtained from the spectrometer, and the movement of the target was achieved using a neural network-controlled stepper motor. As feedback, the second harmonic of femtosecond laser radiation was used, the intensity of which has a square root dependence on the X-ray yield. The developed machine learning methodology allows the considered systems to optimize their performance and adapt in real time, leading to increased efficiency, accuracy, and reliability. Keywords: reinforcement learning; laser-plasma X-ray source; laser-matter interaction; femtosecond
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Evgenii Mareev 1, * , Alena Garmatina 1,2 , Timur Semenov 1,2 , Nika Asharchuk 1 , Vladimir Rovenko 1 and Irina Dyachkova 1
+1 Federal Scientific Research Center 'Crystallography and Photonics', Russian Academy of Sciences, Leninskiy Prospect 59, 119333 Moscow, Russia; alga009@mail.ru (A.G.); timur.phys@mail.ru (T.S.); nikaasharchuk@yandex.ru (N.A.); rovenko.vladimir@physics.msu.ru (V.R.); sig74@mail.ru (I.D.)
+2 National Research Center «Kurchatov Institute», Academic Kurchatov Sq. 1, 123182 Moscow, Russia
+Correspondence: mareev.evgeniy@physics.msu.ru
+Abstract: Progress in the field of machine learning has enhanced the development of self-adjusting optical systems capable of autonomously adapting to changing environmental conditions. This study demonstrates the concept of self-adjusting optical systems and presents a new approach based on reinforcement learning methods. We integrated reinforcement learning algorithms into the setup for tuning the laser radiation into the fiber, as well as into the complex for controlling the laser-plasma source. That reduced the dispersion of the generated X-ray signal by 2-3 times through automatic adjustment of the position of the rotating copper target and completely eliminated the linear trend arising from the ablation of the target surface. The adjustment of the system was performed based on feedback signals obtained from the spectrometer, and the movement of the target was achieved using a neural network-controlled stepper motor. As feedback, the second harmonic of femtosecond laser radiation was used, the intensity of which has a square root dependence on the X-ray yield. The developed machine learning methodology allows the considered systems to optimize their performance and adapt in real time, leading to increased efficiency, accuracy, and reliability.
+Keywords: reinforcement learning; laser-plasma X-ray source; laser-matter interaction; femtosecond
+
+====================================================================================================
+CHUNK 2 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#1._Introduction_part0
+Section:      1. Introduction
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2240 chars, 314 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Nowadays, neural networks are finding increasing applications in optics and photonics. In the earlier works of machine learning, genetic algorithms were primarily used for pattern recognition, image reconstruction, aberration correction, or optical component design [1]. Subsequent studies focused on the analysis of large datasets [2] and inverse problems, where the superior ability of machine learning to classify data, uncover hidden structures, and handle a large number of degrees of freedom led to significant breakthroughs [3]. Neural networks have achieved great success in the design of nanomaterials [4], cell classification [5], super-resolution microscopy [6], quantum optics [7], and optical communications [8]. In addition to their application in general data processing, machine learning methods have the potential to control ultrafast photonics technologies of the next generation. This is due to the growing demand for adaptive control and selfadjustment of laser systems, as well as the fact that many ultrafast phenomena in photonics are nonlinear and multidimensional, with dynamics highly sensitive to noise [3]. Although advances in measurement techniques have led to significant developments in experimental methods, recent research has shown that machine learning algorithms provide new ways to identify coherent structures in large sets of noisy data and potentially determine fundamental physical models and equations based on the analysis of complex time series [3]. Neural networks can also greatly facilitate and automate the alignment process of complex optical systems such as femtosecond oscillators [9]. Machine learning with reinforcement has recently been used for this purpose. For example, it has been used for mode synchronization in femtosecond and picosecond oscillators [9,10], seed generation Citation: Mareev, E.; Garmatina, A.; Semenov, T.; Asharchuk, N.; Rovenko, V.; Dyachkova, I. Self-Adjusting Optical Systems Based on Reinforcement Learning. Photonics 2023 , 10 , 1097. https://doi.org/ 10.3390/photonics10101097 Received: 16 August 2023 Revised: 25 September 2023 Accepted: 27 September 2023 Published: 29 September 2023 Copyright: © 2023 by the authors. Licensee MDPI, Basel, Switzerland.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Nowadays, neural networks are finding increasing applications in optics and photonics. In the earlier works of machine learning, genetic algorithms were primarily used for pattern recognition, image reconstruction, aberration correction, or optical component design [1]. Subsequent studies focused on the analysis of large datasets [2] and inverse problems, where the superior ability of machine learning to classify data, uncover hidden structures, and handle a large number of degrees of freedom led to significant breakthroughs [3]. Neural networks have achieved great success in the design of nanomaterials [4], cell classification [5], super-resolution microscopy [6], quantum optics [7], and optical communications [8]. In addition to their application in general data processing, machine learning methods have the potential to control ultrafast photonics technologies of the next generation. This is due to the growing demand for adaptive control and selfadjustment of laser systems, as well as the fact that many ultrafast phenomena in photonics are nonlinear and multidimensional, with dynamics highly sensitive to noise [3]. Although advances in measurement techniques have led to significant developments in experimental methods, recent research has shown that machine learning algorithms provide new ways to identify coherent structures in large sets of noisy data and potentially determine fundamental physical models and equations based on the analysis of complex time series [3]. Neural networks can also greatly facilitate and automate the alignment process of complex optical systems such as femtosecond oscillators [9]. Machine learning with reinforcement has recently been used for this purpose. For example, it has been used for mode synchronization in femtosecond and picosecond oscillators [9,10], seed generation
+Citation: Mareev, E.; Garmatina, A.; Semenov, T.; Asharchuk, N.; Rovenko, V.; Dyachkova, I. Self-Adjusting Optical Systems Based on Reinforcement Learning. Photonics 2023 , 10 , 1097. https://doi.org/ 10.3390/photonics10101097
+Received: 16 August 2023 Revised: 25 September 2023 Accepted: 27 September 2023 Published: 29 September 2023
+Copyright: © 2023 by the authors. Licensee MDPI, Basel, Switzerland.
+
+====================================================================================================
+CHUNK 3 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#1._Introduction_part1
+Section:      1. Introduction
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1878 chars, 284 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/). Photonics 2023 , 10 , 1097. https://doi.org/10.3390/photonics10101097 https://www.mdpi.com/journal/photonics Photonics 2023 , 10 , 1097 2 of 10 for free-electron lasers [11], soliton and chaos control in laser systems [12,13], and laser processing of silicon [14]. In any case, machine learning provides the opportunity to automate the adjustment of complex systems under changing external conditions. This has made this approach attractive for optimizing (increasing stability and signal level) the created laser-plasma source. The physics of X-ray generation in a laser-plasma source can be described as follows. When a laser pulse is focused on the surface of a solid target, the laser pulse energy is absorbed in the skin layer, generating laser-induced plasma with a temperature of several hundred electron volts and a solid density. During this short period, X-ray radiation is generated, as electrons cannot transfer a significant portion of their energy back to the lattice [15]. These fast electrons, arising from the interaction of the incident laser radiation with the plasma, lead to the generation of characteristic lines as the electron vacancy in the inner shell is filled from the outer shell [16]. To achieve a high X-ray flux, it is necessary to tightly focus the laser pulse, resulting in a focal spot size of a few micrometers, making the setup extremely sensitive to target position [15]. Therefore, target vibrations modulate the X-ray pulse. Additionally, due to the high intensity, surface ablation (removal of surface material) occurs, resulting in the reduction of the diameter of the rotating target over time, causing the focus to drift away from the target surface.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/).
+Photonics 2023 , 10 , 1097. https://doi.org/10.3390/photonics10101097
+https://www.mdpi.com/journal/photonics
+Photonics 2023 , 10 , 1097
+2 of 10
+for free-electron lasers [11], soliton and chaos control in laser systems [12,13], and laser processing of silicon [14]. In any case, machine learning provides the opportunity to automate the adjustment of complex systems under changing external conditions. This has made this approach attractive for optimizing (increasing stability and signal level) the created laser-plasma source. The physics of X-ray generation in a laser-plasma source can be described as follows. When a laser pulse is focused on the surface of a solid target, the laser pulse energy is absorbed in the skin layer, generating laser-induced plasma with a temperature of several hundred electron volts and a solid density. During this short period, X-ray radiation is generated, as electrons cannot transfer a significant portion of their energy back to the lattice [15]. These fast electrons, arising from the interaction of the incident laser radiation with the plasma, lead to the generation of characteristic lines as the electron vacancy in the inner shell is filled from the outer shell [16]. To achieve a high X-ray flux, it is necessary to tightly focus the laser pulse, resulting in a focal spot size of a few micrometers, making the setup extremely sensitive to target position [15]. Therefore, target vibrations modulate the X-ray pulse. Additionally, due to the high intensity, surface ablation (removal of surface material) occurs, resulting in the reduction of the diameter of the rotating target over time, causing the focus to drift away from the target surface.
+
+====================================================================================================
+CHUNK 4 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#1._Introduction_part2
+Section:      1. Introduction
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         547 chars, 84 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+As a result, the X-ray signal becomes unstable over time, and constant target-position adjustment is required due to target ablation. Therefore, the main aim of this study was to develop an experimental setup based on reinforcement learning that would stabilize and maximize the amplitude of the X-ray signal generated in a laser-plasma source when ultrashort laser pulses are focused onto the surface of a rotating copper target. Additionally, the neural network created can be used for automatic control of the laser pulse propagation direction.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+As a result, the X-ray signal becomes unstable over time, and constant target-position adjustment is required due to target ablation.
+Therefore, the main aim of this study was to develop an experimental setup based on reinforcement learning that would stabilize and maximize the amplitude of the X-ray signal generated in a laser-plasma source when ultrashort laser pulses are focused onto the surface of a rotating copper target. Additionally, the neural network created can be used for automatic control of the laser pulse propagation direction.
+
+====================================================================================================
+CHUNK 5 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.1._Experimental_Setup_part0
+Section:      2.1. Experimental Setup
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2264 chars, 373 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+In the experiments, a femtosecond ytterbium fiber laser ANTAUS-10W-40u/250K (Avesta Project, Troitsk, Russia) with a wavelength of 1030 nm and an average power of up to 20 W was used. The pulse repetition rate was 2.0 MHz, with a maximum pulse energy of 10 µ J and a laser pulse duration of approximately 280 fs (M2 = 1.2). The laser radiation was focused (intensity on the target surface ~2.5 × 10 14 W/cm 2 ) onto the end of a rotating and vertically cyclically displaced copper cylinder (diameter 44 mm, thickness 8 mm) using a microscopic objective PAL-20-NIR-HR-LC00 with a focal length of 10 mm (NA ~0.3, spot diameter on the target ~4 µ m). A target with a polished side surface (roughness of 0.5 µ m or less) was mounted on a motor shaft taken from a hard disk. The vibrations of the rotating surface on the shaft did not exceed 2 µ m(mean square root value over 10 min interval). This displacement algorithm allowed a single target to be operated for at least 5 h-during this time interval the dispersion of the X-ray intensity did not exceed 15%. To prevent deposition of ablated particles on the focusing optics, a compressed air blowing system was assembled in the exposure area. The ablated particles were carried away by the airflow through a thin tube and then sucked away by a vacuum cleaner. X-ray radiation was measured using a single-channel scintillation detector SCSD-4 (Radikon, St. Petersburg, Russia) placed 13 cm away from the target. Attenuating copper or aluminum filters were installed in front of the detector for high radiation fluxes. The focus position relative to the target was controlled based on the intensity of the X-ray radiation. The second harmonic signal was focused into the HR USB4000 fiber spectrometer (Ocean Insight, Rochester, NY, USA). The rotating target was mounted on a motorized 5-axis table. Control of the table movement was achieved using a WiFi2Duet stepper motor driver. The investigated samples were also placed on a three-axis motorized table and controlled by a similar driver. Signal collection was fully automated using LabVIEW, with simultaneous registration of X-ray signal intensity, source size (based on the second harmonic signal), second harmonic spectrum, and second harmonic signal intensity.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+In the experiments, a femtosecond ytterbium fiber laser ANTAUS-10W-40u/250K (Avesta Project, Troitsk, Russia) with a wavelength of 1030 nm and an average power of up to 20 W was used. The pulse repetition rate was 2.0 MHz, with a maximum pulse energy of 10 µ J and a laser pulse duration of approximately 280 fs (M2 = 1.2). The laser radiation was focused (intensity on the target surface ~2.5 × 10 14 W/cm 2 ) onto the end of a rotating and vertically cyclically displaced copper cylinder (diameter 44 mm, thickness 8 mm) using a microscopic objective PAL-20-NIR-HR-LC00 with a focal length of 10 mm (NA ~0.3, spot diameter on the target ~4 µ m). A target with a polished side surface (roughness of 0.5 µ m or less) was mounted on a motor shaft taken from a hard disk. The vibrations of the rotating surface on the shaft did not exceed 2 µ m(mean square root value over 10 min interval). This displacement algorithm allowed a single target to be operated for at least 5 h-during this time interval the dispersion of the X-ray intensity did not exceed 15%. To prevent deposition of ablated particles on the focusing optics, a compressed air blowing system was assembled in the exposure area. The ablated particles were carried away by the airflow through a thin tube and then sucked away by a vacuum cleaner.
+X-ray radiation was measured using a single-channel scintillation detector SCSD-4 (Radikon, St. Petersburg, Russia) placed 13 cm away from the target. Attenuating copper or aluminum filters were installed in front of the detector for high radiation fluxes. The focus position relative to the target was controlled based on the intensity of the X-ray radiation. The second harmonic signal was focused into the HR USB4000 fiber spectrometer (Ocean Insight, Rochester, NY, USA).
+The rotating target was mounted on a motorized 5-axis table. Control of the table movement was achieved using a WiFi2Duet stepper motor driver. The investigated samples were also placed on a three-axis motorized table and controlled by a similar driver. Signal collection was fully automated using LabVIEW, with simultaneous registration of X-ray signal intensity, source size (based on the second harmonic signal), second harmonic spectrum, and second harmonic signal intensity.
+
+====================================================================================================
+CHUNK 6 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.1._Experimental_Setup_part1
+Section:      2.1. Experimental Setup
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2291 chars, 375 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The schematic diagram of the experimental Photonics 2023 , 10 , 1097 3 of 10 The rotating target was mounted on a motorized 5-axis table. Control of the table movement was achieved using a WiFi2Duet stepper motor driver. The investigated sam- ples were also placed on a three-axis motorized table and controlled by a similar driver. Signal collection was fully automated using LabVIEW, with simultaneous registration of X-ray signal intensity, source size (based on the second harmonic signal), second har- monic spectrum, and second harmonic signal intensity. The schematic diagram of the ex- setup is shown in Figure 1. The intensity of the second harmonic signal unambiguously determined the number of X-ray quanta generated during copper target ablation; thus, the spectral brightness at a wavelength of 515 nm was used as the feedback signal. A UDP server was used for data transmission to the neural network on the computer. HTTP protocol was used to control the neural network by the motion the stepper motors. In this configuration, a working speed of 10 Hz was achieved. The neural network controlled the stepper motor, moving the target along the optical axis. As a model experiment, the task of coupling laser radiation (at a wavelength of ~600 nm) into a fiber connected to a spectrometer was considered. For this purpose, a special node was developed, which was inserted into the kinematic alignment KM-100. perimental setup is shown in Figure 1. The intensity of the second harmonic signal unambiguously determined the number of X-ray quanta generated during copper target ablation; thus, the spectral brightness at a wavelength of 515 nm was used as the feedback signal. A UDP server was used for data transmission to the neural network on the computer. HTTP protocol was used to control the neural network by the motion the stepper motors. In this con fi guration, a working speed of 10 Hz was achieved. The neural network controlled the stepper motor, moving the target along the optical axis. As a model experiment, the task of coupling laser radiation (at a wavelength of ~600 nm) into a fi ber connected to a spectrometer was considered. For this purpose, a special node was developed, which was inserted into the kinematic alignment KM-100. Figure 1. Experimental setup.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The schematic diagram of the experimental
+Photonics 2023 , 10 , 1097
+3 of 10
+The rotating target was mounted on a motorized 5-axis table. Control of the table movement was achieved using a WiFi2Duet stepper motor driver. The investigated sam-
+ples were also placed on a three-axis motorized table and controlled by a similar driver.
+Signal collection was fully automated using LabVIEW, with simultaneous registration of
+X-ray signal intensity, source size (based on the second harmonic signal), second har- monic spectrum, and second harmonic signal intensity. The schematic diagram of the ex-
+setup is shown in Figure 1. The intensity of the second harmonic signal unambiguously determined the number of X-ray quanta generated during copper target ablation; thus, the spectral brightness at a wavelength of 515 nm was used as the feedback signal. A UDP server was used for data transmission to the neural network on the computer. HTTP protocol was used to control the neural network by the motion the stepper motors. In this configuration, a working speed of 10 Hz was achieved. The neural network controlled the stepper motor, moving the target along the optical axis. As a model experiment, the task of coupling laser radiation (at a wavelength of ~600 nm) into a fiber connected to a spectrometer was considered. For this purpose, a special node was developed, which was inserted into the kinematic alignment KM-100. perimental setup is shown in Figure 1. The intensity of the second harmonic signal unambiguously determined the number of X-ray quanta generated during copper target ablation; thus, the spectral brightness at a wavelength of 515 nm was used as the feedback signal. A UDP server was used for data transmission to the neural network on the computer. HTTP protocol was used to control the neural network by the motion the stepper motors. In this con fi guration, a working speed of 10 Hz was achieved. The neural network controlled the stepper motor, moving the target along the optical axis. As a model experiment, the task of coupling laser radiation (at a wavelength of ~600 nm) into a fi ber connected to a spectrometer was considered. For this purpose, a special node was developed, which was inserted into the kinematic alignment KM-100.
+Figure 1. Experimental setup.
+
+====================================================================================================
+CHUNK 7 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.1._Experimental_Setup_part2
+Section:      2.1. Experimental Setup
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1446 chars, 237 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The laser pulse beam is tightly focused on the surface of the rotated Cu target, which leads to the generation of the X-ray. The sample is inserted inside the X-ray beam, and transmi tt ed through the sample X-ray beam registered by the X-ray detector. In addition to the X-ray, the second harmonic (515 nm) is generated during laser-ma tt er interaction. The second harmonic is collimated by the objective and transmi tt ed to the spectrometer. The second harmonic is used as a feedback for the machine learning algorithm. Based on the signal, the Cu target location is changed by the motorized 5-axis stepper motor controlled by the driver. Figure 1. Experimental setup. The laser pulse beam is tightly focused on the surface of the rotated Cu target, which leads to the generation of the X-ray. The sample is inserted inside the X-ray beam, and transmitted through the sample X-ray beam registered by the X-ray detector. In addition to the X-ray, the second harmonic (515 nm) is generated during laser-matter interaction. The second harmonic is collimated by the objective and transmitted to the spectrometer. The second harmonic is used as a feedback for the machine learning algorithm. Based on the signal, the Cu target location is changed by the motorized 5-axis stepper motor controlled by the driver. feedback second harmonic expander fs beam laser Dichroicmirror He/air X-Ray High NA detector lobjective Sample X1 PC stepper motordriver
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The laser pulse beam is tightly focused on the surface of the rotated Cu target, which leads to the generation of the X-ray. The sample is inserted inside the X-ray beam, and transmi tt ed through the sample X-ray beam registered by the X-ray detector. In addition to the X-ray, the second harmonic (515 nm) is generated during laser-ma tt er interaction. The second harmonic is collimated by the objective and transmi tt ed to the spectrometer. The second harmonic is used as a feedback for the machine learning algorithm. Based on the signal, the Cu target location is changed by the motorized 5-axis stepper motor controlled by the driver. Figure 1. Experimental setup. The laser pulse beam is tightly focused on the surface of the rotated Cu target, which leads to the generation of the X-ray. The sample is inserted inside the X-ray beam, and transmitted through the sample X-ray beam registered by the X-ray detector. In addition to the X-ray, the second harmonic (515 nm) is generated during laser-matter interaction. The second harmonic is collimated by the objective and transmitted to the spectrometer. The second harmonic is used as a feedback for the machine learning algorithm. Based on the signal, the Cu target location is changed by the motorized 5-axis stepper motor controlled by the driver.
+feedback
+second harmonic
+expander
+fs
+beam
+laser
+Dichroicmirror
+He/air
+X-Ray
+High NA
+detector
+lobjective
+Sample
+X1
+PC
+stepper
+motordriver
+
+====================================================================================================
+CHUNK 8 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.2._Neural_Network_Architectu_part0
+Section:      2.2. Neural Network Architecture 2.2. Neural Network Architecture
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2094 chars, 357 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The developed setup is based on the DQN learning algorithm [16]. Deep Q-Network (DQN) is a popular algorithm used in reinforcement learning, which combines the Qlearning algorithm with deep neural networks to train an agent with optimal action strategies in a given environment. The environment is the system or object (in our case, the current coordinates and feedback signal amplitude) that the agent interacts with, while the agent represents the reinforcement learning algorithm. The process starts with the The developed setup is based on the DQN learning algorithm [16]. Deep Q-Network (DQN) is a popular algorithm used in reinforcement learning, which combines the Qlearning algorithm with deep neural networks to train an agent with optimal action strategies in a given environment. The environment is the system or object (in our case, the current coordinates and feedback signal amplitude) that the agent interacts with, while the agent represents the reinforcement learning algorithm. The process starts with the environment sending its initial state (state = S ) to the agent, who then takes an action (action = A -either movement or no action) based on its values in response to this state. The environment then sends the agent a new state (state ′ = S ′ ) and a reward (reward = K ). The agent updates its knowledge based on the reward returned by the environment for the last action, and the cycle repeats. The cycle continues until the termination conditions Photonics 2023 , 10 , 1097 4 of 10 ). The environment sending its initial state (state = tion = A S ) to the agent, who then takes an action (ac- -either movement or no action) based on its values in response to this state. The environment then sends the agent a new state (state ′ = S ′ ) and a reward (reward = К agent updates its knowledge based on the reward returned by the environment for the last action, and the cycle repeats. The cycle continues until the termination conditions of of the learning process are met (either a specified number of actions are completed or the error level reaches a certain value).
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The developed setup is based on the DQN learning algorithm [16]. Deep Q-Network (DQN) is a popular algorithm used in reinforcement learning, which combines the Qlearning algorithm with deep neural networks to train an agent with optimal action strategies in a given environment. The environment is the system or object (in our case, the current coordinates and feedback signal amplitude) that the agent interacts with, while the agent represents the reinforcement learning algorithm. The process starts with the The developed setup is based on the DQN learning algorithm [16]. Deep Q-Network (DQN) is a popular algorithm used in reinforcement learning, which combines the Qlearning algorithm with deep neural networks to train an agent with optimal action strategies in a given environment. The environment is the system or object (in our case, the current coordinates and feedback signal amplitude) that the agent interacts with, while the agent represents the reinforcement learning algorithm. The process starts with the environment sending its initial state (state = S ) to the agent, who then takes an action (action = A -either movement or no action) based on its values in response to this state. The environment then sends the agent a new state (state ′ = S ′ ) and a reward (reward = K ). The agent updates its knowledge based on the reward returned by the environment for the last action, and the cycle repeats. The cycle continues until the termination conditions
+Photonics 2023 , 10 , 1097
+4 of 10 ). The
+environment sending its initial state (state =
+tion =
+A
+S
+) to the agent, who then takes an action (ac-
+-either movement or no action) based on its values in response to this state. The environment then sends the agent a new state (state
+′
+=
+S
+′
+) and a reward (reward =
+К
+agent updates its knowledge based on the reward returned by the environment for the last action, and the cycle repeats. The cycle continues until the termination conditions of
+of the learning process are met (either a specified number of actions are completed or the error level reaches a certain value).
+
+====================================================================================================
+CHUNK 9 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.2._Neural_Network_Architectu_part1
+Section:      2.2. Neural Network Architecture 2.2. Neural Network Architecture
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2268 chars, 382 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+In DQN, the agent learns to choose actions based on the maximum expected future reward by using a neural network (NN) to approximate the Q-value function, which represents the expected reward for performing an action in a given state. The neural network takes the current state as input and outputs Q values for each possible action (see Figure 2). The Q function is computed using the following formula: the learning process are met (either a speci fi ed number of actions are completed or the error level reaches a certain value). In DQN, the agent learns to choose actions based on the maximum expected future reward by using a neural network (NN) to approximate the Q-value function, which represents the expected reward for performing an action in a given state. The neural network takes the current state as input and outputs Q values for each possible action (see Figure 2). The Q function is computed using the following for- where g is a number in the interval (0, 1), indicating the level of 'greediness' of the algorithm. If g approaches 0, the algorithm acts in a maximally 'greedy' manner, seeking to maximize the next action. If g approaches 1, the algorithm aims to maximize the overall gain on a larger scale. rt represents the reward at the current step. During the learning process, the agent interacts with the environment and stores its experience (i.e., state, action, reward, and next state) in a memory buffer. Initially, the agent acts randomly, with the probability of random actions exponentially decaying over time. The agent then selects a random mini-batch of the collected information from the buffer and uses it to update the Q-value function by minimizing the difference between the predicted Q values and the actual received rewards. where γ is a number in the interval (0, 1), indicating the level of 'greediness' of the algorithm. If γ approaches 0, the algorithm acts in a maximally 'greedy' manner, seeking to maximize the next action. If γ approaches 1, the algorithm aims to maximize the overall gain on a larger scale. rt represents the reward at the current step. During the learning process, the agent interacts with the environment and stores its experience (i.e., state, action, reward, and next state) in a memory bu ff er.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+In DQN, the agent learns to choose actions based on the maximum expected future reward by using a neural network (NN) to approximate the Q-value function, which represents the expected reward for performing an action in a given state. The neural network takes the current state as input and outputs Q values for each possible action (see Figure 2). The Q function is computed using the following formula: the learning process are met (either a speci fi ed number of actions are completed or the error level reaches a certain value). In DQN, the agent learns to choose actions based on the maximum expected future reward by using a neural network (NN) to approximate the Q-value function, which represents the expected reward for performing an action in a given state. The neural network takes the current state as input and outputs Q values for each possible action (see Figure 2). The Q function is computed using the following for-
+where g is a number in the interval (0, 1), indicating the level of 'greediness' of the algorithm. If g approaches 0, the algorithm acts in a maximally 'greedy' manner, seeking to maximize the next action. If g approaches 1, the algorithm aims to maximize the overall gain on a larger scale. rt represents the reward at the current step. During the learning process, the agent interacts with the environment and stores its experience (i.e., state, action, reward, and next state) in a memory buffer. Initially, the agent acts randomly, with the probability of random actions exponentially decaying over time. The agent then selects a random mini-batch of the collected information from the buffer and uses it to update the Q-value function by minimizing the difference between the predicted Q values and the actual received rewards. where γ is a number in the interval (0, 1), indicating the level of 'greediness' of the algorithm. If γ approaches 0, the algorithm acts in a maximally 'greedy' manner, seeking to maximize the next action. If γ approaches 1, the algorithm aims to maximize the overall gain on a larger scale. rt represents the reward at the current step. During the learning process, the agent interacts with the environment and stores its experience (i.e., state, action, reward, and next state) in a memory bu ff er.
+
+====================================================================================================
+CHUNK 10 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.2._Neural_Network_Architectu_part2
+Section:      2.2. Neural Network Architecture 2.2. Neural Network Architecture
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2239 chars, 374 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Initially, the agent acts randomly, with the probability of random actions exponentially decaying over time. The agent then selects a random mini-batch of the collected information from the bu ff er and uses it to update the Q-value function by minimizing the di ff erence between the predicted Q values and the actual received rewards. Figure 2. Schematic representation of the algorithm. The agent receives information about environment (feedback and current coordinate) and reward. Based on the neural network (2 layers of 1024 neurons) it chooses one action: move left, move right or wait. The environment changes and the loop starts again. Figure 2. Schematic representation of the algorithm. The agent receives information about environment (feedback and current coordinate) and reward. Based on the neural network (2 layers of 1024 neurons) it chooses one action: move left, move right or wait. The environment changes and the loop starts again. Aim is to maximize intensity Agent Moving stepper motor 2 layers Action At R move left State Reward moye right S St Rt wait X 1024 neurons Enviroment St+1 Change of coordinate Obtaining feedback The DQN (RL) algorithm was implemented based on two linear layers, each consisting of 1024 neurons. The training was performed on an Nvidia RTX 3070 (Nvidia, SantaClara, USA) graphics card. The training parameters were set as follows: memory size of 100,000 elements, batch size of 1024 elements, learning rate of 10 -4 , Adam optimizer, MSE loss error criterion, and error decay rate of 5 × 10 -4 . In the NN, we used the current coordinate of the target (multiplied on the 0.001 factor) and the second harmonic intensity as feedback and) as inputs. These values were used as inputs for NN. The action (move left/move right/wait) is the output of the NN as it is presented in Figure 2. The DQN (RL) algorithm was implemented based on two linear layers, each consisting of 1024 neurons. The training was performed on an Nvidia RTX 3070 (Nvidia, Santa-Clara, CA, USA) graphics card. The training parameters were set as follows: memory size of 100,000 elements, batch size of 1024 elements, learning rate of 10 -4 , Adam optimizer, MSE loss error criterion, and error decay rate of 5 × 10 -4 .
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Initially, the agent acts randomly, with the probability of random actions exponentially decaying over time. The agent then selects a random mini-batch of the collected information from the bu ff er and uses it to update the Q-value function by minimizing the di ff erence between the predicted Q values and the actual received rewards.
+Figure 2. Schematic representation of the algorithm. The agent receives information about environment (feedback and current coordinate) and reward. Based on the neural network (2 layers of 1024 neurons) it chooses one action: move left, move right or wait. The environment changes and the loop starts again. Figure 2. Schematic representation of the algorithm. The agent receives information about environment (feedback and current coordinate) and reward. Based on the neural network (2 layers of 1024 neurons) it chooses one action: move left, move right or wait. The environment changes and the loop starts again.
+Aim is to maximize intensity
+Agent
+Moving stepper motor
+2 layers
+Action At
+R
+move left
+State
+Reward
+moye right
+S
+St
+Rt
+wait
+X
+1024 neurons
+Enviroment
+St+1
+Change of coordinate
+Obtaining feedback
+The DQN (RL) algorithm was implemented based on two linear layers, each consisting of 1024 neurons. The training was performed on an Nvidia RTX 3070 (Nvidia, SantaClara, USA) graphics card. The training parameters were set as follows: memory size of 100,000 elements, batch size of 1024 elements, learning rate of 10 -4 , Adam optimizer, MSE loss error criterion, and error decay rate of 5 × 10 -4 . In the NN, we used the current coordinate of the target (multiplied on the 0.001 factor) and the second harmonic intensity as feedback and) as inputs. These values were used as inputs for NN. The action (move left/move right/wait) is the output of the NN as it is presented in Figure 2. The DQN (RL) algorithm was implemented based on two linear layers, each consisting of 1024 neurons. The training was performed on an Nvidia RTX 3070 (Nvidia, Santa-Clara, CA, USA) graphics card. The training parameters were set as follows: memory size of 100,000 elements, batch size of 1024 elements, learning rate of 10 -4 , Adam optimizer, MSE loss error criterion, and error decay rate of 5 × 10 -4 .
+
+====================================================================================================
+CHUNK 11 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.2._Neural_Network_Architectu_part3
+Section:      2.2. Neural Network Architecture 2.2. Neural Network Architecture
+Chunk Index:  3
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1284 chars, 211 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+In the NN, we used the current coordinate of the target (multiplied on the 0.001 factor) and the second harmonic intensity as feedback and) as inputs. These values were used as inputs for NN. The action (move left/move right/wait) is the output of the NN as it is presented in Figure 2. The training parameters were selected after training the NN in the sandbox, as discussed further. The training was performed over 100,000 iterations, which guarantees a stable (close to 100%) result, i.e., the NN stabilizes the system in the verification stage (decreases dispersion and neutralizes the linear trend). During training, the NN initially acts randomly (for ~10,000 iterations, the possibility of the random action decays as 10 -4 ), which is needed for filling the memory buffer. After that, the NN acts based on the result of mula: Photonics 2023 , 10 , 1097 5 of 10 developed algorithm. The learning process finishes when the error becomes smaller than 0.01 (if the number of iterations is higher than 20,000) or after 100,000 steps. The training procedure is completed in about two hours. In the working regime, it takes about one minute to achieve the optimal value. Code is open-sourced and can be found at https://github.com/EvgMar/X_ray_AI.git (accessed on 28 September 2023).
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+In the NN, we used the current coordinate of the target (multiplied on the 0.001 factor) and the second harmonic intensity as feedback and) as inputs. These values were used as inputs for NN. The action (move left/move right/wait) is the output of the NN as it is presented in Figure 2.
+The training parameters were selected after training the NN in the sandbox, as discussed further. The training was performed over 100,000 iterations, which guarantees a stable (close to 100%) result, i.e., the NN stabilizes the system in the verification stage (decreases dispersion and neutralizes the linear trend). During training, the NN initially acts randomly (for ~10,000 iterations, the possibility of the random action decays as 10 -4 ), which is needed for filling the memory buffer. After that, the NN acts based on the result of mula:
+Photonics 2023 , 10 , 1097
+5 of 10
+developed algorithm. The learning process finishes when the error becomes smaller than 0.01 (if the number of iterations is higher than 20,000) or after 100,000 steps. The training procedure is completed in about two hours. In the working regime, it takes about one minute to achieve the optimal value.
+Code is open-sourced and can be found at https://github.com/EvgMar/X_ray_AI.git (accessed on 28 September 2023).
+
+====================================================================================================
+CHUNK 12 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#2.3._Construction_of_the_Reward_Function
+Section:      2.3. Construction of the Reward Function
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1475 chars, 263 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The key to the successful operation of the algorithm lies in the proper choice of rewards. In the case of an incorrectly defined reward function, the neural network will be unstable or learn too slowly. In the context of this setup, the neural network has three main actions to choose from: pause, move left, and move right. The objective is to move to the area with the maximum feedback signal and stay there for as long as possible. Therefore, the reward function was calculated as follows: -3 if the neural network suggests leaving the movement area (no movement occurs in this case). -1 × ( It -1 -It ) + ( It -Imax )/ Imax , where It is the signal amplitude at the current step, It -1 is the signal amplitude at the previous step, and Imax is the maximum amplitude over all previous steps, if the feedback amplitude decreases during the current step. ( It -1 -It ) + ( It -Imax )/ Imax , if the feedback amplitude increases during the current step. 0.5 if the pause occurs within the range of 0.9 Imax-Imax (due to fluctuations in the feedback signal). -( It -Imax )/ Imax if the pause occurs within the range of 0.9 Imax -Imax (to avoid stopping outside the optimum). By defining the reward function in this way, the error function does not grow exponentially (only at the boundaries, which is correct), and the neural network receives positive rewards in the area of maximum signal and during movement towards the maximum. This ensures high stability during operation.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The key to the successful operation of the algorithm lies in the proper choice of rewards. In the case of an incorrectly defined reward function, the neural network will be unstable or learn too slowly. In the context of this setup, the neural network has three main actions to choose from: pause, move left, and move right. The objective is to move to the area with the maximum feedback signal and stay there for as long as possible. Therefore, the reward function was calculated as follows:
+-3 if the neural network suggests leaving the movement area (no movement occurs in this case).
+-1 × ( It -1 -It ) + ( It -Imax )/ Imax , where It is the signal amplitude at the current step, It -1 is the signal amplitude at the previous step, and Imax is the maximum amplitude over all previous steps, if the feedback amplitude decreases during the current step.
+( It -1 -It ) + ( It -Imax )/ Imax , if the feedback amplitude increases during the current step.
+0.5 if the pause occurs within the range of 0.9 Imax-Imax (due to fluctuations in the feedback signal).
+-( It -Imax )/ Imax if the pause occurs within the range of 0.9 Imax -Imax (to avoid stopping outside the optimum).
+By defining the reward function in this way, the error function does not grow exponentially (only at the boundaries, which is correct), and the neural network receives positive rewards in the area of maximum signal and during movement towards the maximum. This ensures high stability during operation.
+
+====================================================================================================
+CHUNK 13 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#3.1._Feedback_Signal_Selection_part0
+Section:      3.1. Feedback Signal Selection
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2128 chars, 366 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+From a practical standpoint, the key parameters of a laser-plasma X-ray source are the X-ray flux, source size, stability of the X-ray signal, and ease of use. In order to address the ease of use, we have opted to operate the X-ray source without the need for a vacuum environment. Instead, X-rays are generated at the surface of a rotating copper cylinder, which continuously moves along the vertical axis. The laser pulse is tightly focused on the target surface, resulting in the formation of an electron plasma. During the duration of the laser pulse, a very short X-ray pulse is generated, as the laser-induced electrons are unable to transfer a significant portion of their energy back to the ions. This leads to the filling of vacancies in the inner shell from the outer shell, resulting in the generation of characteristic lines [16]. In our setup, the continuous movement of the target ensures that its time of usage is practically unlimited. However, two main issues arise. Firstly, the X-ray yield linearly decreases over time due to the ablation of the target surface by femtosecond laser pulses. Each pulse creates a small micromodification on the surface with an approximate depth of 1 µ m. With a high repetition rate of approximately 2 MHz, the diameter of the target slowly decreases at a rate of about 1 µ m every 10 min. As a result, the position of the laser focus shifts outward from the target surface, leading to a drop in X-ray yield and an increase in the size of the X-ray source. Additionally, the beats of the rotating target, with an amplitude of approximately 1 µ m, introduce oscillations in the X-ray signal. It is also worth mentioning that the laser-induced plasma generates the second harmonic (SH) [17]. The intensity of the SH is determined by the parameters of the laser-induced plasma. Given Photonics 2023 , 10 , 1097 6 of 10 focus shifts outward from the target surface, leading to a drop in X-ray yield and an in- crease in the size of the X-ray source. Additionally, the beats of the rotating target, with an amplitude of approximately 1 µm, introduce oscillations in the X-ray signal.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+From a practical standpoint, the key parameters of a laser-plasma X-ray source are the X-ray flux, source size, stability of the X-ray signal, and ease of use. In order to address the ease of use, we have opted to operate the X-ray source without the need for a vacuum environment. Instead, X-rays are generated at the surface of a rotating copper cylinder, which continuously moves along the vertical axis. The laser pulse is tightly focused on the target surface, resulting in the formation of an electron plasma. During the duration of the laser pulse, a very short X-ray pulse is generated, as the laser-induced electrons are unable to transfer a significant portion of their energy back to the ions. This leads to the filling of vacancies in the inner shell from the outer shell, resulting in the generation of characteristic lines [16].
+In our setup, the continuous movement of the target ensures that its time of usage is practically unlimited. However, two main issues arise. Firstly, the X-ray yield linearly decreases over time due to the ablation of the target surface by femtosecond laser pulses. Each pulse creates a small micromodification on the surface with an approximate depth of 1 µ m. With a high repetition rate of approximately 2 MHz, the diameter of the target slowly decreases at a rate of about 1 µ m every 10 min. As a result, the position of the laser focus shifts outward from the target surface, leading to a drop in X-ray yield and an increase in the size of the X-ray source. Additionally, the beats of the rotating target, with an amplitude of approximately 1 µ m, introduce oscillations in the X-ray signal. It is also worth mentioning that the laser-induced plasma generates the second harmonic (SH) [17]. The intensity of the SH is determined by the parameters of the laser-induced plasma. Given
+Photonics 2023 , 10 , 1097
+6 of 10
+focus shifts outward from the target surface, leading to a drop in X-ray yield and an in- crease in the size of the X-ray source. Additionally, the beats of the rotating target, with
+an amplitude of approximately 1 µm, introduce oscillations in the X-ray signal.
+
+====================================================================================================
+CHUNK 14 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#3.1._Feedback_Signal_Selection_part1
+Section:      3.1. Feedback Signal Selection
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2198 chars, 358 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+It is also worth mentioning that the laser-induced plasma generates the second harmonic (SH) [17]. that the X-ray yield also depends on the plasma electron density and temperature, we simultaneously measured the SH intensity and the X-ray yield, as shown in Figure 3. The intensity of the SH is determined by the parameters of the laser-induced plasma. Given that the X-ray yield also depends on the plasma electron density and temperature, we simultaneously measured the SH intensity and the X-ray yield, as shown in Figure 3. Figure 3. Dependence of second harmonic intensity on X-ray photon fl ux at repetition frequencies of 2 MHz. The solid line shows square root dependence. Figure 3. Dependence of second harmonic intensity on X-ray photon flux at repetition frequencies of 2 MHz. The solid line shows square root dependence. 2 MHz X-Ray0.5 1.5x104 (arb.un.) 1.0x104 5.0x103 5.0x108 1.0x109 1.5x109 2.0x109 X-ray (ph/s in 2π) The square root dependence of the second harmonic (SH) on X-ray fl ux (see Figure 3) provides an opportunity to utilize the SH as feedback for reinforcement learning. The SH at a wavelength of 515 nm can be observed using various devices, such as CCD cameras, spectrometers, and photodetectors, including low-cost solutions. These devices o ff er di ff erent frequency ranges for measuring the SH intensity, ranging from MHz using photodetectors to kHz using cameras and approximately 100 Hz for spectrometers, providing a wide range of options. In our setup, we employed a scintillator detector with a frequency of 10 Hz, making the SH a particularly promising tool for incorporation into the feedback loop, due to the be tt er possibilities for the scaling of working speed. However, during the validation process, we primarily focused on the X-ray signal as the key indicator, as end users are interested in a stable and high X-ray fl ux. The square root dependence of the second harmonic (SH) on X-ray flux (see Figure 3) provides an opportunity to utilize the SH as feedback for reinforcement learning. The SH at a wavelength of 515 nm can be observed using various devices, such as CCD cameras, spectrometers, and photodetectors, including low-cost solutions.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+It is also worth mentioning that the laser-induced plasma generates the second harmonic (SH) [17].
+that the X-ray yield also depends on the plasma electron density and temperature, we simultaneously measured the SH intensity and the X-ray yield, as shown in Figure 3. The intensity of the SH is determined by the parameters of the laser-induced plasma. Given that the X-ray yield also depends on the plasma electron density and temperature, we simultaneously measured the SH intensity and the X-ray yield, as shown in Figure 3.
+Figure 3. Dependence of second harmonic intensity on X-ray photon fl ux at repetition frequencies of 2 MHz. The solid line shows square root dependence. Figure 3. Dependence of second harmonic intensity on X-ray photon flux at repetition frequencies of 2 MHz. The solid line shows square root dependence.
+2 MHz
+X-Ray0.5
+1.5x104
+(arb.un.)
+1.0x104
+5.0x103
+5.0x108
+1.0x109
+1.5x109
+2.0x109
+X-ray (ph/s in 2π)
+The square root dependence of the second harmonic (SH) on X-ray fl ux (see Figure 3) provides an opportunity to utilize the SH as feedback for reinforcement learning. The SH at a wavelength of 515 nm can be observed using various devices, such as CCD cameras, spectrometers, and photodetectors, including low-cost solutions. These devices o ff er di ff erent frequency ranges for measuring the SH intensity, ranging from MHz using photodetectors to kHz using cameras and approximately 100 Hz for spectrometers, providing a wide range of options. In our setup, we employed a scintillator detector with a frequency of 10 Hz, making the SH a particularly promising tool for incorporation into the feedback loop, due to the be tt er possibilities for the scaling of working speed. However, during the validation process, we primarily focused on the X-ray signal as the key indicator, as end users are interested in a stable and high X-ray fl ux. The square root dependence of the second harmonic (SH) on X-ray flux (see Figure 3) provides an opportunity to utilize the SH as feedback for reinforcement learning. The SH at a wavelength of 515 nm can be observed using various devices, such as CCD cameras, spectrometers, and photodetectors, including low-cost solutions.
+
+====================================================================================================
+CHUNK 15 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#3.1._Feedback_Signal_Selection_part2
+Section:      3.1. Feedback Signal Selection
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         609 chars, 98 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+These devices offer different frequency ranges for measuring the SH intensity, ranging from MHz using photodetectors to kHz using cameras and approximately 100 Hz for spectrometers, providing a wide range of options. In our setup, we employed a scintillator detector with a frequency of 10 Hz, making the SH a particularly promising tool for incorporation into the feedback loop, due to the better possibilities for the scaling of working speed. However, during the validation process, we primarily focused on the X-ray signal as the key indicator, as end users are interested in a stable and high X-ray flux.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+These devices offer different frequency ranges for measuring the SH intensity, ranging from MHz using photodetectors to kHz using cameras and approximately 100 Hz for spectrometers, providing a wide range of options. In our setup, we employed a scintillator detector with a frequency of 10 Hz, making the SH a particularly promising tool for incorporation into the feedback loop, due to the better possibilities for the scaling of working speed. However, during the validation process, we primarily focused on the X-ray signal as the key indicator, as end users are interested in a stable and high X-ray flux.
+
+====================================================================================================
+CHUNK 16 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#3.2._Checking_the_Operation_an_part0
+Section:      3.2. Checking the Operation and Stability of the Neural Network in the Sandbox 3.2. Checking the Operation and Stability of the Neural Network in the Sandbox
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2179 chars, 362 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Initially, the neural network was tested without being connected to external sensors and control elements. This allowed the determination of initial values for the learning rate, the decay rate of the probability of random actions, and the coe ffi cient γ .  In  this  case, within the framework of the simulated environment, it was assumed that the signal intensity (feedback) was calculated as -1 × (x -x0)², where x0 represents the initial position of the target. The neural network adjusted the coordinate x, while the target oscillated with a period T (100-time steps) and an amplitude A (10% of the maximum signal intensity). Additionally, the target moved linearly at a speed of 1/B (B = 5000), as shown in Figure 4. Initially, the neural network was tested without being connected to external sensors and control elements. This allowed the determination of initial values for the learning rate, the decay rate of the probability of random actions, and the coefficient γ . In this case, within the framework of the simulated environment, it was assumed that the signal intensity (feedback) was calculated as -1 × (x -x0) 2 , where x0 represents the initial position of the target. The neural network adjusted the coordinate x, while the target oscillated with a period T (100-time steps) and an amplitude A (10% of the maximum signal intensity). Additionally, the target moved linearly at a speed of 1/B (B = 5000), as shown in Figure 4. The conducted performance evaluation demonstrated that the model maintains stability regardless of the initial positions. Furthermore, the model exhibits stability even when subjected to linear drift speeds up to four times higher than the training speeds. The range of stability is maintained when adjusting the frequency of oscillations within the range of f 0 /5 < f < 2f 0 , where f 0 represents the oscillation frequency used during training. Through this testing in the simulated environment, initial parameters were identified for successful implementation in real experiments. Photonics 2023 , 10 , 1097 2023 , 10 , x FOR PEER REVIEW 7 of 10 hotonics 7  of  11 Figure 4. Results of the neural network performance in a sandbox.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Initially, the neural network was tested without being connected to external sensors and control elements. This allowed the determination of initial values for the learning rate, the decay rate of the probability of random actions, and the coe ffi cient γ .  In  this  case, within the framework of the simulated environment, it was assumed that the signal intensity (feedback) was calculated as -1 × (x -x0)², where x0 represents the initial position of the target. The neural network adjusted the coordinate x, while the target oscillated with a period T (100-time steps) and an amplitude A (10% of the maximum signal intensity). Additionally, the target moved linearly at a speed of 1/B (B = 5000), as shown in Figure 4. Initially, the neural network was tested without being connected to external sensors and control elements. This allowed the determination of initial values for the learning rate, the decay rate of the probability of random actions, and the coefficient γ . In this case, within the framework of the simulated environment, it was assumed that the signal intensity (feedback) was calculated as -1 × (x -x0) 2 , where x0 represents the initial position of the target. The neural network adjusted the coordinate x, while the target oscillated with a period T (100-time steps) and an amplitude A (10% of the maximum signal intensity). Additionally, the target moved linearly at a speed of 1/B (B = 5000), as shown in Figure 4.
+The conducted performance evaluation demonstrated that the model maintains stability regardless of the initial positions. Furthermore, the model exhibits stability even when subjected to linear drift speeds up to four times higher than the training speeds. The range of stability is maintained when adjusting the frequency of oscillations within the range of f 0 /5 < f < 2f 0 , where f 0 represents the oscillation frequency used during training. Through this testing in the simulated environment, initial parameters were identified for successful implementation in real experiments.
+Photonics 2023 , 10 , 1097 2023 , 10 , x FOR PEER REVIEW
+7 of 10
+hotonics
+7  of  11
+Figure 4. Results of the neural network performance in a sandbox.
+
+====================================================================================================
+CHUNK 17 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#3.2._Checking_the_Operation_an_part1
+Section:      3.2. Checking the Operation and Stability of the Neural Network in the Sandbox 3.2. Checking the Operation and Stability of the Neural Network in the Sandbox
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         713 chars, 109 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The black line represents the signal variation without the work of the neural network, the red line represents the signal variation with the working neural network, and the blue line represents the change in coordinates. Figure 4. Results of the neural network performance in a sandbox. The black line represents the signal variation without the work of the neural network, the red line represents the signal variation with the working neural network, and the blue line represents the change in coordinates. 5 0.0 Translator coordinate -0.5- I(arb.un.) 1.0 4 -1.5 -2.0 -2.5- 3 Without ML (sin oscillations+linear trend) -3.0 Working ML Coordinateoftranslator(rightaxis) 0 2,000 4,000 6,000 8,000 10,000 t(arb.un.)
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The black line represents the signal variation without the work of the neural network, the red line represents the signal variation with the working neural network, and the blue line represents the change in coordinates. Figure 4. Results of the neural network performance in a sandbox. The black line represents the signal variation without the work of the neural network, the red line represents the signal variation with the working neural network, and the blue line represents the change in coordinates.
+5
+0.0
+Translator coordinate
+-0.5-
+I(arb.un.)
+1.0
+4
+-1.5
+-2.0
+-2.5-
+3
+Without ML (sin oscillations+linear trend)
+-3.0
+Working ML
+Coordinateoftranslator(rightaxis)
+0
+2,000
+4,000 6,000
+8,000
+10,000
+t(arb.un.)
+
+====================================================================================================
+CHUNK 18 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#The_conducted_performance_eval_part0
+Section:      The conducted performance evaluation demonstrated that the model maintains sta3.3. Coupling the Laser Pulse into a Fiber Using Reinforcement Machine Learning
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2247 chars, 353 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+bility  regardless of the initial positions. Furthermore, the model exhibits stability even when subjected to linear drift speeds up to four times higher than the training speeds. The range of stability is maintained when adjusting the frequency of oscillations within the range of f 0 /5 < f < 2f 0 , where f 0 represents the oscillation frequency used during training. Through this testing in the simulated environment, initial parameters were identi fi ed for successful implementation in real experiments. 3.3. Coupling the Laser Pulse into a Fiber Using Reinforcement Machine Learning The next modeling task involved coupling light into the fi ber. For this purpose, the neural network was modi fi ed to perform movements in two coordinates, thereby adding two additional actions. The light was coupled inside the fi ber, changing the angle of inciThe next modeling task involved coupling light into the fiber. For this purpose, the neural network was modified to perform movements in two coordinates, thereby adding two additional actions. The light was coupled inside the fiber, changing the angle of incidence of the laser beam onto the kinematic mirror mount (KM-100, Thorlabs, Newton, MA, USA). By adjusting two alignment screws, the angle of deviation of the laser beam could be changed, allowing for coupling into the spectrometer. In this setup, the maximum spectral brightness (signal intensity at a specific wavelength measured by the spectrometer) served as the feedback signal. Although the task may initially seem straightforward, the presence of play or backlash complicates the problem. When moving to the same coordinates on the controller, the laser beam may not return to the exact same point due to these mechanical imperfections. dence of the laser beam onto the kinematic mirror mount (KM-100, Thorlabs, Newton, USA). By adjusting two alignment screws, the angle of deviation of the laser beam could be changed, allowing for coupling into the spectrometer. In this setup, the maximum spectral brightness (signal intensity at a speci fi c wavelength measured by the spectrometer) served as the feedback signal. Although the task may initially seem straightforward, the presence of play or backlash complicates the problem.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+bility  regardless of the initial positions. Furthermore, the model exhibits stability even when subjected to linear drift speeds up to four times higher than the training speeds. The range of stability is maintained when adjusting the frequency of oscillations within the range of f 0 /5 < f < 2f 0 , where f 0 represents the oscillation frequency used during training. Through this testing in the simulated environment, initial parameters were identi fi ed for successful implementation in real experiments. 3.3. Coupling the Laser Pulse into a Fiber Using Reinforcement Machine Learning The next modeling task involved coupling light into the fi ber. For this purpose, the neural network was modi fi ed to perform movements in two coordinates, thereby adding two additional actions. The light was coupled inside the fi ber, changing the angle of inciThe next modeling task involved coupling light into the fiber. For this purpose, the neural network was modified to perform movements in two coordinates, thereby adding two additional actions. The light was coupled inside the fiber, changing the angle of incidence of the laser beam onto the kinematic mirror mount (KM-100, Thorlabs, Newton, MA, USA). By adjusting two alignment screws, the angle of deviation of the laser beam could be changed, allowing for coupling into the spectrometer. In this setup, the maximum spectral brightness (signal intensity at a specific wavelength measured by the spectrometer) served as the feedback signal. Although the task may initially seem straightforward, the presence of play or backlash complicates the problem. When moving to the same coordinates on the controller, the laser beam may not return to the exact same point due to these mechanical imperfections.
+dence of the laser beam onto the kinematic mirror mount (KM-100, Thorlabs, Newton, USA). By adjusting two alignment screws, the angle of deviation of the laser beam could be changed, allowing for coupling into the spectrometer. In this setup, the maximum spectral brightness (signal intensity at a speci fi c wavelength measured by the spectrometer) served as the feedback signal. Although the task may initially seem straightforward, the presence of play or backlash complicates the problem.
+
+====================================================================================================
+CHUNK 19 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#The_conducted_performance_eval_part1
+Section:      The conducted performance evaluation demonstrated that the model maintains sta3.3. Coupling the Laser Pulse into a Fiber Using Reinforcement Machine Learning
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2295 chars, 389 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+When moving to the same coordinates on the controller, the laser beam may not return to the exact same point due to these mechanical imperfections. Figure 5 illustrates the results of the neural networkGLYPH<31> s operation in two di ff erent regimes. In the fi rst case (Figure 5a), the maximum amplitude was not initially speci fi ed, while in the second case (Figure 5b), the maximum amplitude was speci fi ed. In the fi rst case, the neural network determined the maximum value in the working process. As a Figure 5 illustrates the results of the neural network's operation in two different regimes. In the first case (Figure 5a), the maximum amplitude was not initially specified, while in the second case (Figure 5b), the maximum amplitude was specified. In the first case, the neural network determined the maximum value in the working process. As a result, the convergence to the operational regime was significantly slower in the first case. By plotting the trajectory of the laser beam coupling (see Figure 5c) on a two-dimensional intensity map (constructed by traversing all available coordinates), it can be observed that the coupling path with simultaneous movement along only one axis is close to optimal. However, the reverse movement along the x axis is affected by the presence of backlash in the system. It is worth noting that due to fluctuations in the signal of approximately 10%, the neural network exhibits small fluctuations along different axes in the vicinity of the maximum, without any significant changes in intensity. result, the convergence to the operational regime was signi By plo tt fi cantly slower in the fi rst case. ing the trajectory of the laser beam coupling (see Figure 5c) on a two-dimensional intensity map (constructed by traversing all available coordinates), it can be observed that the coupling path with simultaneous movement along only one axis is close to optimal. However, the reverse movement along the x axis is a ff in the system. It is worth noting that due to ected by the presence of backlash uctuations in the signal of approximately fl Photonics 2023 , 10 , 1097 8 of 10 2023 , 10 , x FOR PEER REVIEW 10%, the neural network exhibits small the maximum, without any signi fl uctuations along di fi cant changes in intensity. Figure 5.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+When moving to the same coordinates on the controller, the laser beam may not return to the exact same point due to these mechanical imperfections. Figure 5 illustrates the results of the neural networkGLYPH<31> s operation in two di ff erent regimes. In the fi rst case (Figure 5a), the maximum amplitude was not initially speci fi ed, while in the second case (Figure 5b), the maximum amplitude was speci fi ed. In the fi rst case, the neural network determined the maximum value in the working process. As a Figure 5 illustrates the results of the neural network's operation in two different regimes. In the first case (Figure 5a), the maximum amplitude was not initially specified, while in the second case (Figure 5b), the maximum amplitude was specified. In the first case, the neural network determined the maximum value in the working process. As a result, the convergence to the operational regime was significantly slower in the first case. By plotting the trajectory of the laser beam coupling (see Figure 5c) on a two-dimensional intensity map (constructed by traversing all available coordinates), it can be observed that the coupling path with simultaneous movement along only one axis is close to optimal. However, the reverse movement along the x axis is affected by the presence of backlash in the system. It is worth noting that due to fluctuations in the signal of approximately 10%, the neural network exhibits small fluctuations along different axes in the vicinity of the maximum, without any significant changes in intensity.
+result, the convergence to the operational regime was signi
+By plo tt
+fi cantly slower in the
+fi rst case.
+ing the trajectory of the laser beam coupling (see Figure 5c) on a two-dimensional intensity map (constructed by traversing all available coordinates), it can be observed that
+the coupling path with simultaneous movement along only one axis is close to optimal.
+However, the reverse movement along the x axis is a ff
+in the system. It is worth noting that due to ected by the presence of backlash
+uctuations in the signal of approximately fl
+Photonics 2023 , 10 , 1097
+8 of 10
+2023
+,
+10
+, x FOR PEER REVIEW
+10%, the neural network exhibits small the maximum, without any signi
+fl uctuations along di
+fi cant changes in intensity.
+Figure 5.
+
+====================================================================================================
+CHUNK 20 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#The_conducted_performance_eval_part2
+Section:      The conducted performance evaluation demonstrated that the model maintains sta3.3. Coupling the Laser Pulse into a Fiber Using Reinforcement Machine Learning
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2266 chars, 372 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Working regime of neural network. The black line shows the intensity observed by spectrometer, red line shows stepper motor coordinate. ( a ) 'Slow' regime, when no information about intensity level was given. ( b ) 'Fast' regime, when the approximate maximum intensity was transmi tt ed to the neural network. ( c ) The heat map of the intensity distribution for all x and y coordinates. The dashed line indicates the path that the network used to fi nd optimal location pair (x,y). From a practical perspective, several important aspects can be highlighted. The best Figure 5. Working regime of neural network. The black line shows the intensity observed by spectrometer, red line shows stepper motor coordinate. ( a ) 'Slow' regime, when no information about intensity level was given. ( b ) 'Fast' regime, when the approximate maximum intensity was transmitted to the neural network. ( c ) The heat map of the intensity distribution for all x and y coordinates. The dashed line indicates the path that the network used to find optimal location pair (x,y). I(arb.un.) 3.5 10 1.385 Intensity(arb.un.) 2.0 Coordinates(arb.un.) Intensity(arb.un.) 3.0 Coordinate(arb.un) 8 1.212 1.5 2 2.5 Y(arb.un.) 1.039 9 0.8656 1.0 2.0 0.6925 1.5 0.5194 0.5 2 0.3463 1.0 2 Intensity Intensity 0.1731 0.0 e Coordinate 0.5 [(b) Coordinate 0.000 0 1000 2000 3000 4000 5000 0 50 100150200 250 300350 2 4 6 8 10 N(steps) N(steps) X(arb.un.) convergence and stability of the neural network are achieved when the feedback signal is initially di ff erent from zero. Otherwise, signi fi cantly more training time (more than twice as much) is required, as the time spent searching for a non-zero signal level signi fi cantly a ff ects the weights. Increasing the learning rate also has a negative impact on the stability of the neural networkGLYPH<31> s operation. The minimum required number of training iterations is on the order of 10,000. If fewer cycles of training are performed, the neural network does not learn, even if the training error suggests otherwise. This is probably due to insuffi cient exploration of the state space (coordinates, intensity) within the given time, resulting in the neural network encountering scenarios that were not adequately explored during training.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Working regime of neural network. The black line shows the intensity observed by spectrometer, red line shows stepper motor coordinate. ( a ) 'Slow' regime, when no information about intensity level was given. ( b ) 'Fast' regime, when the approximate maximum intensity was transmi tt ed to the neural network. ( c ) The heat map of the intensity distribution for all x and y coordinates. The dashed line indicates the path that the network used to fi nd optimal location pair (x,y). From a practical perspective, several important aspects can be highlighted. The best Figure 5. Working regime of neural network. The black line shows the intensity observed by spectrometer, red line shows stepper motor coordinate. ( a ) 'Slow' regime, when no information about intensity level was given. ( b ) 'Fast' regime, when the approximate maximum intensity was transmitted to the neural network. ( c ) The heat map of the intensity distribution for all x and y coordinates. The dashed line indicates the path that the network used to find optimal location pair (x,y).
+I(arb.un.)
+3.5
+10
+1.385
+Intensity(arb.un.)
+2.0
+Coordinates(arb.un.)
+Intensity(arb.un.)
+3.0
+Coordinate(arb.un)
+8
+1.212
+1.5
+2
+2.5
+Y(arb.un.)
+1.039
+9
+0.8656
+1.0
+2.0
+0.6925
+1.5
+0.5194
+0.5
+2
+0.3463
+1.0
+2
+Intensity
+Intensity
+0.1731
+0.0
+e
+Coordinate
+0.5
+[(b)
+Coordinate
+0.000
+0
+1000
+2000
+3000
+4000
+5000
+0
+50
+100150200
+250
+300350
+2
+4
+6
+8
+10
+N(steps)
+N(steps)
+X(arb.un.)
+convergence and stability of the neural network are achieved when the feedback signal is initially di ff erent from zero. Otherwise, signi fi cantly more training time (more than twice as much) is required, as the time spent searching for a non-zero signal level signi fi cantly a ff ects the weights. Increasing the learning rate also has a negative impact on the stability of the neural networkGLYPH<31> s operation. The minimum required number of training iterations is on the order of 10,000. If fewer cycles of training are performed, the neural network does not learn, even if the training error suggests otherwise. This is probably due to insuffi cient exploration of the state space (coordinates, intensity) within the given time, resulting in the neural network encountering scenarios that were not adequately explored during training.
+
+====================================================================================================
+CHUNK 21 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#The_conducted_performance_eval_part3
+Section:      The conducted performance evaluation demonstrated that the model maintains sta3.3. Coupling the Laser Pulse into a Fiber Using Reinforcement Machine Learning
+Chunk Index:  3
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1648 chars, 251 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+From a practical standpoint, the most optimal trade-o ff between training time and stability is achieved with approximately 30,000 training steps. In such cases, it is possible to achieve successful fi ber coupling from any starting position in nearly 100% of attempts (10 out of 10). Longer training times also contribute to stable operation. 3.4. Stabilising the Intencity of the X-ray Source From a practical perspective, several important aspects can be highlighted. The best convergence and stability of the neural network are achieved when the feedback signal is initially different from zero. Otherwise, significantly more training time (more than twice as much) is required, as the time spent searching for a non-zero signal level significantly affects the weights. Increasing the learning rate also has a negative impact on the stability of the neural network's operation. The minimum required number of training iterations is on the order of 10,000. If fewer cycles of training are performed, the neural network does not learn, even if the training error suggests otherwise. This is probably due to insufficient exploration of the state space (coordinates, intensity) within the given time, resulting in the neural network encountering scenarios that were not adequately explored during training. From a practical standpoint, the most optimal trade-off between training time and stability is achieved with approximately 30,000 training steps. In such cases, it is possible to achieve successful fiber coupling from any starting position in nearly 100% of attempts (10 out of 10). Longer training times also contribute to stable operation.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+From a practical standpoint, the most optimal trade-o ff between training time and stability is achieved with approximately 30,000 training steps. In such cases, it is possible to achieve successful fi ber coupling from any starting position in nearly 100% of attempts (10 out of 10). Longer training times also contribute to stable operation. 3.4. Stabilising the Intencity of the X-ray Source From a practical perspective, several important aspects can be highlighted. The best convergence and stability of the neural network are achieved when the feedback signal is initially different from zero. Otherwise, significantly more training time (more than twice as much) is required, as the time spent searching for a non-zero signal level significantly affects the weights. Increasing the learning rate also has a negative impact on the stability of the neural network's operation. The minimum required number of training iterations is on the order of 10,000. If fewer cycles of training are performed, the neural network does not learn, even if the training error suggests otherwise. This is probably due to insufficient exploration of the state space (coordinates, intensity) within the given time, resulting in the neural network encountering scenarios that were not adequately explored during training. From a practical standpoint, the most optimal trade-off between training time and stability is achieved with approximately 30,000 training steps. In such cases, it is possible to achieve successful fiber coupling from any starting position in nearly 100% of attempts (10 out of 10). Longer training times also contribute to stable operation.
+
+====================================================================================================
+CHUNK 22 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#In__the__case__of__optimizing__part0
+Section:      In  the  case  of  optimizing  the  laser-plasma  source,  the  movement  was  performed 3.4. Stabilising the Intencity of the X-ray Source
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2253 chars, 344 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+along a single axis, and the second harmonic signal served as the feedback, which was detected using an Ocean Optics HR 4000 spectrometer. When optimizing X-ray pulse generation, the main objectives were compensating for target oscillations and addressing the linear drift caused by target ablation (where the laser pulse gradually removes part of the target surface at a rate of approximately 1 µm/minute). In some aspects, this task is even simpler, as achieving stable coupling to a single point is more challenging than compensating for periodic oscillations. This may be due to the fact that maintaining stability at a single point is not so robust as continuously compensating for oscillations. Figure 6 reveals the presence of a linear trend and complex beating signal, representing a superposition of multiple harmonic frequencies. The linear trend compensates for target drift, while the combined beating signal stabilizes the X-ray pulse. In the case of optimizing the laser-plasma source, the movement was performed along a single axis, and the second harmonic signal served as the feedback, which was detected using an Ocean Optics HR 4000 spectrometer. When optimizing X-ray pulse generation, the main objectives were compensating for target oscillations and addressing the linear drift caused by target ablation (where the laser pulse gradually removes part of the target surface at a rate of approximately 1 µ m/minute). In some aspects, this task is even simpler, as achieving stable coupling to a single point is more challenging than compensating for periodic oscillations. This may be due to the fact that maintaining stability at a single point is not so robust as continuously compensating for oscillations. Figure 6 reveals the presence of a linear trend and complex beating signal, representing a superposition of multiple harmonic frequencies. The linear trend compensates for target drift, while the combined beating signal stabilizes the X-ray pulse. The conducted validation demonstrates several important features. Firstly, a significant reduction in X-ray signal oscillations by 2-3 times was achieved. Secondly, the linear trend that arose during the laser ablation of the target was effectively compensated, see Figure 6b.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+along a single axis, and the second harmonic signal served as the feedback, which was detected using an Ocean Optics HR 4000 spectrometer. When optimizing X-ray pulse generation, the main objectives were compensating for target oscillations and addressing the linear drift caused by target ablation (where the laser pulse gradually removes part of the target surface at a rate of approximately 1 µm/minute). In some aspects, this task is even simpler, as achieving stable coupling to a single point is more challenging than compensating for periodic oscillations. This may be due to the fact that maintaining stability at a single point is not so robust as continuously compensating for oscillations. Figure 6 reveals the presence of a linear trend and complex beating signal, representing a superposition of multiple harmonic frequencies. The linear trend compensates for target drift, while the combined beating signal stabilizes the X-ray pulse. In the case of optimizing the laser-plasma source, the movement was performed along a single axis, and the second harmonic signal served as the feedback, which was detected using an Ocean Optics HR 4000 spectrometer. When optimizing X-ray pulse generation, the main objectives were compensating for target oscillations and addressing the linear drift caused by target ablation (where the laser pulse gradually removes part of the target surface at a rate of approximately 1 µ m/minute). In some aspects, this task is even simpler, as achieving stable coupling to a single point is more challenging than compensating for periodic oscillations. This may be due to the fact that maintaining stability at a single point is not so robust as continuously compensating for oscillations. Figure 6 reveals the presence of a linear trend and complex beating signal, representing a superposition of multiple harmonic frequencies. The linear trend compensates for target drift, while the combined beating signal stabilizes the X-ray pulse.
+The conducted validation demonstrates several important features. Firstly, a significant reduction in X-ray signal oscillations by 2-3 times was achieved. Secondly, the linear trend that arose during the laser ablation of the target was effectively compensated, see Figure 6b.
+
+====================================================================================================
+CHUNK 23 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#In__the__case__of__optimizing__part1
+Section:      In  the  case  of  optimizing  the  laser-plasma  source,  the  movement  was  performed 3.4. Stabilising the Intencity of the X-ray Source
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2080 chars, 351 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+From the perspective of stability and robustness, similar parameters to the fiber coupling case were observed. Specifically, it is important to maintain a moderate learning rate (~10 -4 ), and the initial feedback signal should be non-zero to ensure stability during the learning process. Furthermore, a training duration of more than 20,000 iterations is recommended to achieve a high level of stability and performance. The observed maxima in the initial stages of the X-ray yield was obtained on the small ledge that formed on the edge of the target where the stepper motor changed its direction (the ablation speed ff 8  of  11 erent axes in the vicinity of Photonics 2023 , 10 , 1097 9 of 10 2023 , 10 , x FOR PEER REVIEW doubled during the turn). Due to local field enhancement on this edge, the X-ray yield increased. However, this led to the decrease in the mean signal. During the NN-based algorithm, the edge does not form and this maximum is less pronounced. It is also worth mentioning that the profile of the irradiated target is smother under ML control. Thereby, the use of the ML algorithm demonstrates the ability to compensate the complex vibrations and linear trends, and could also be used to compensate long-term temperature drift or low-frequency noise. We believe that such complex optical systems could in future be maintained by the AI-based algorithm, which would improve the stability of the system and will free up human resources for use in more creative tasks. 9  of  11 Figure 6. Comparison of operating regimes of the laser-plasma source with and without the reinforcement learning-based automatic target position adjustment. ( a )  Dynamics of the X-ray signal variation in full scale. ( b ) Enlarged view of the graph in (a). The do tt ed lines show the linear trend due to laser ablation Figure 6. Comparison of operating regimes of the laser-plasma source with and without the reinforcement learning-based automatic target position adjustment. ( a ) Dynamics of the X-ray signal variation in full scale. ( b ) Enlarged view of the graph in (a).
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+From the perspective of stability and robustness, similar parameters to the fiber coupling case were observed. Specifically, it is important to maintain a moderate learning rate (~10 -4 ), and the initial feedback signal should be non-zero to ensure stability during the learning process. Furthermore, a training duration of more than 20,000 iterations is recommended to achieve a high level of stability and performance. The observed maxima in the initial stages of the X-ray yield was obtained on the small ledge that formed on the edge of the target where the stepper motor changed its direction (the ablation speed ff
+8  of  11
+erent axes in the vicinity of
+Photonics 2023 , 10 , 1097
+9 of 10
+2023
+,
+10
+, x FOR PEER REVIEW
+doubled during the turn). Due to local field enhancement on this edge, the X-ray yield increased. However, this led to the decrease in the mean signal. During the NN-based algorithm, the edge does not form and this maximum is less pronounced. It is also worth mentioning that the profile of the irradiated target is smother under ML control. Thereby, the use of the ML algorithm demonstrates the ability to compensate the complex vibrations and linear trends, and could also be used to compensate long-term temperature drift or low-frequency noise. We believe that such complex optical systems could in future be maintained by the AI-based algorithm, which would improve the stability of the system and will free up human resources for use in more creative tasks. 9  of  11
+Figure 6. Comparison of operating regimes of the laser-plasma source with and without the reinforcement learning-based automatic target position adjustment. ( a )  Dynamics of the X-ray signal variation in full scale. ( b ) Enlarged view of the graph in (a). The do tt ed lines show the linear trend due to laser ablation Figure 6. Comparison of operating regimes of the laser-plasma source with and without the reinforcement learning-based automatic target position adjustment. ( a ) Dynamics of the X-ray signal variation in full scale. ( b ) Enlarged view of the graph in (a).
+
+====================================================================================================
+CHUNK 24 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#In__the__case__of__optimizing__part2
+Section:      In  the  case  of  optimizing  the  laser-plasma  source,  the  movement  was  performed 3.4. Stabilising the Intencity of the X-ray Source
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         453 chars, 74 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The dotted lines show the linear trend due to laser ablation. 35,000 37,000 no ML withML s 30,000 X-Ray(photons/s) -Ray(photons) 36,000- 25,000 20,000 35,000- 15,000 34,000- 10,000 5,000 33,000- no ML withML 0 50 100 150 200 250 300 0 50 100 150 200 250 300 time(s) time(s) The conducted validation demonstrates several important features. Firstly, a signi fi - cant reduction in X-ray signal oscillations by 2-3 times was achieved. Secondly, the linear
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The dotted lines show the linear trend due to laser ablation.
+35,000
+37,000
+no ML
+withML
+s
+30,000
+X-Ray(photons/s)
+-Ray(photons)
+36,000-
+25,000
+20,000
+35,000-
+15,000
+34,000-
+10,000
+5,000
+33,000-
+no ML
+withML
+0
+50
+100
+150
+200
+250
+300
+0
+50
+100
+150
+200
+250
+300
+time(s)
+time(s)
+The conducted validation demonstrates several important features. Firstly, a signi fi
+-
+cant reduction in X-ray signal oscillations by 2-3 times was achieved. Secondly, the linear
+
+====================================================================================================
+CHUNK 25 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#4._Conclusions_part0
+Section:      4. Conclusions
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         1874 chars, 286 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+trend that arose during the laser ablation of the target was e ff ectively compensated, see Figure 6b. From the perspective of stability and robustness, similar parameters to the fi ber coupling case were observed. Speci fi cally, it is important to maintain a moderate learning rate (~10 -4 ), and the initial feedback signal should be non-zero to ensure stability during the learning process. Furthermore, a training duration of more than 20,000 iterations is recommended to achieve a high level of stability and performance. The observed maxima in the initial stages of the X-ray yield was obtained on the small ledge that formed on the edge of the target where the stepper motor changed its direction (the ablation speed doubled during the turn). Due to local fi eld enhancement on this edge, the X-ray yield increased. However, this led to the decrease in the mean signal. During the NN-based algorithm, the edge does not form and this maximum is less pronounced. It is also worth mentioning that the pro fi le of the irradiated target is smother under ML control. Thereby, the In conclusion, the optimization of laser-plasma X-ray sources using reinforcement learning techniques has shown promising results in improving stability and performance. Through the adjustment of the laser focus position, the X-ray signal output can be enhanced and stabilized. The incorporation of reinforcement learning algorithms allows adaptive optimization, compensating for target oscillations, linear drift, and other effects that may impact X-ray signal generation. The validation process demonstrated the effectiveness of reinforcement learning in reducing X-ray signal oscillations and compensating for linear trends during laser ablation. By carefully selecting learning parameters and ensuring a sufficient number of training iterations, stability and robustness can be achieved.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+trend that arose during the laser ablation of the target was e ff ectively compensated, see Figure 6b. From the perspective of stability and robustness, similar parameters to the fi ber coupling case were observed. Speci fi cally, it is important to maintain a moderate learning rate (~10 -4 ), and the initial feedback signal should be non-zero to ensure stability during the learning process. Furthermore, a training duration of more than 20,000 iterations is recommended to achieve a high level of stability and performance. The observed maxima in the initial stages of the X-ray yield was obtained on the small ledge that formed on the edge of the target where the stepper motor changed its direction (the ablation speed doubled during the turn). Due to local fi eld enhancement on this edge, the X-ray yield increased. However, this led to the decrease in the mean signal. During the NN-based algorithm, the edge does not form and this maximum is less pronounced. It is also worth mentioning that the pro fi le of the irradiated target is smother under ML control. Thereby, the In conclusion, the optimization of laser-plasma X-ray sources using reinforcement learning techniques has shown promising results in improving stability and performance. Through the adjustment of the laser focus position, the X-ray signal output can be enhanced and stabilized. The incorporation of reinforcement learning algorithms allows adaptive optimization, compensating for target oscillations, linear drift, and other effects that may impact X-ray signal generation. The validation process demonstrated the effectiveness of reinforcement learning in reducing X-ray signal oscillations and compensating for linear trends during laser ablation. By carefully selecting learning parameters and ensuring a sufficient number of training iterations, stability and robustness can be achieved.
+
+====================================================================================================
+CHUNK 26 of 26
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf#4._Conclusions_part1
+Section:      4. Conclusions
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Mareev_et_al.___2023___Self_Adjusting_Optical_Systems_Based_on_Reinforcement_Learning.pdf
+Filename:     Mareev et al. - 2023 - Self-Adjusting Optical Systems Based on Reinforcement Learning.pdf
+Size:         2266 chars, 316 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Further research and experimentation in this field hold great potential for advancing the performance and reliability of laser-plasma X-ray sources, benefiting various applications such as material analysis, medical imaging, and industrial processes. use of the ML algorithm demonstrates the ability to compensate the complex vibrations and linear trends, and could also be used to compensate long-term temperature drift or low-frequency noise. We believe that such complex optical systems could in future be maintained by the AI-based algorithm, which would improve the stability of the system Author Contributions: Conceptualization, methodology, supervision, writing-original draft preparation and writing, E.M.; investigation, E.M., A.G., T.S., N.A. and V.R.; writing-review and editing all authors, funding acquisition, project administration, I.D. All authors have read and agreed to the published version of the manuscript. and will free up human resources for use in more creative tasks. 4. Conclusions In conclusion, the optimization of laser-plasma X-ray sources using reinforcement Funding: This work was performed within the State assignment of Federal Scientific Research Center 'Crystallography and Photonics' of the Russian Academy of Sciences (in part of 'data processing'), under grant No. 075-15-2021-1362 (as part of 'carrying out measurements on the laser microplasma X-ray source'). learning techniques has shown promising results in improving stability and performance. Institutional Review Board Statement: Not applicable. Through the adjustment of the laser focus position, the X-ray signal output can be en- hanced and stabilized.  The  incorporation  of  reinforcement  learning  algorithms  allows Informed Consent Statement: Not applicable. adaptive optimization, compensating for target oscillations, linear drift, and other e ff ects that may impact X-ray signal generation. The validation process demonstrated the e ff ec- tiveness of reinforcement learning in reducing X-ray signal oscillations and compensating for linear trends during laser ablation. By carefully selecting learning parameters and en- suring a su ffi cient number of training iterations, stability and robustness can be achieved. Photonics 2023 , 10 , 1097 10 of 10
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Further research and experimentation in this field hold great potential for advancing the performance and reliability of laser-plasma X-ray sources, benefiting various applications such as material analysis, medical imaging, and industrial processes.
+use of the ML algorithm demonstrates the ability to compensate the complex vibrations and linear trends, and could also be used to compensate long-term temperature drift or low-frequency noise. We believe that such complex optical systems could in future be maintained by the AI-based algorithm, which would improve the stability of the system Author Contributions: Conceptualization, methodology, supervision, writing-original draft preparation and writing, E.M.; investigation, E.M., A.G., T.S., N.A. and V.R.; writing-review and editing all authors, funding acquisition, project administration, I.D. All authors have read and agreed to the published version of the manuscript.
+and will free up human resources for use in more creative tasks. 4. Conclusions In conclusion, the optimization of laser-plasma X-ray sources using reinforcement Funding: This work was performed within the State assignment of Federal Scientific Research Center 'Crystallography and Photonics' of the Russian Academy of Sciences (in part of 'data processing'), under grant No. 075-15-2021-1362 (as part of 'carrying out measurements on the laser microplasma X-ray source').
+learning techniques has shown promising results in improving stability and performance. Institutional Review Board Statement: Not applicable.
+Through the adjustment of the laser focus position, the X-ray signal output can be en- hanced and stabilized.  The  incorporation  of  reinforcement  learning  algorithms  allows Informed Consent Statement: Not applicable.
+adaptive optimization, compensating for target oscillations, linear drift, and other e ff
+ects that may impact X-ray signal generation. The validation process demonstrated the e
+ff ec-
+tiveness of reinforcement learning in reducing X-ray signal oscillations and compensating for linear trends during laser ablation. By carefully selecting learning parameters and en-
+suring a su ffi
+cient number of training iterations, stability and robustness can be achieved.
+Photonics 2023 , 10 , 1097
+10 of 10
