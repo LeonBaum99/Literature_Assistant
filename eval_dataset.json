@@ -1,34 +1,5 @@
 [
-  {
-    "tier": 1,
-    "target_tag": "FAST",
-    "question": "What does the acronym ERD stand for, and what role does it play in the sampling pipeline?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1"
-  },
-  {
-    "tier": 1,
-    "target_tag": "FAST",
-    "question": "What is the size of the test dark-field image (in pixels), and how many candidate measurement positions does that imply?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1"
-  },
-  {
-    "tier": 1,
-    "target_tag": "FAST",
-    "question": "Name the static sampling baselines used for comparison.",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1"
-  },
-  {
-    "tier": 1,
-    "target_tag": "FAST",
-    "question": "What is the initial scan coverage (%) used before adaptive selection begins?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1"
-  },
-  {
-    "tier": 1,
-    "target_tag": "FAST",
-    "question": "How many new points are acquired per iteration during the adaptive scan?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1"
-  },
+
   {
     "tier": 1,
     "target_tag": "liquid lenses",
@@ -64,42 +35,6 @@
     "target_tag": "optics",
     "question": "What are the two main limitations of a well-tuned integrator controller that motivate RL for adaptive optics?",
     "expected_chunk_id": "Nousiainen_et_al.___2024___Laboratory_experiments_of_model_based_reinforcement_learning_for_adaptive_optics_control.pdf#ABSTRACT._part1"
-  },
-  {
-    "tier": 2,
-    "target_tag": "FAST",
-    "question": "What batch size (number of points) is chosen for acquisition in FAST, and what practical reason is given?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
-  },
-  {
-    "tier": 2,
-    "target_tag": "FAST",
-    "question": "At roughly what scan coverage does reconstruction quality 'stabilize' in FAST (based on SSIM/NRMSE trends)?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
-  },
-  {
-    "tier": 2,
-    "target_tag": "FAST",
-    "question": "If the full grid is 200 x 40, how many points is that total, and how many points correspond to 20% coverage?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
-  },
-  {
-    "tier": 2,
-    "target_tag": "FAST",
-    "question": "Which specific workflow design choice is described as the primary contributor to the large time saving in FAST?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
-  },
-  {
-    "tier": 2,
-    "target_tag": "FAST",
-    "question": "What value of k is used for k-nearest neighbors, and what time complexity (Big-O) is stated for the method?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1"
-  },
-  {
-    "tier": 2,
-    "target_tag": "FAST",
-    "question": "Why are Gaussian Processes included as a comparator in FAST, and what scaling drawback is highlighted?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
   },
   {
     "tier": 2,
@@ -139,34 +74,18 @@
   },
   {
     "tier": 3,
-    "target_tag": null,
-    "question": "Compare the utility/decision signal FAST uses vs. the reward metrics in adaptive ptychography. Why does each make sense in its domain?",
-    "expected_chunk_id": null
-  },
-  {
-    "tier": 3,
     "target_tag": "FAST",
     "question": "How does FAST define 'scanning efficiency,' and in what way is this fundamentally different from raster-grid scanning?",
     "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
   },
-  {
-    "tier": 3,
-    "target_tag": null,
-    "question": "Compare how at least two different papers address the trade-off between image quality and sample damage/dose. What is each paper's 'knob' for reducing damage?",
-    "expected_chunk_id": null
-  },
+
   {
     "tier": 3,
     "target_tag": "autofocus",
     "question": "Why might discretizing the action space improve stability or convergence compared to continuous control in the DRL autofocus setting?",
     "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0"
   },
-  {
-    "tier": 3,
-    "target_tag": null,
-    "question": "Contrast the observation/state and reward shaping between DQN alignment and DRL autofocus; explain why the reward needs are different.",
-    "expected_chunk_id": null
-  },
+
   {
     "tier": 3,
     "target_tag": "ptychography",
@@ -178,17 +97,5 @@
     "target_tag": "FAST",
     "question": "Where does the exploration–exploitation trade-off appear in FAST results/figures, and what mitigation strategy is proposed?",
     "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
-  },
-  {
-    "tier": 3,
-    "target_tag": null,
-    "question": "List the main latency bottlenecks mentioned across at least two papers and the optimizations suggested.",
-    "expected_chunk_id": null
-  },
-  {
-    "tier": 3,
-    "target_tag": null,
-    "question": "Identify two domain-shift risks (new sample types, new optics, etc.) and how each paper attempts to handle them.",
-    "expected_chunk_id": null
   }
 ]
