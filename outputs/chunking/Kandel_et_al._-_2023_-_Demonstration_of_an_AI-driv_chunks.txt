@@ -1,0 +1,762 @@
+====================================================================================================
+CHUNKING ANALYSIS: Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+====================================================================================================
+
+PAPER METADATA:
+----------------------------------------------------------------------------------------------------
+Title:    Article
+ArXiv ID: None
+Authors:  https://doi.org/10.1038/s41467-023-40339-1
+
+Total Chunks: 22
+Avg Chunk Size: 1847 chars
+Min/Max Size: 501 / 2453 chars
+
+====================================================================================================
+
+
+====================================================================================================
+CHUNK 1 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Demonstration_of_an_AI-driven__part0
+Section:      Demonstration of an AI-driven work /uniFB02 ow for autonomous high-resolution scanning microscopy
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2294 chars, 364 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Received: 12 January 2023 Accepted: 19 July 2023 Check for updates Saugat Kandel 1 , Tao Zhou 2 , Anakha V. Babu 3 , Zichao Di 4 , Xinxin Li 2,5 , Xuedan Ma 2,5 , Martin Holt 2 , Antonino Miceli 1 , Charudatta Phatak 6 & Mathew J. Cherukara 1 Modern scanning microscopes can image materials with up to sub-atomic spatial and sub-picosecond time resolutions, but these capabilities come with large volumes of data, which can be dif /uniFB01 cult to store and analyze. We report the Fast Autonomous Scanning Toolkit (FAST) that addresses this challenge by combining a neural network, route optimization, and ef /uniFB01 cient hardware controls to enable a self-driving experiment that actively identi /uniFB01 es and measures a sparse but representative data subset in lieu of the full dataset. FAST requires no prior information about the sample, is computationally ef /uniFB01 cient, and uses generic hardware controls with minimal experiment-speci /uniFB01 c wrapping. We test FAST in simulations and a dark/uniFB01 eld X-ray microscopy experiment of a WSe2 /uniFB01 lm. Our studies show that a FAST scan of <25% is suf /uniFB01 cient to accurately image and analyze the sample. FAST is easy to adapt for any scanning microscope; its broad adoption will empower general multi-level studies of materials evolution with respect to time, temperature, or other parameters. Scanning microscopes are versatile instruments that use photons, electrons, ions, neutrons, or mechanical probes to interrogate atomicscale composition, topography, and functionality of materials, with up to sub-atomic spatial resolution and sub-picosecond time resolution 1 -3 . Notwithstanding the variation in the probe modalities, these instruments all rely on a scan of the sample to generate spatially resolved signals that are then collected to form an image of the sample. Ongoing advances in instrumentation, such as the development of next-generation X-ray and electron detectors 4,5 , have meant that scanning microscopes can now image faster and at higher resolutions than ever before. We can now envision a broad use of these instruments to study not only static systems but also multi-level studies of the dynamic evolution of materials with time, temperature, or other parameters, even in situ or operando 6 .
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Received: 12 January 2023
+Accepted: 19 July 2023
+Check for updates
+Saugat Kandel 1 , Tao Zhou 2 , Anakha V. Babu 3 , Zichao Di 4 , Xinxin Li 2,5 , Xuedan Ma 2,5 , Martin Holt 2 , Antonino Miceli 1 , Charudatta Phatak 6 & Mathew J. Cherukara 1
+Modern scanning microscopes can image materials with up to sub-atomic spatial and sub-picosecond time resolutions, but these capabilities come with large volumes of data, which can be dif /uniFB01 cult to store and analyze. We report the Fast Autonomous Scanning Toolkit (FAST) that addresses this challenge by combining a neural network, route optimization, and ef /uniFB01 cient hardware controls to enable a self-driving experiment that actively identi /uniFB01 es and measures a sparse but representative data subset in lieu of the full dataset. FAST requires no prior information about the sample, is computationally ef /uniFB01 cient, and uses generic hardware controls with minimal experiment-speci /uniFB01 c wrapping. We test FAST in simulations and a dark/uniFB01 eld X-ray microscopy experiment of a WSe2 /uniFB01 lm. Our studies show that a FAST scan of <25% is suf /uniFB01 cient to accurately image and analyze the sample. FAST is easy to adapt for any scanning microscope; its broad adoption will empower general multi-level studies of materials evolution with respect to time, temperature, or other parameters.
+Scanning microscopes are versatile instruments that use photons, electrons, ions, neutrons, or mechanical probes to interrogate atomicscale composition, topography, and functionality of materials, with up to sub-atomic spatial resolution and sub-picosecond time resolution 1 -3 . Notwithstanding the variation in the probe modalities, these instruments all rely on a scan of the sample to generate spatially resolved signals that are then collected to form an image of the sample. Ongoing advances in instrumentation, such as the development of next-generation X-ray and electron detectors 4,5 , have meant that scanning microscopes can now image faster and at higher resolutions than ever before. We can now envision a broad use of these instruments to study not only static systems but also multi-level studies of the dynamic evolution of materials with time, temperature, or other parameters, even in situ or operando 6 .
+
+====================================================================================================
+CHUNK 2 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Demonstration_of_an_AI-driven__part1
+Section:      Demonstration of an AI-driven work /uniFB02 ow for autonomous high-resolution scanning microscopy
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2226 chars, 316 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Fine-resolution large/uniFB01 eld-ofview scanning experiments, however, come with some signi /uniFB01 cant drawbacks: the volume of data generated and the probe-induced damagetothesamplecanbeprohibitively large. For example, it is now routinely possible to perform X-ray imaging of 1 mm 3 volumes at ≈ 10 nm resolution, but this generates ≈ 10 15 voxels of data 7,8 and requires a commensurately high probe dose 9 . Meanwhile, the information of interest in these experiments is often concentrated in sparse regions that contain interfaces, defects, or other speci /uniFB01 c structural elements. Directing the scan to only these locations could greatly reduce the scan time and data volume, but it is dif /uniFB01 cult to obtain this information a priori. Addressing this challenge with a human-in-theloop protocol, where an experienced user examines the data acquired to identify trends and guide the scan, can be tedious and prohibitively time-consuming (in comparison to the experimental acquisition time). Given these factors, the development of autonomous acquisition techniques that can continuously analyze acquired data and drive the sampling speci /uniFB01 cally toward regions of interest is imperative so as to make full use of the potential of these scienti /uniFB01 c instruments. 1 Advanced Photon Source, Argonne National Laboratory, Lemont, IL 60439, USA. 2 Nanoscience and Technology Division, Argonne National Laboratory, Lemont,IL60439,USA. 3 KLA Corporation, Ann Arbor, MI 48105, USA. 4 Mathematics and Computer Science, Argonne National Laboratory, Lemont, IL 60439, USA. 5 Consortium for Advanced Science and Engineering, University of Chicago, Chicago, Illinois 60637, USA. 6 Materials Science Division, Argonne National Laboratory, Lemont, IL 60439, USA. e-mail: skandel@anl.gov; mcherukara@anl.gov Nature Communications|         (2023) 14:5501 1 Article https://doi.org/10.1038/s41467-023-40339-1 In parallel to the advances in scienti /uniFB01 c instrumentation, the last decade has also seen the rapid development of deep learning (DL) techniques and their applications in all domains of science and technology, including for the acceleration and enhancement of advanced microscopy methods 10 -13 .
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Fine-resolution large/uniFB01 eld-ofview scanning experiments, however, come with some signi /uniFB01 cant drawbacks: the volume of data generated and the probe-induced damagetothesamplecanbeprohibitively large. For example, it is now routinely possible to perform X-ray imaging of 1 mm 3 volumes at ≈ 10 nm resolution, but this generates ≈ 10 15 voxels of data 7,8 and requires a commensurately high probe dose 9 . Meanwhile, the information of interest in these experiments is often concentrated in sparse regions that contain interfaces, defects, or other speci /uniFB01 c structural elements. Directing the scan to only these locations could greatly reduce the scan time and data volume, but it is dif /uniFB01 cult to obtain this information a priori. Addressing this challenge with a human-in-theloop protocol, where an experienced user examines the data acquired to identify trends and guide the scan, can be tedious and prohibitively time-consuming (in comparison to the experimental acquisition time). Given these factors, the development of autonomous acquisition techniques that can continuously analyze acquired data and drive the sampling speci /uniFB01 cally toward regions of interest is imperative so as to make full use of the potential of these scienti /uniFB01 c instruments.
+1 Advanced Photon Source, Argonne National Laboratory, Lemont, IL 60439, USA. 2 Nanoscience and Technology Division, Argonne National Laboratory, Lemont,IL60439,USA. 3 KLA Corporation, Ann Arbor, MI 48105, USA. 4 Mathematics and Computer Science, Argonne National Laboratory, Lemont, IL 60439, USA. 5 Consortium for Advanced Science and Engineering, University of Chicago, Chicago, Illinois 60637, USA. 6 Materials Science Division, Argonne National Laboratory, Lemont, IL 60439, USA. e-mail: skandel@anl.gov; mcherukara@anl.gov
+Nature Communications|         (2023) 14:5501
+1
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+In parallel to the advances in scienti /uniFB01 c instrumentation, the last decade has also seen the rapid development of deep learning (DL) techniques and their applications in all domains of science and technology, including for the acceleration and enhancement of advanced microscopy methods 10 -13 .
+
+====================================================================================================
+CHUNK 3 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Demonstration_of_an_AI-driven__part2
+Section:      Demonstration of an AI-driven work /uniFB02 ow for autonomous high-resolution scanning microscopy
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2242 chars, 329 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+These DL-based inversion methods are enabling real-time data analysis, which is, in turn, opening the door to self-driving techniques that make real-time acquisition decisions based on real-time data streams. Such self-driving or autonomous experimentation methods 14 are methods that combine automated experimental control with on-the/uniFB02 y data-driven decision-making so that an algorithm adaptively explores parameter spaces of interest and conducts new experiments until it achieves a pre-de /uniFB01 ned completion criterion 15 . These methods therefore have the potential to not only remove the need for constant human supervision and intervention in experiments but also make optimal choices in parameter spaces that are too large for humans to easily contextualize. As such, they have the potentialto revolutionize experimentaldesign in many scienti /uniFB01 c /uniFB01 elds, including the /uniFB01 eld of imaging and materials characterization. In general, the use of data-driven priors to direct future experiments is a Bayesian search problem, for which the use of off-the-shelf deeplearning methods usually do not suf /uniFB01 ce 16 . Speci /uniFB01 c to microscopy, a popular Bayesian search approach is to use unsupervised (without pre-training) Gaussian Processes (GPs) that could continuously determine the spatial locations that we are most uncertain about, then direct the scanning to these locations 17 -22 . While GPs are powerful techniques, their computational cost tends to scale cubically with the numberofpointsacquired.Thedecision-making time increases during the experiment and quickly exceeds the acquisition time for the measurement itself. The development of scalable GPs is a signi /uniFB01 cant area of research, but these methods are not yet ready for application in large-scale imaging problems 23 . General supervised alternatives such as reinforcement learning can be powerful and fast, but they often require costly pre-training and tend to ignore the global state of the Fig. 1 | Artist ' s representation of the autonomous dark/uniFB01 eld scanning microscopy experiment at the Advanced Photon Source (APS). The APS synchrotron producesa coherent X-ray beam that is focused using a zone plate setup.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+These DL-based inversion methods are enabling real-time data analysis, which is, in turn, opening the door to self-driving techniques that make real-time acquisition decisions based on real-time data streams. Such self-driving or autonomous experimentation methods 14 are methods that combine automated experimental control with on-the/uniFB02 y data-driven decision-making so that an algorithm adaptively explores parameter spaces of interest and conducts new experiments until it achieves a pre-de /uniFB01 ned completion criterion 15 . These methods therefore have the potential to not only remove the need for constant human supervision and intervention in experiments but also make optimal choices in parameter spaces that are too large for humans to easily contextualize. As such, they have the potentialto revolutionize experimentaldesign in many scienti /uniFB01 c /uniFB01 elds, including the /uniFB01 eld of imaging and materials characterization.
+In general, the use of data-driven priors to direct future experiments is a Bayesian search problem, for which the use of off-the-shelf deeplearning methods usually do not suf /uniFB01 ce 16 . Speci /uniFB01 c to microscopy, a popular Bayesian search approach is to use unsupervised (without pre-training) Gaussian Processes (GPs) that could continuously determine the spatial locations that we are most uncertain about, then direct the scanning to these locations 17 -22 . While GPs are powerful techniques, their computational cost tends to scale cubically with the numberofpointsacquired.Thedecision-making time increases during the experiment and quickly exceeds the acquisition time for the measurement itself. The development of scalable GPs is a signi /uniFB01 cant area of research, but these methods are not yet ready for application in large-scale imaging problems 23 . General supervised alternatives such as reinforcement learning can be powerful and fast, but they often require costly pre-training and tend to ignore the global state of the
+Fig. 1 | Artist ' s representation of the autonomous dark/uniFB01 eld scanning microscopy experiment at the Advanced Photon Source (APS). The APS synchrotron producesa coherent X-ray beam that is focused using a zone plate setup.
+
+====================================================================================================
+CHUNK 4 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Demonstration_of_an_AI-driven__part3
+Section:      Demonstration of an AI-driven work /uniFB02 ow for autonomous high-resolution scanning microscopy
+Chunk Index:  3
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1978 chars, 297 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+It strikes a WSe2 /uniFB01 lm (green) exfoliated onto a Si substrate (blue), which generates diffraction patterns that are collected by a two-dimensional detector. Above the bubbles, the lattice of the /uniFB01 lm rotates, shifting the diffracted intensities away from its nominal positions. The beam position, as well as the detector acquisition, are autonomously controlled by the FAST AI-based work /uniFB02 ow. Image by Argonne National Laboratory. parameter space in exchange for a local search; as such, they have only found limited traction for scanning imaging modalities 24 . Speci /uniFB01 cally for scanning microscopy applications, Godaliyadda et al. 25 have proposed to achieve computationally ef /uniFB01 cient autonomous sampling with the Supervised Learning Approach for Dynamic Sampling (SLADS) technique. The SLADS technique uses curated feature maps to quantify the current measurement state and predict the total image quality improvement obtained by measuring a given point, thereby informing the choice of which point to measure next. Variations of this technique have found applications in live steering for dose-ef /uniFB01 cient crystal positioning for crystallography 26 and for imaging with transmission electron microscopy 27 and mass spectrometry 28 methods. These works, however, either involve training with and reconstruction of binary images only 26,27 or require extensive training with images closely related to the sample under study 28 . As such, they are dif /uniFB01 cult to translate to imaging settings with more complex images, particularly for imaging without any prior assumptions about the sample. Meanwhile, Zhang et al. 29 have incorporated a neural network (NN)within the SLADS method (for the SLADS-Net method) and shown in numerical experiments that it is suf /uniFB01 cient to train the method on only a generic image, eschewing any prior knowledge about the sample, to produce a high/uniFB01 delity image with sparse sampling.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+It strikes a WSe2 /uniFB01 lm (green) exfoliated onto a Si substrate (blue), which generates diffraction patterns that are collected by a two-dimensional detector. Above the bubbles, the lattice of the /uniFB01 lm rotates, shifting the diffracted intensities away from its nominal positions. The beam position, as well as the detector acquisition, are autonomously controlled by the FAST AI-based work /uniFB02 ow. Image by Argonne National Laboratory.
+parameter space in exchange for a local search; as such, they have only found limited traction for scanning imaging modalities 24 .
+Speci /uniFB01 cally for scanning microscopy applications, Godaliyadda et al. 25 have proposed to achieve computationally ef /uniFB01 cient autonomous sampling with the Supervised Learning Approach for Dynamic Sampling (SLADS) technique. The SLADS technique uses curated feature maps to quantify the current measurement state and predict the total image quality improvement obtained by measuring a given point, thereby informing the choice of which point to measure next. Variations of this technique have found applications in live steering for dose-ef /uniFB01 cient crystal positioning for crystallography 26 and for imaging with transmission electron microscopy 27 and mass spectrometry 28 methods. These works, however, either involve training with and reconstruction of binary images only 26,27 or require extensive training with images closely related to the sample under study 28 . As such, they are dif /uniFB01 cult to translate to imaging settings with more complex images, particularly for imaging without any prior assumptions about the sample. Meanwhile, Zhang et al. 29 have incorporated a neural network (NN)within the SLADS method (for the SLADS-Net method) and shown in numerical experiments that it is suf /uniFB01 cient to train the method on only a generic image, eschewing any prior knowledge about the sample, to produce a high/uniFB01 delity image with sparse sampling.
+
+====================================================================================================
+CHUNK 5 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Demonstration_of_an_AI-driven__part4
+Section:      Demonstration of an AI-driven work /uniFB02 ow for autonomous high-resolution scanning microscopy
+Chunk Index:  4
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2237 chars, 331 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+However, this has not yet been demonstrated in experiment. In this work, we report the F ast A utonomous S canning T oolkit (FAST) that combines the SLADS-Net method, a route optimization technique, and ef /uniFB01 cient and modular hardware controls to make onthe/uniFB02 y sampling and scan path choices for synchrotron-based scanning microscopy. This method relies on sample-agnostic training to dynamically measure and reconstruct a complicated (non-binary) sample, distinguishing this toolkit from existing SLADS-based work/uniFB02 ows. Moreover, its computational cost is negligible compared to the acquisition time, even when run on a low-power edge computing device placed at a synchrotron beamline, which presents a signi /uniFB01 cant advantage over more generic autonomous experimentation techniques. These characteristics enable the application of our work /uniFB02 ow in the high-precision nanoscale scanning X-ray microscopy instrument present at the hard X-ray nanoprobe beamline at the Advanced Photon Source. Wevalidate the FAST scheme through real-time demonstration at the hard X-ray nanoprobe beamline at the APS 30 . A few-layer exfoliated two-dimensional WSe2 thin /uniFB01 lm was chosen as a representative example; the preparation process for the thin /uniFB01 lm often leaves microscopic air bubbles trapped underneath the thin /uniFB01 lm, deforming the 2D material. We show that an adaptive scan of <25% of the sample is suf /uniFB01 cient to produce a high/uniFB01 delity reconstruction that identi /uniFB01 es all the bubbles within the /uniFB01 eld of view and even to acquire quantitative information about the /uniFB01 lm curvature induced by these bubbles. The scheme quickly identi /uniFB01 es the deformed part of the 2D material and focuses its attention there while ignoring regions of the /uniFB01 lm that are /uniFB02 at and homogeneous. Film curvature reconstructed from the adaptive scan (<25% coverage) is consistent with that reconstructed from the full-grid scan (100% coverage). Given these characteristics, the FAST scheme can be directly applied in other scanning techniques and instruments at the APS and elsewhere and may underpin the development of many multi-level experimental studies.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+However, this has not yet been demonstrated in experiment.
+In this work, we report the F ast A utonomous S canning T oolkit (FAST) that combines the SLADS-Net method, a route optimization technique, and ef /uniFB01 cient and modular hardware controls to make onthe/uniFB02 y sampling and scan path choices for synchrotron-based scanning microscopy. This method relies on sample-agnostic training to dynamically measure and reconstruct a complicated (non-binary) sample, distinguishing this toolkit from existing SLADS-based work/uniFB02 ows. Moreover, its computational cost is negligible compared to the acquisition time, even when run on a low-power edge computing device placed at a synchrotron beamline, which presents a signi /uniFB01 cant advantage over more generic autonomous experimentation techniques. These characteristics enable the application of our work /uniFB02 ow in the high-precision nanoscale scanning X-ray microscopy instrument present at the hard X-ray nanoprobe beamline at the Advanced Photon Source.
+Wevalidate the FAST scheme through real-time demonstration at the hard X-ray nanoprobe beamline at the APS 30 . A few-layer exfoliated two-dimensional WSe2 thin /uniFB01 lm was chosen as a representative example; the preparation process for the thin /uniFB01 lm often leaves microscopic air bubbles trapped underneath the thin /uniFB01 lm, deforming the 2D material. We show that an adaptive scan of <25% of the sample is suf /uniFB01 cient to produce a high/uniFB01 delity reconstruction that identi /uniFB01 es all the bubbles within the /uniFB01 eld of view and even to acquire quantitative information about the /uniFB01 lm curvature induced by these bubbles. The scheme quickly identi /uniFB01 es the deformed part of the 2D material and focuses its attention there while ignoring regions of the /uniFB01 lm that are /uniFB02 at and homogeneous. Film curvature reconstructed from the adaptive scan (<25% coverage) is consistent with that reconstructed from the full-grid scan (100% coverage). Given these characteristics, the FAST scheme can be directly applied in other scanning techniques and instruments at the APS and elsewhere and may underpin the development of many multi-level experimental studies.
+
+====================================================================================================
+CHUNK 6 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Results
+Section:      Results
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1494 chars, 230 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Figure 1 shows the experimental setup that scans a focused X-ray beam on a sample while acquiring a two-dimensional diffraction image at eachpoint. The live demonstration was performed on a few-layer WSe2 sample with the detector placed along the 008 Bragg peak, with 2 θ =43. 1° at 10.4 keV. The diffraction patterns were processed on the detector computer (see ' Methods ' ) to generate the integrated intensities for use in the FAST work /uniFB02 ow. The /uniFB01 nal output of the work /uniFB02 owisa dark/uniFB01 eld image of the WSe2 sample. Nature Communications|         (2023) 14:5501 2 Article https://doi.org/10.1038/s41467-023-40339-1 Fig. 2 | The FAST work /uniFB02 ow. A A set of quasi-random initial measurements are transferred to the edge device, which sequentially generates an initial sample estimate, computes the candidate points to be measured next, and calculates the travel path for the measurement. The new measurements are combined with the existing measurements and used to calculate a new estimate, and the process is repeated until it achieves a completion criterion. B The candidate computation starts by examining the local neighborhood (with radius r ) of each unmeasured NEWMEASUREMENT A FINAL RESULT NEWESTIMATION AI EDGE OPTIMIZINGPATH INITIALMEASUREMENTS INITIALESTIMATION COMPUTINGCANDIDATES B Spatial grads 02,r Std.devs 5hiddenlayers L,pr Dens. of meas. inputs 50 nodes per layer U1 Generate U1 output ERD Features 01,r RBF U2 U2 02,r kernel L U50] U50 pr
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Figure 1 shows the experimental setup that scans a focused X-ray beam on a sample while acquiring a two-dimensional diffraction image at eachpoint. The live demonstration was performed on a few-layer WSe2 sample with the detector placed along the 008 Bragg peak, with 2 θ =43. 1° at 10.4 keV. The diffraction patterns were processed on the detector computer (see ' Methods ' ) to generate the integrated intensities for use in the FAST work /uniFB02 ow. The /uniFB01 nal output of the work /uniFB02 owisa dark/uniFB01 eld image of the WSe2 sample.
+Nature Communications|         (2023) 14:5501
+2
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+Fig. 2 | The FAST work /uniFB02 ow. A A set of quasi-random initial measurements are transferred to the edge device, which sequentially generates an initial sample estimate, computes the candidate points to be measured next, and calculates the travel path for the measurement. The new measurements are combined with the existing measurements and used to calculate a new estimate, and the process is repeated until it achieves a completion criterion. B The candidate computation starts by examining the local neighborhood (with radius r ) of each unmeasured
+NEWMEASUREMENT
+A
+FINAL RESULT
+NEWESTIMATION
+AI
+EDGE
+OPTIMIZINGPATH
+INITIALMEASUREMENTS
+INITIALESTIMATION
+COMPUTINGCANDIDATES
+B
+Spatial grads
+02,r
+Std.devs
+5hiddenlayers
+L,pr
+Dens. of meas.
+inputs
+50 nodes per layer
+U1
+Generate
+U1
+output
+ERD
+Features
+01,r
+RBF
+U2
+U2
+02,r
+kernel
+L
+U50]
+U50
+pr
+
+====================================================================================================
+CHUNK 7 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part0
+Section:      Self-driving scanning microscopy work /uniFB02 ow
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2156 chars, 327 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Figure 2A broadly illustrates the FAST work /uniFB02 ow for the experiments reported here. To initiate the work /uniFB02 ow, a low-discrepancy quasi-random selection (generated using the Hammersely sequence 31 ) of sample position is measured corresponding to 1% of the total area of interest. The integrated intensities of the measurements are transferred to the edge device, an NVIDIA Jetson Xavier AGX located adjacent to the detector, which uses Inverse Distance Weighted (IDW) interpolation to estimate the dark/uniFB01 eld image. The estimated image serves as input for the decision-making step whereby the prospective measurement points are identi /uniFB01 ed. This self-driving work /uniFB02 ow adopts the Supervised Learning Approach for Dynamic Sampling using Deep Neural Networks (SLADSNet) algorithm 29 to /uniFB01 ndtheprospective measurement points. In effect, the SLADS-Net algorithm uses the current measurements to identify the best unmeasured points that, when added to the existing dataset, would have the greatest effect on the quality of the reconstructed image. As illustrated in Fig. 2B, this is accomplished by, /uniFB01 rst, representing each unmeasured point as a feature vector with elements that depend on the measurement state in the neighborhood of the point. These feature vectors are used as input for a pre-trained neural network with 5 hidden layers, with 50 nodes per layer, and with the ReLU activation function. The neural network then predicts the expected reduction in distortion (ERD), a metric (loosely speaking) for the point P , with the highlighted points indicating points already measured, to generate a 6-dimensional feature vector. The feature vector is transformed to a 50dimensional vector using the Radial Basis Function (RBF) kernel and used as input to a multi-layer NN. The NN then predicts the expected improvement in the image (ERD) from measuring the point P . A set of unmeasured pixels with the highest ERD are selected as candidates for the next measurement. expected improvement in the reconstruction quality obtained from measuring this unmeasured point, individually for each unmeasured point.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Figure 2A broadly illustrates the FAST work /uniFB02 ow for the experiments reported here. To initiate the work /uniFB02 ow, a low-discrepancy quasi-random selection (generated using the Hammersely sequence 31 ) of sample position is measured corresponding to 1% of the total area of interest. The integrated intensities of the measurements are transferred to the edge device, an NVIDIA Jetson Xavier AGX located adjacent to the detector, which uses Inverse Distance Weighted (IDW) interpolation to estimate the dark/uniFB01 eld image. The estimated image serves as input for the decision-making step whereby the prospective measurement points are identi /uniFB01 ed.
+This self-driving work /uniFB02 ow adopts the Supervised Learning Approach for Dynamic Sampling using Deep Neural Networks (SLADSNet) algorithm 29 to /uniFB01 ndtheprospective measurement points. In effect, the SLADS-Net algorithm uses the current measurements to identify the best unmeasured points that, when added to the existing dataset, would have the greatest effect on the quality of the reconstructed image. As illustrated in Fig. 2B, this is accomplished by, /uniFB01 rst, representing each unmeasured point as a feature vector with elements that depend on the measurement state in the neighborhood of the point. These feature vectors are used as input for a pre-trained neural network with 5 hidden layers, with 50 nodes per layer, and with the ReLU activation function. The neural network then predicts the expected reduction in distortion (ERD), a metric (loosely speaking) for the
+point P , with the highlighted points indicating points already measured, to generate a 6-dimensional feature vector. The feature vector is transformed to a 50dimensional vector using the Radial Basis Function (RBF) kernel and used as input to a multi-layer NN. The NN then predicts the expected improvement in the image (ERD) from measuring the point P . A set of unmeasured pixels with the highest ERD are selected as candidates for the next measurement.
+expected improvement in the reconstruction quality obtained from measuring this unmeasured point, individually for each unmeasured point.
+
+====================================================================================================
+CHUNK 8 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1
+Section:      Self-driving scanning microscopy work /uniFB02 ow
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1870 chars, 293 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The original SLADS-Net algorithm simply uses the unmeasured point with the highest ERD for the next measurement and repeats this procedure pointwise. In practice, if the measurement procedure and the motor movements are fast, then the ERD calculation also has to be commensurately fast to reduce the dead-time in the experiment. In this work, we mitigate this requirement by instead selecting a batch of points that have the highest ERD, sorted in descending order -we found that a batch of 50 points adequately minimized the experimental dead-time while still ensuring that the overall measurement was adequately sparse. The coordinates of these 50 points are passed on to a route optimization algorithm based on Google ' s OR-Tools 32 to generate the shortest path for the motors to visit all of them. This path is appended to the look-up table in the EPICS 33 scan record, which then kicks off the data acquisition. Henceforth, the scan is automatically paused after every 50 points, raising a /uniFB02 agthattriggers a callback function on the edge device. There, a new estimated dark /uniFB01 eld image of the sample is generated, and the coordinates for the next 50 prospective points are computed. The scan is resumed after the EPICS scan record receives the new coordinates for the optimized scanning path. The actual scanning of the focused X-ray beam is achieved by moving two piezoelectric linear translation motors in step mode. Nature Communications|         (2023) 14:5501 3 Article https://doi.org/10.1038/s41467-023-40339-1 Fig. 3 | Numerical comparison of sampling methods. A shows the ground truth with the color scale representing the normalized intensity, B -D show respectively the raster grid (RG), low-discrepancy random (LDR), and FAST reconstructions at 10% scan coverage, and G -I show the actual scan points that produce these reconstructions.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The original SLADS-Net algorithm simply uses the unmeasured point with the highest ERD for the next measurement and repeats this procedure pointwise. In practice, if the measurement procedure and the motor movements are fast, then the ERD calculation also has to be commensurately fast to reduce the dead-time in the experiment. In this work, we mitigate this requirement by instead selecting a batch of points that have the highest ERD, sorted in descending order -we found that a batch of 50 points adequately minimized the experimental dead-time while still ensuring that the overall measurement was adequately sparse.
+The coordinates of these 50 points are passed on to a route optimization algorithm based on Google ' s OR-Tools 32 to generate the shortest path for the motors to visit all of them. This path is appended to the look-up table in the EPICS 33 scan record, which then kicks off the data acquisition. Henceforth, the scan is automatically paused after every 50 points, raising a /uniFB02 agthattriggers a callback function on the edge device. There, a new estimated dark /uniFB01 eld image of the sample is generated, and the coordinates for the next 50 prospective points are computed. The scan is resumed after the EPICS scan record receives the new coordinates for the optimized scanning path. The actual scanning of the focused X-ray beam is achieved by moving two piezoelectric linear translation motors in step mode.
+Nature Communications|         (2023) 14:5501
+3
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+Fig. 3 | Numerical comparison of sampling methods. A shows the ground truth with the color scale representing the normalized intensity, B -D show respectively the raster grid (RG), low-discrepancy random (LDR), and FAST reconstructions at 10% scan coverage, and G -I show the actual scan points that produce these reconstructions.
+
+====================================================================================================
+CHUNK 9 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part2
+Section:      Self-driving scanning microscopy work /uniFB02 ow
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1514 chars, 270 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+E , F show the evolution of the normalized root mean square error 1.0 A B Reconstructions (10% scan 0.8 True 0.6 0.4 0.2 150μm 0.0 Raster grid (RG) LD random (LDR) FAST 0.5 0.4 E :27% LDR UR G NRMSE 0.3 RG FAST 0.2 Measured points 0.1 0.0 1.0 SSIM 0.9 0.8 0 20 40 60 80 100 Scancoverage(%) The detector exposure time is set to 0.5 s and comes with an overhead of 0.2 s. For the 200 × 40 pixels object described in ' Results: Experimental demonstration ' , the work /uniFB02 ow required ≈ 0.15 s to compute the new positions, ≈ 42 s to scan the set of 50 positions, and a total of ≈ 0.37 s to process the diffraction patterns and communicate the measurements. This represents an overhead of ⪅ 2%. The work /uniFB02 owis currently entirely CPU-bound, relying on the on-board 8-core ARM CPUs, and does not take advantage of the GPU bundled into the NVIDIA AGX device. These timing results showcase the rapid data-driven decision-making ability that is characteristic of the FAST work /uniFB02 ow. In the future, we expect to perform the computation in a parallelized and asynchronous fashion, which would further reduce this overhead. We also note that, for all the results reported in this work, the underlying NN was trained on the standard ' cameraman ' 34 image that has no relation to microscopy, and we discuss the choice of a training image in Supplementary Information S.2. For details about the SLADSNet algorithm and the sample-agnostic training procedure, the reader is referred to the ' Methods ' section.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+E , F show the evolution of the normalized root mean square error
+1.0
+A
+B
+Reconstructions (10% scan
+0.8
+True
+0.6
+0.4
+0.2
+150μm
+0.0
+Raster grid (RG)
+LD random (LDR)
+FAST
+0.5
+0.4
+E
+:27%
+LDR
+UR
+G
+NRMSE
+0.3
+RG
+FAST
+0.2
+Measured points
+0.1
+0.0
+1.0
+SSIM
+0.9
+0.8
+0
+20
+40
+60
+80
+100
+Scancoverage(%)
+The detector exposure time is set to 0.5 s and comes with an overhead of 0.2 s.
+For the 200 × 40 pixels object described in ' Results: Experimental demonstration ' , the work /uniFB02 ow required ≈ 0.15 s to compute the new positions, ≈ 42 s to scan the set of 50 positions, and a total of ≈ 0.37 s to process the diffraction patterns and communicate the measurements. This represents an overhead of ⪅ 2%. The work /uniFB02 owis currently entirely CPU-bound, relying on the on-board 8-core ARM CPUs, and does not take advantage of the GPU bundled into the NVIDIA AGX device. These timing results showcase the rapid data-driven decision-making ability that is characteristic of the FAST work /uniFB02 ow. In the future, we expect to perform the computation in a parallelized and asynchronous fashion, which would further reduce this overhead.
+We also note that, for all the results reported in this work, the underlying NN was trained on the standard ' cameraman ' 34 image that has no relation to microscopy, and we discuss the choice of a training image in Supplementary Information S.2. For details about the SLADSNet algorithm and the sample-agnostic training procedure, the reader is referred to the ' Methods ' section.
+
+====================================================================================================
+CHUNK 10 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Numerical_demonstration_for_sc_part0
+Section:      Numerical demonstration for scanning dark/uniFB01 eld microscopy
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2263 chars, 349 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+We /uniFB01 rst validated the performance of the proposed work /uniFB02 owthrough a numerical experiment on a set of pre-acquired dark/uniFB01 eld microscopy data. Here, we compared the FAST sampling with three static sampling techniques: Raster grid (RG): For a test sampling percentage, we generated an equally spaced raster grid that provides a uniform coverage of the sample. (NRMSE), for which lower is better, and the Structural Similarity metric (SSIM), for which higher is better, as a function of the scan coverage. The FAST reconstruction stabilizes at 27% coverage, while the other techniques take signi /uniFB01 cantly longer to reach the same quality. Source data are provided as a Source Data /uniFB01 le. Uniform random (UR) sampling: The measurement pixels were drawn from a uniform random distribution. Low-discrepancy (LDR) quasi-random sampling: For each measurement percentage, we generated a low-discrepancy sampling grid using the quasi-random Hammersly sequence. The test dataset is a dark /uniFB01 eld image of size 600 × 400 pixels which represents 240,000 possible measurement positions. This covers a physical area of 900 × 600 μ mandencloses multiple /uniFB02 akes of WSe2 with various thicknesses, with the thicker regions associated with regions of higher brightness in the image (Fig. 3). At this spatial resolution, only medium and large-sized bubbles (with diameter >2 μ m) can be observed. As explained previously, the bubbles deform the surface and shift the Bragg peak of the 2D materials away from their theoretical ( /uniFB02 at region) positions, resulting in regions of darker contrast. Finally, the image also contains /uniFB02 ake-free regions that have zero integrated intensities. For this comparison, we /uniFB01 rst initialized the FAST sampling with a 1% measurement coverage (as described above), then successively measured 50 additional points at every iteration. For each FAST measurement, we also generate RG, UR, and LDR measurement masks with the same number of scan points. In this fashion, we generate a sequence of sampling masks and the associated reconstructions until we achieve 100% sampling. We present the numerical results in Fig. 3, where we show a comparison of the various methods at 10% sampling.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+We /uniFB01 rst validated the performance of the proposed work /uniFB02 owthrough a numerical experiment on a set of pre-acquired dark/uniFB01 eld microscopy data. Here, we compared the FAST sampling with three static sampling techniques:
+Raster grid (RG): For a test sampling percentage, we generated an equally spaced raster grid that provides a uniform coverage of the sample.
+(NRMSE), for which lower is better, and the Structural Similarity metric (SSIM), for which higher is better, as a function of the scan coverage. The FAST reconstruction stabilizes at 27% coverage, while the other techniques take signi /uniFB01 cantly longer to reach the same quality. Source data are provided as a Source Data /uniFB01 le.
+Uniform random (UR) sampling: The measurement pixels were drawn from a uniform random distribution.
+Low-discrepancy (LDR) quasi-random sampling: For each measurement percentage, we generated a low-discrepancy sampling grid using the quasi-random Hammersly sequence.
+The test dataset is a dark /uniFB01 eld image of size 600 × 400 pixels which represents 240,000 possible measurement positions. This covers a physical area of 900 × 600 μ mandencloses multiple /uniFB02 akes of WSe2 with various thicknesses, with the thicker regions associated with regions of higher brightness in the image (Fig. 3). At this spatial resolution, only medium and large-sized bubbles (with diameter >2 μ m) can be observed. As explained previously, the bubbles deform the surface and shift the Bragg peak of the 2D materials away from their theoretical ( /uniFB02 at region) positions, resulting in regions of darker contrast. Finally, the image also contains /uniFB02 ake-free regions that have zero integrated intensities.
+For this comparison, we /uniFB01 rst initialized the FAST sampling with a 1% measurement coverage (as described above), then successively measured 50 additional points at every iteration. For each FAST measurement, we also generate RG, UR, and LDR measurement masks with the same number of scan points. In this fashion, we generate a sequence of sampling masks and the associated reconstructions until we achieve 100% sampling.
+We present the numerical results in Fig. 3, where we show a comparison of the various methods at 10% sampling.
+
+====================================================================================================
+CHUNK 11 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Numerical_demonstration_for_sc_part1
+Section:      Numerical demonstration for scanning dark/uniFB01 eld microscopy
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         501 chars, 75 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Note that while the proposed method internally uses the fast IDW algorithm for the inpainting, the /uniFB01 nal images presented here are calculated using the Nature Communications|         (2023) 14:5501 4 Article https://doi.org/10.1038/s41467-023-40339-1 Fig. 4 | Evolution of the FAST scan. A , C , E showthe reconstruction at 5%, 15%, and 20% reconstructions, respectively, B , D , F show the corresponding actual measurement points. G shows the image obtained through a full-grid pointwise scan.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Note that while the proposed method internally uses the fast IDW algorithm for the inpainting, the /uniFB01 nal images presented here are calculated using the
+Nature Communications|         (2023) 14:5501
+4
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+Fig. 4 | Evolution of the FAST scan. A , C , E showthe reconstruction at 5%, 15%, and 20% reconstructions, respectively, B , D , F show the corresponding actual measurement points. G shows the image obtained through a full-grid pointwise scan.
+
+====================================================================================================
+CHUNK 12 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#FASTreconstructions
+Section:      FASTreconstructions
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1614 chars, 250 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Measuredpoints A 0.3 0.3 0.2 0.2 0.1 0.1 5% 0.0 0.0 C 0.3 0.3 0.2 0.2 0.1 0.1 15% 15% 0.0 0.0 E 0.3 0.3 0.2 0.2 0.1 0.1 20% 20% 0.0 0.0 Fullscanimage Measurementsbetween15-20% G μm 0.3 0.3 0.2 0.2 0.1 0.1 0.0 0.0 higher-quality biharmonic inpainting technique 35 . The uniform random scheme performs worse than the LDR and raster grid schemes and is not shown in the /uniFB01 gure. In Fig. 3A -D, we can see that the FAST sampling is able to reproduce with high /uniFB01 delity the /uniFB02 ake boundaries, the bubbles, and the regions of transition between the varying levels of thicknesses. In contrast, the LDR and raster schemes produce much lower-quality reconstructions of these features. Figure 3E shows an evolution of the normalized root mean squared error (NRMSE), and Fig. 3F the structural similarity metric (SSIM) (which measures multiscale perceptual similarity) for the different sampling techniques. It is evident that FAST produces high-quality reconstructions at much lower measurement percentages than the examined static sampling techniques. We note that the result could be further improved in the future by using a more sophisticated inpainting technique within the FAST method. To understand how FAST outperforms the other methods under the same sampling condition, we show the actual measuredpositions of the various schemes at 10% coverage (Fig. 3G -I). FAST preferentially samples the regions with signi /uniFB01 cant heterogeneity over the homogeneous regions. This is particularly useful for sparse samples,wherethetimespentsamplingfrom empty regions adds little additional information.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Measuredpoints
+A
+0.3
+0.3
+0.2
+0.2
+0.1
+0.1
+5%
+0.0
+0.0
+C
+0.3
+0.3
+0.2
+0.2
+0.1
+0.1
+15%
+15%
+0.0
+0.0
+E
+0.3
+0.3
+0.2
+0.2
+0.1
+0.1
+20%
+20%
+0.0
+0.0
+Fullscanimage
+Measurementsbetween15-20%
+G
+μm
+0.3
+0.3
+0.2
+0.2
+0.1
+0.1
+0.0
+0.0
+higher-quality biharmonic inpainting technique 35 . The uniform random scheme performs worse than the LDR and raster grid schemes and is not shown in the /uniFB01 gure. In Fig. 3A -D, we can see that the FAST sampling is able to reproduce with high /uniFB01 delity the /uniFB02 ake boundaries, the bubbles, and the regions of transition between the varying levels of thicknesses. In contrast, the LDR and raster schemes produce much lower-quality reconstructions of these features. Figure 3E shows an evolution of the normalized root mean squared error (NRMSE), and Fig. 3F the structural similarity metric (SSIM) (which measures multiscale perceptual similarity) for the different sampling techniques. It is evident that FAST produces high-quality reconstructions at much lower measurement percentages than the examined static sampling techniques. We note that the result could be further improved in the future by using a more sophisticated inpainting technique within the FAST method. To understand how FAST outperforms the other methods under the same sampling condition, we show the actual measuredpositions of the various schemes at 10% coverage (Fig. 3G -I). FAST preferentially samples the regions with signi /uniFB01 cant heterogeneity over the homogeneous regions. This is particularly useful for sparse samples,wherethetimespentsamplingfrom empty regions adds little additional information.
+
+====================================================================================================
+CHUNK 13 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Experimental_demonstration_part0
+Section:      Experimental demonstration
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2095 chars, 357 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+We next demonstrate the application of the FAST work /uniFB02 ow in a live experiment at a synchrotron beamline. A video showing the sampling, recorded live during the actual experiment, is available here 36 . Other than starting the work /uniFB02 ow scripts at the beginning, the entire experiment was unmanned and fully automated. In order to measure the deformed WSe2 /uniFB02 akes in detail, a higher spatial resolution of 100 nm was chosen. This limits the /uniFB01 eld of view to 20 × 4 μ mfor a scan point density of 200 × 40 points. In Fig. 4, we show the reconstructed dark /uniFB01 eld image (subplots A, C, E) and the measurement points (subplots B, D, F) from 5 to 20% coverage and compare them to that obtained from raster scanning the sample with 100% coverage (subplot G). We see that the FAST method identi /uniFB01 es some of the regions of heterogeneity -the edges of the bubbles -and starts to preferentially sample these regions within 5% coverage of the sample. At 15% coverage, these regions are extensively sampled. The reconstruction does not change signi /uniFB01 cantly between The color scale in ( A -G ) shows the normalized intensities. H shows only the points sampled between 15 and 20% coverage. 15 and 20%, indicating that the reconstruction has stabilized. Moreover, the 20% reconstruction also contains sharp and accurate reproductions of all the major features present in the full scan image. A point of interest is that the partially scanned bubble at the bottom right corners of Fig. 4E -G shows up only in the 20% scan and not in the 15% scan. To explain this, we note that the 5% scan, and therefore the initial 1% quasi-random sampling, does not contain any measurements in the neighborhood of this bubble. The FAST scheme favors the exploitation of regions it knows to be heterogeneous over the exploration of this fully unknown region and therefore only explores this region much later in the measurement process (Fig. 4H). This is, in fact, an instance of the general exploration-exploitation tradeoff that exists in all Bayesian search procedures 37 .
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+We next demonstrate the application of the FAST work /uniFB02 ow in a live experiment at a synchrotron beamline. A video showing the sampling, recorded live during the actual experiment, is available here 36 . Other than starting the work /uniFB02 ow scripts at the beginning, the entire experiment was unmanned and fully automated. In order to measure the deformed WSe2 /uniFB02 akes in detail, a higher spatial resolution of 100 nm was chosen. This limits the /uniFB01 eld of view to 20 × 4 μ mfor a scan point density of 200 × 40 points.
+In Fig. 4, we show the reconstructed dark /uniFB01 eld image (subplots A, C, E) and the measurement points (subplots B, D, F) from 5 to 20% coverage and compare them to that obtained from raster scanning the sample with 100% coverage (subplot G). We see that the FAST method identi /uniFB01 es some of the regions of heterogeneity -the edges of the bubbles -and starts to preferentially sample these regions within 5% coverage of the sample. At 15% coverage, these regions are extensively sampled. The reconstruction does not change signi /uniFB01 cantly between
+The color scale in ( A -G ) shows the normalized intensities. H shows only the points sampled between 15 and 20% coverage.
+15 and 20%, indicating that the reconstruction has stabilized. Moreover, the 20% reconstruction also contains sharp and accurate reproductions of all the major features present in the full scan image.
+A point of interest is that the partially scanned bubble at the bottom right corners of Fig. 4E -G shows up only in the 20% scan and not in the 15% scan. To explain this, we note that the 5% scan, and therefore the initial 1% quasi-random sampling, does not contain any measurements in the neighborhood of this bubble. The FAST scheme favors the exploitation of regions it knows to be heterogeneous over the exploration of this fully unknown region and therefore only explores this region much later in the measurement process (Fig. 4H). This is, in fact, an instance of the general exploration-exploitation tradeoff that exists in all Bayesian search procedures 37 .
+
+====================================================================================================
+CHUNK 14 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Experimental_demonstration_part1
+Section:      Experimental demonstration
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2190 chars, 349 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Potential mitigation steps could be to sample more initially (say 5% points) or to deliberately introduce diversity into each batch of measurement points. So far, we have reduced the diffraction image measured at each point to one single quantity (integrated intensity) in order to guide the automated experiment. These images often need to be reprocessed after the experiment to extract additional physically relevant results. Notably, the intensity distribution in the diffraction patterns contains information about the strain as well as the rotation of the crystal lattice and, in this case, the curvature of the 2D materials due to the bubbles underneath. A simple center of mass calculation in the X direction (CoMx) would yield the magnitude of the /uniFB01 lm curved in the XZ plane. The curvature (deviation of the CoMx from its nominal value) is the smallest around the center of the bubble and the largest at the edge. It also changes sign going from the left side to the right side. Center of mass calculation in the Y direction yields the magnitude of the /uniFB01 lm curved in the YZ plane. The results look slightly different from the CoMx calculations due to the way the shifted Bragg peak intersects with the Ewald ' s sphere. Figure 5A and B show, respectively, the CoMx andCoMyobtainedfromrasterscanwith100%coverageontheareaof interest. The unit is the number of pixel shift, relative to the center of thenominaldiffraction pattern. Figure5C and B show,respectively, the CoMxandCoMyobtainedwithFAST.Thecurvatureinformationofthe /uniFB01 lm was faithfully reproduced despite scanning just 20% of the entire area. For more information on the reconstruction of the CoM maps, the reader is referred to the ' Methods ' section. Nature Communications|         (2023) 14:5501 5 Article https://doi.org/10.1038/s41467-023-40339-1 Fig. 5 | Comparison of the per measured point center of mass (COM) of the diffraction patterns between the FAST scan at 20% coverage and full-grid scan. Subplots A and B show the inpainted COMx and COMy, respectively, for the full-grid raster scan, and subplots C and D for the FAST scan. CoMx CoMy 20 A 50B 2 um 0 -20 -50 FAST 20 C 50 D 0 0 -20 -50
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Potential mitigation steps could be to sample more initially (say 5% points) or to deliberately introduce diversity into each batch of measurement points.
+So far, we have reduced the diffraction image measured at each point to one single quantity (integrated intensity) in order to guide the automated experiment. These images often need to be reprocessed after the experiment to extract additional physically relevant results. Notably, the intensity distribution in the diffraction patterns contains information about the strain as well as the rotation of the crystal lattice and, in this case, the curvature of the 2D materials due to the bubbles underneath. A simple center of mass calculation in the X direction (CoMx) would yield the magnitude of the /uniFB01 lm curved in the XZ plane. The curvature (deviation of the CoMx from its nominal value) is the smallest around the center of the bubble and the largest at the edge. It also changes sign going from the left side to the right side. Center of mass calculation in the Y direction yields the magnitude of the /uniFB01 lm curved in the YZ plane. The results look slightly different from the CoMx calculations due to the way the shifted Bragg peak intersects with the Ewald ' s sphere. Figure 5A and B show, respectively, the CoMx andCoMyobtainedfromrasterscanwith100%coverageontheareaof interest. The unit is the number of pixel shift, relative to the center of thenominaldiffraction pattern. Figure5C and B show,respectively, the CoMxandCoMyobtainedwithFAST.Thecurvatureinformationofthe /uniFB01 lm was faithfully reproduced despite scanning just 20% of the entire area. For more information on the reconstruction of the CoM maps, the reader is referred to the ' Methods ' section.
+Nature Communications|         (2023) 14:5501
+5
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+Fig. 5 | Comparison of the per measured point center of mass (COM) of the diffraction patterns between the FAST scan at 20% coverage and full-grid scan. Subplots A and B show the inpainted COMx and COMy, respectively, for the full-grid raster scan, and subplots C and D for the FAST scan.
+CoMx
+CoMy
+20
+A
+50B
+2
+um
+0
+-20
+-50
+FAST
+20
+C
+50
+D
+0
+0
+-20
+-50
+
+====================================================================================================
+CHUNK 15 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part0
+Section:      Discussion
+Chunk Index:  0
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2221 chars, 356 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+In this work, we have showcased the FAST work /uniFB02 ow that combines a sparse sampling algorithm with route planning to drive a scanning diffraction microscopy experiment at a synchrotron beamline. In addition to being an effective alternative to a full pointwise scan to acquire a dark/uniFB01 eld image of the sample, FAST also produces accurate quantitative measurements of its physical properties. For our live demonstration of 200 × 40 points with a measurement time of 0.5 s/ point, the FAST decision-making time was negligible, leading to an overall saving of ≈ 80 min ( ≈ 65%) of the experiment time. This saving was facilitated by our choice to acquire a batch of 50 measurements between the selection of the prospective measurement points. This ensured that the communication time stayed negligible, with no noticeable loss in the quality of points acquired when compared to a pointwise candidate selection scheme (see Supplementary Fig. S.1). The generalizability of the FAST method comes from the fact that the key NN-based component of this work /uniFB02 ow is trained on just the standard cameraman image 34 , not on close analogs of a sample of interest. While this generalizability results in a slight loss of performance of the technique, it still shows excellent sparsity performance for cases tested in previous research 29,38 and in the current work. This has the bene /uniFB01 t that we do not need a priori knowledge of the sample. As such, while general pre-training would be dif /uniFB01 cult to satisfy for new and expensive experiments, the FAST approach can be used directly. Furthermore, the batch prediction and route optimization approach we implement can also be directly applied in any application of choice. Moreover, the experimental application of our work uses an extensible edge device and the widely used EPICS platform for hardware control, both of which can be incorporated into any instrument even with the SLADS-Net replaced by any other sampling strategies. For example, we could just replace the dark/uniFB01 eld detection procedure described here with a /uniFB02 uorescence counting setup and use exactly the FAST scheme for /uniFB02 uorescence-based imaging of the sample.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+In this work, we have showcased the FAST work /uniFB02 ow that combines a sparse sampling algorithm with route planning to drive a scanning diffraction microscopy experiment at a synchrotron beamline. In addition to being an effective alternative to a full pointwise scan to acquire a dark/uniFB01 eld image of the sample, FAST also produces accurate quantitative measurements of its physical properties. For our live demonstration of 200 × 40 points with a measurement time of 0.5 s/ point, the FAST decision-making time was negligible, leading to an overall saving of ≈ 80 min ( ≈ 65%) of the experiment time. This saving was facilitated by our choice to acquire a batch of 50 measurements between the selection of the prospective measurement points. This ensured that the communication time stayed negligible, with no noticeable loss in the quality of points acquired when compared to a pointwise candidate selection scheme (see Supplementary Fig. S.1).
+The generalizability of the FAST method comes from the fact that the key NN-based component of this work /uniFB02 ow is trained on just the standard cameraman image 34 , not on close analogs of a sample of interest. While this generalizability results in a slight loss of performance of the technique, it still shows excellent sparsity performance for cases tested in previous research 29,38 and in the current work. This has the bene /uniFB01 t that we do not need a priori knowledge of the sample. As such, while general pre-training would be dif /uniFB01 cult to satisfy for new and expensive experiments, the FAST approach can be used directly. Furthermore, the batch prediction and route optimization approach we implement can also be directly applied in any application of choice. Moreover, the experimental application of our work uses an extensible edge device and the widely used EPICS platform for hardware control, both of which can be incorporated into any instrument even with the SLADS-Net replaced by any other sampling strategies. For example, we could just replace the dark/uniFB01 eld detection procedure described here with a /uniFB02 uorescence counting setup and use exactly the FAST scheme for /uniFB02 uorescence-based imaging of the sample.
+
+====================================================================================================
+CHUNK 16 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part1
+Section:      Discussion
+Chunk Index:  1
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2031 chars, 334 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+Alternatively, since all the instruments at the APS rely on EPICS controls, one can perform transmission, surface scattering, or any other 2D scanning experiment in any applicable beamline with only minor changes to the FAST routine. Thecomputationsinthe current work /uniFB02 owhaveatimecomplexity of O 2 N log N + kM log N ð Þ , where N is the number of measured points, M the number of unmeasured points, and k the number of nearest neighboring measurements ( k =10 in our case) that we use for the feature vector calculations. Here, the /uniFB01 rst term accounts for the creation of the nearest neighbor K-d tree and the second term for the nearest neighbor calculation. The remainder of the algorithm has a linear time complexity and could be performed in parallel for the unmeasured points. We expect that it is possible to reduce this complexity using an approximate nearest neighbor search method instead of the K-d tree approach. As such, a GPU-based implementation that takes advantage of the parallelization and the approximation would likely signi /uniFB01 cantly reduce the computation time. This stands in stark contrast with the time complexity of O N 3 /C16 /C17 (for N measured points) for Gaussian Processes, a similarly training-free method that is widely used for autonomous experimentation. For an illustrative example, Vasudevan et al. 20 report a GP-based scanning microscopy experiment where the calculation of each set of measurement candidates takes ≈ 6s on an NVIDIA DGX-2 GPU for a 50 × 50 image; our work /uniFB02 ow performs an equivalent calculation for a larger 200 × 40 image within ≈ 1.5 s in a low-power CPU. We note, however, that GPs remain a very powerful and generalizable approach with a bevy of applications beyond only scanning microscopy. We also note that even the current FAST decision-making time of ≈ 0.15 s is still much larger than the typical dwell times of tens of microseconds in several popular scanning microscopy techniques (like scanning /uniFB02 uorescence microscopy 39 ).
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+Alternatively, since all the instruments at the APS rely on EPICS controls, one can perform transmission, surface scattering, or any other 2D scanning experiment in any applicable beamline with only minor changes to the FAST routine.
+Thecomputationsinthe current work /uniFB02 owhaveatimecomplexity of O 2 N log N + kM log N ð Þ , where N is the number of measured points, M the number of unmeasured points, and k the number of nearest neighboring measurements ( k =10 in our case) that we use for the feature vector calculations. Here, the /uniFB01 rst term accounts for the creation of the nearest neighbor K-d tree and the second term for the nearest neighbor calculation. The remainder of the algorithm has a linear time complexity and could be performed in parallel for the unmeasured points. We expect that it is possible to reduce this complexity using an approximate nearest neighbor search method instead of the K-d tree approach. As such, a GPU-based implementation that takes advantage of the parallelization and the approximation would likely signi /uniFB01 cantly reduce the computation time. This stands in stark contrast with the time complexity of O N 3 /C16 /C17 (for N measured points) for Gaussian Processes, a similarly training-free method that is widely used for autonomous experimentation. For an illustrative example, Vasudevan et al. 20 report a GP-based scanning microscopy experiment where the calculation of each set of measurement candidates takes ≈ 6s on an NVIDIA DGX-2 GPU for a 50 × 50 image; our work /uniFB02 ow performs an equivalent calculation for a larger 200 × 40 image within ≈ 1.5 s in a low-power CPU. We note, however, that GPs remain a very powerful and generalizable approach with a bevy of applications beyond only scanning microscopy. We also note that even the current FAST decision-making time of ≈ 0.15 s is still much larger than the typical dwell times of tens of microseconds in several popular scanning microscopy techniques (like scanning /uniFB02 uorescence microscopy 39 ).
+
+====================================================================================================
+CHUNK 17 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part2
+Section:      Discussion
+Chunk Index:  2
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2202 chars, 333 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+As such, the FAST code needs to be signi /uniFB01 cantly accelerated via GPUbased parallelization, approximate nearest-neighbor search methods, or other techniques, to enable its application in high-speed microscopy settings -we are looking to implement these changes in the future. Practical applications of the FAST work /uniFB02 ow require considerations about the spatial extent, number density, and heterogeneity of the features in the sample under investigation. Our numerical experiments for these (see Supplementary Information S.3) show that the FAST work /uniFB02 ow is most ef /uniFB01 cient for the study of isolated sparse features as long as the features are partially sampled during the initial quasi-random scan step. Isolated features that are smaller in size than the average spacing between the initial scan points are especially likely to be missed during the initial sampling and therefore not sampled until much later in the experiment. One way to resolve this challenge is to use prior knowledge (or an informed guess) about the expected dimensions of the smallest features to tailor the density of the initial scan so that it samples almost every image patch of these dimensions. Wealsonote that the FAST scan time increases with the increase in the overall contour (or perimeter) of the features, even if the features are at the same intensity levels and occupy the same area overall (see Supplementary Information S.3.2). Additionally, while the FAST scan is not affected adversely by heterogeneity in the feature sizes, it is less effective at resolving low-contrast features in settings with contrast heterogeneity, and addressing this can require signi /uniFB01 cant prior information about the experiment (see Supplementary Information S.3.3). Moreover, we observe that FAST is less effective in experiments with a highly noisy intensity data (with signal-to-noise ratio of <0.5), but shows consistent performance in all regimes with higher signal levels (see Supplementary Information S.6). A /uniFB01 nal consideration, more practical in nature, is that the scan paths require signi /uniFB01 cant motor movement, often including a retracing over points already measured.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+As such, the FAST code needs to be signi /uniFB01 cantly accelerated via GPUbased parallelization, approximate nearest-neighbor search methods, or other techniques, to enable its application in high-speed microscopy settings -we are looking to implement these changes in the future.
+Practical applications of the FAST work /uniFB02 ow require considerations about the spatial extent, number density, and heterogeneity of the features in the sample under investigation. Our numerical experiments for these (see Supplementary Information S.3) show that the FAST work /uniFB02 ow is most ef /uniFB01 cient for the study of isolated sparse features as long as the features are partially sampled during the initial quasi-random scan step. Isolated features that are smaller in size than the average spacing between the initial scan points are especially likely to be missed during the initial sampling and therefore not sampled until much later in the experiment. One way to resolve this challenge is to use prior knowledge (or an informed guess) about the expected dimensions of the smallest features to tailor the density of the initial scan so that it samples almost every image patch of these dimensions. Wealsonote that the FAST scan time increases with the increase in the overall contour (or perimeter) of the features, even if the features are at the same intensity levels and occupy the same area overall (see Supplementary Information S.3.2). Additionally, while the FAST scan is not affected adversely by heterogeneity in the feature sizes, it is less effective at resolving low-contrast features in settings with contrast heterogeneity, and addressing this can require signi /uniFB01 cant prior information about the experiment (see Supplementary Information S.3.3). Moreover, we observe that FAST is less effective in experiments with a highly noisy intensity data (with signal-to-noise ratio of <0.5), but shows consistent performance in all regimes with higher signal levels (see Supplementary Information S.6). A /uniFB01 nal consideration, more practical in nature, is that the scan paths require signi /uniFB01 cant motor movement, often including a retracing over points already measured.
+
+====================================================================================================
+CHUNK 18 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3
+Section:      Discussion
+Chunk Index:  3
+Is Split:     True
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1200 chars, 176 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+As such, there could exist scenarios in which the time required for the motormovementeclipsesthe time required for a single measurement. We expect to address the latter challenge by explicitly including a measurement-density-based term 38 or a movement-time-based term in the candidate selection procedure 40 or by using a line-based sampling technique 41 . Nature Communications|         (2023) 14:5501 6 Article https://doi.org/10.1038/s41467-023-40339-1 Despite these considerations and challenges, we believe that the proposed FAST technique has great potential. It is an ideal tool for use cases with limited sampling or dosage budgets. It can be used to isolate regions of interest in sparse settings to prepare for pointwise scanning in these regions. More generally, it can be used to guide any scanning microscopy experiment where we do not need full pointwise information. In the future, we expect to extend this method for 3D imaging, /uniFB02 y scans, ptychography, and other imaging applications. We expect that these developments will signi /uniFB01 cantly enhance the ef /uniFB01 cacy of scanning microscopy experiments,bolstering their use for the study of dynamic physical phenomena.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+As such, there could exist scenarios in which the time required for the motormovementeclipsesthe time required for a single measurement. We expect to address the latter challenge by explicitly including a measurement-density-based term 38 or a movement-time-based term in the candidate selection procedure 40 or by using a line-based sampling technique 41 .
+Nature Communications|         (2023) 14:5501
+6
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+Despite these considerations and challenges, we believe that the proposed FAST technique has great potential. It is an ideal tool for use cases with limited sampling or dosage budgets. It can be used to isolate regions of interest in sparse settings to prepare for pointwise scanning in these regions. More generally, it can be used to guide any scanning microscopy experiment where we do not need full pointwise information. In the future, we expect to extend this method for 3D imaging, /uniFB02 y scans, ptychography, and other imaging applications. We expect that these developments will signi /uniFB01 cantly enhance the ef /uniFB01 cacy of scanning microscopy experiments,bolstering their use for the study of dynamic physical phenomena.
+
+====================================================================================================
+CHUNK 19 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#The_SLADS-Net_algorithm
+Section:      The SLADS-Net algorithm
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1901 chars, 360 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The SLADS-Net algorithm 29 used within the FAST work /uniFB02 ow is an adaptation of the Supervised Learning Approach for Dynamic Sampling (SLADS) algorithm originally developed by Godaliyadda et al. 25 , and the algorithms differ only in their training approaches ( ' Methods: Training ' ). To explain the SLADS algorithm, we /uniFB01 rst denote the object wewanttomeasureas A 2 R N , where N is the total number of pixels in the image. Further, we can denote the pixel at location 1 ≤ s ≤ N as as so that a measurement at the location s extracts the value as ; each measurement is thus characterized by the pair s , as /C0 /C1 . After k measurements, then, we get the k ×2 measurement vector Using these k measurements, then, we can reconstruct (e.g., via interpolation) an estimate ^ A k of the true object A . The difference between A and ^ A k is denoted as the distortion D ð A , ^ A k Þ and can be calculated using any chosen metric. In the current work, we de /uniFB01 ne D ð A , ^ A k Þ to be the L2 norm: Given the measurement Y k and the reconstruction ^ A k , a new measurement at any location s will presumably reduce the distortion in the reconstruction. We can denote this reduction in distortion (RD) as where ^ A k , s is the reconstruction that includes the newly added measurement at s . The goal of the SLADS algorithm is then to identify the pixel location that would maximize this reduction in distortion: Of course, since we cannot know the value of the measurement as or the ground truth A , SLADS bases its selection on the conditional expectation of reduction in distortion (ERD), which is de /uniFB01 ned as: Thealgorithm assumes that we can compute the ERD at s based on just the measurement state Yk as where v k , s is a location-dependent feature vector calculated using the measurement state Yk . The goal of the SLADS training procedure is to estimate the function g .
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The SLADS-Net algorithm 29 used within the FAST work /uniFB02 ow is an adaptation of the Supervised Learning Approach for Dynamic Sampling (SLADS) algorithm originally developed by Godaliyadda et al. 25 , and the algorithms differ only in their training approaches ( ' Methods: Training ' ). To explain the SLADS algorithm, we /uniFB01 rst denote the object wewanttomeasureas A 2 R N , where N is the total number of pixels in the image. Further, we can denote the pixel at location 1 ≤ s ≤ N as as so that a measurement at the location s extracts the value as ; each measurement is thus characterized by the pair s , as /C0 /C1 . After k measurements, then, we get the k ×2 measurement vector
+Using these k measurements, then, we can reconstruct (e.g., via interpolation) an estimate ^ A k of the true object A . The difference between A and ^ A k is denoted as the distortion D ð A , ^ A k Þ and can be calculated using any chosen metric. In the current work, we de /uniFB01 ne D ð A , ^ A k Þ to be the L2 norm:
+Given the measurement Y k and the reconstruction ^ A k , a new measurement at any location s will presumably reduce the distortion in the reconstruction. We can denote this reduction in distortion (RD) as
+where ^ A k , s is the reconstruction that includes the newly added measurement at s . The goal of the SLADS algorithm is then to identify the pixel location that would maximize this reduction in distortion:
+Of course, since we cannot know the value of the measurement as or the ground truth A , SLADS bases its selection on the conditional expectation of reduction in distortion (ERD), which is de /uniFB01 ned as:
+Thealgorithm assumes that we can compute the ERD at s based on just the measurement state Yk as
+where v k , s is a location-dependent feature vector calculated using the measurement state Yk . The goal of the SLADS training procedure is to estimate the function g .
+
+====================================================================================================
+CHUNK 20 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Training
+Section:      Training
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         2453 chars, 429 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The training procedure for the SLADS/SLADS-Net algorithm is a supervised procedure in which we generate a large number of ð v k , s , R k , s Þ pairs and use these to estimate g . Note that this is a pixelwise computation that is performed independently for each measurement location s ; for each measurement s we have to calculate a reconstruction ^ A k , s before we can calculate the RD R k , s . To make this computationally tractable, Godaliyadda et al. 25 use approximations that ensure that the RD of each pixel only depends on its local neighborhood. Correspondingly, instead of working with the full measurement state Y k , the training procedure uses carefully designed feature vectors that capture the local neighborhood of the pixel at location s . As shown in Fig. 2B, the feature vector for the pixel P consists of six features: (1) ∇ x and ∇ y are the spatial gradients at P , (2) σ 1, r and σ 2, r measure the deviation of the estimated value for P from the nearby measured values (highlighted in red), and (3) L (which is the distance of P from the closest measured point) and ρ r measure the density of measurements around P . The original SLADS algorithm assumes that this feature vector is linearly related to the RD, and the training therefore is a linear regression procedure. The SLADS-Net adaptation /uniFB01 rst uses a radial basis function (RBF) kernelization to transform the 6-dimensional feature vector to a 50-dimensional vector, then replaces the linear predictor with a nonlinear fully connected neural network that contains 5 hidden layers with 50 nodes each. We follow the procedure from the original SLADS-Net adaptation and use the default parameters in the Scikit-learn Python library 42 for the RBF kernelization. In this work, we train the SLADS-Net neural network on only the standard cameraman image without using any a priori information about the sample. For the training, we generate a measurement state Y k by randomly choosing a /uniFB01 xed number of measurement locations, then calculate the feature vector v k , s and the RD R k , s for each unmeasured pixel. We generate such sets of training pairs for 10 different sample coverage percentages between 1% and 80%. This overall comprises our training dataset. We use this data to train the neural network for 100 epochs using the Adam optimizer with a learning rate of 0.001. We use this trained model for all the simulated and experimental measurements.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The training procedure for the SLADS/SLADS-Net algorithm is a supervised procedure in which we generate a large number of ð v k , s , R k , s Þ pairs and use these to estimate g . Note that this is a pixelwise computation that is performed independently for each measurement location s ; for each measurement s we have to calculate a reconstruction ^ A k , s before we can calculate the RD R k , s . To make this computationally tractable, Godaliyadda et al. 25 use approximations that ensure that the RD of each pixel only depends on its local neighborhood. Correspondingly, instead of working with the full measurement state Y k , the training procedure uses carefully designed feature vectors that capture the local neighborhood of the pixel at location s . As shown in Fig. 2B, the feature vector for the pixel P consists of six features: (1) ∇ x and ∇ y are the spatial gradients at P , (2) σ 1, r and σ 2, r measure the deviation of the estimated value for P from the nearby measured values (highlighted in red), and (3) L (which is the distance of P from the closest measured point) and ρ r measure the density of measurements around P .
+The original SLADS algorithm assumes that this feature vector is linearly related to the RD, and the training therefore is a linear regression procedure. The SLADS-Net adaptation /uniFB01 rst uses a radial basis function (RBF) kernelization to transform the 6-dimensional feature vector to a 50-dimensional vector, then replaces the linear predictor with a nonlinear fully connected neural network that contains 5 hidden layers with 50 nodes each. We follow the procedure from the original SLADS-Net adaptation and use the default parameters in the Scikit-learn Python library 42 for the RBF kernelization.
+In this work, we train the SLADS-Net neural network on only the standard cameraman image without using any a priori information about the sample. For the training, we generate a measurement state Y k by randomly choosing a /uniFB01 xed number of measurement locations, then calculate the feature vector v k , s and the RD R k , s for each unmeasured pixel. We generate such sets of training pairs for 10 different sample coverage percentages between 1% and 80%. This overall comprises our training dataset. We use this data to train the neural network for 100 epochs using the Adam optimizer with a learning rate of 0.001. We use this trained model for all the simulated and experimental measurements.
+
+====================================================================================================
+CHUNK 21 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Experimental_measurements
+Section:      Experimental measurements
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         1202 chars, 182 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+At each point of the measurement, a tight region of interest (RoI) aroundtheexpectedposition of the thin /uniFB01 lmBraggpeakwasextracted from the corresponding diffraction image. Integrated intensities of the RoI were used to guide the NN prediction. For the /uniFB02 at region, the integrated intensity is high, showing up as brighter contrast on the dark /uniFB01 eld image. For the deformed region, the integrated intensity is low (darker contrast on the dark /uniFB01 eld image) as the illuminated /uniFB01 lm diffraction partially exits the selected RoI (see Supplementary Fig. S.8). For the FAST experiment, the predicted ERD and the dark/uniFB01 eld reconstruction served as visual guides to inform when to stop the experiment. During the experiment, we noted that the ERD and the reconstruction had stabilized by ≈ 20% scan coverage, but we let the experiment run to ≈ 35%coveragetoensurethatthis behavior persisted (see Supplementary Fig. S.9). While we used this visual criterion for our exploratory experiment, it is straightforward to design a numerical stopping criterion based on the absolute or relative convergence of the ERD, or on the per-iteration change in the reconstructed image.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+At each point of the measurement, a tight region of interest (RoI) aroundtheexpectedposition of the thin /uniFB01 lmBraggpeakwasextracted from the corresponding diffraction image. Integrated intensities of the RoI were used to guide the NN prediction. For the /uniFB02 at region, the integrated intensity is high, showing up as brighter contrast on the dark /uniFB01 eld image. For the deformed region, the integrated intensity is low (darker contrast on the dark /uniFB01 eld image) as the illuminated /uniFB01 lm diffraction partially exits the selected RoI (see Supplementary Fig. S.8).
+For the FAST experiment, the predicted ERD and the dark/uniFB01 eld reconstruction served as visual guides to inform when to stop the experiment. During the experiment, we noted that the ERD and the reconstruction had stabilized by ≈ 20% scan coverage, but we let the experiment run to ≈ 35%coveragetoensurethatthis behavior persisted (see Supplementary Fig. S.9). While we used this visual criterion for our exploratory experiment, it is straightforward to design a numerical stopping criterion based on the absolute or relative convergence of the ERD, or on the per-iteration change in the reconstructed image.
+
+====================================================================================================
+CHUNK 22 of 22
+====================================================================================================
+
+METADATA:
+----------------------------------------------------------------------------------------------------
+Chunk ID:     Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Statistics_and_reproducibility
+Section:      Statistics and reproducibility
+Chunk Index:  0
+Is Split:     False
+Parent ID:    Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf
+Filename:     Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf
+Size:         746 chars, 105 words
+
+----------------------------------------------------------------------------------------------------
+CHUNK CONTENT (as stored in ChromaDB - newlines replaced with spaces):
+----------------------------------------------------------------------------------------------------
+The imaged region of the sample was selected through a visual inspection of a large/uniFB01 eld-of-view low-resolution scan of the sample. This ensured that the high-resolution scan was directed at a region with WSe2 deposition. No other statistical method was used to predetermine the sample size. Intensity data from hot pixels were excluded during the data analysis process. No other data were excluded from the analysis. Nature Communications|         (2023) 14:5501 7 Article https://doi.org/10.1038/s41467-023-40339-1 The experiments were not randomized. The investigators were not blinded to allocation during the experiment and the outcome assessment since the described work /uniFB02 ow provided a real-time reconstruction of the sample.
+
+----------------------------------------------------------------------------------------------------
+ORIGINAL CONTENT (with preserved formatting):
+----------------------------------------------------------------------------------------------------
+The imaged region of the sample was selected through a visual inspection of a large/uniFB01 eld-of-view low-resolution scan of the sample. This ensured that the high-resolution scan was directed at a region with WSe2 deposition. No other statistical method was used to predetermine the sample size.
+Intensity data from hot pixels were excluded during the data analysis process. No other data were excluded from the analysis.
+Nature Communications|         (2023) 14:5501
+7
+Article
+https://doi.org/10.1038/s41467-023-40339-1
+The experiments were not randomized. The investigators were not blinded to allocation during the experiment and the outcome assessment since the described work /uniFB02 ow provided a real-time reconstruction of the sample.

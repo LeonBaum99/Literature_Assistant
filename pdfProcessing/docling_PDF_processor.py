@@ -40,12 +40,14 @@ class DoclingPDFProcessor:
             }
         )
 
-    def process_pdf(self, file_path: str) -> Tuple[Dict[str, Any], Dict[str, str]]:
+    def process_pdf(self, file_path: str, zotero_metadata: Dict[str, Any] = None) -> Tuple[Dict[str, Any], Dict[str, str]]:
         """
         Orchestrates the conversion of a PDF file into structured metadata and sections.
 
         Args:
             file_path (str): The path to the PDF file.
+            zotero_metadata (Dict, optional): Pre-extracted metadata from Zotero.
+                If provided, uses this instead of heuristic extraction.
 
         Returns:
             Tuple[Dict, Dict]: A tuple containing (metadata, sections).
@@ -57,7 +59,7 @@ class DoclingPDFProcessor:
         sections = self._extract_sections_from_doc(result.document)
 
         # 3. Extract Metadata
-        metadata = self._extract_metadata(sections)
+        metadata = self._extract_metadata(sections, zotero_metadata=zotero_metadata)
 
         return metadata, sections
 
@@ -84,10 +86,29 @@ class DoclingPDFProcessor:
         # Join lists into single strings
         return {k: "\n".join(v) for k, v in sections.items() if v}
 
-    def _extract_metadata(self, sections: Dict[str, str]) -> Dict[str, Any]:
+    def _extract_metadata(self, sections: Dict[str, str], zotero_metadata: Dict[str, Any] = None) -> Dict[str, Any]:
         """
-        Heuristic function to extract Metadata (Title, Authors, arXiv ID).
+        Extract metadata from PDF sections, with optional Zotero override.
+        
+        If zotero_metadata is provided, uses it as the primary source (reliable).
+        Otherwise, falls back to heuristic extraction from PDF content.
+        
+        Args:
+            sections: Extracted PDF sections
+            zotero_metadata: Optional pre-extracted metadata from Zotero
+        
+        Returns:
+            Metadata dict with title, authors, arxiv_id
         """
+        # If Zotero metadata is available, use it (most reliable)
+        if zotero_metadata:
+            return {
+                "title": zotero_metadata.get("title", "Unknown"),
+                "authors": zotero_metadata.get("authors", []),
+                "arxiv_id": zotero_metadata.get("arxiv_id", ""),
+            }
+        
+        # Fallback: Heuristic extraction from PDF content
         ARXIV_PATTERN = r"arXiv:\d{4}\.\d{4,5}(v\d+)?"
         metadata = {
             "title": None,
