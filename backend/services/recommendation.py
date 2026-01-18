@@ -61,6 +61,42 @@ class SemanticScholarService:
                 print(f"❌ Recommendation Service Failed: {e}")
                 raise HTTPException(status_code=500, detail=str(e))
 
+    async def search_papers(self, query: str, limit: int = 1) -> List[Dict[str, Any]]:
+        headers = {}
+        if self.api_key:
+            headers["x-api-key"] = self.api_key
+
+        params = {
+            "query": query,
+            "limit": limit,
+            "fields": "paperId,title,year,url,authors,abstract"
+        }
+
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.get(
+                    self.SEARCH_URL,
+                    headers=headers,
+                    params=params,
+                    timeout=10.0
+                )
+
+                if response.status_code == 403:
+                    raise HTTPException(status_code=403, detail="Semantic Scholar API Key invalid or missing.")
+
+                response.raise_for_status()
+                data = response.json()
+
+                return data.get("data", [])
+
+            except httpx.HTTPStatusError as e:
+                error_msg = f"Semantic Scholar Error {e.response.status_code}: {e.response.text}"
+                print(f"Semantic Scholar Search Error: {error_msg}")
+                raise HTTPException(status_code=e.response.status_code, detail=error_msg)
+            except Exception as e:
+                print(f"Paper Search Failed: {e}")
+                raise HTTPException(status_code=500, detail=str(e))
+
     async def search_paper_id(self, query: str, limit: int = 1) -> Optional[str]:
         """
         Searches for a paper by title/query and returns the first matching paperId.

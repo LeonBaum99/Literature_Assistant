@@ -144,6 +144,7 @@ async def rag_answer(
         request: RagRequest,
         embed_service: EmbeddingService = Depends(get_embedding_service),
         db_service: VectorDBService = Depends(get_db_service),
+        rec_service: SemanticScholarService = Depends(get_recommendation_service),
 ):
     """
     Run the RAG pipeline using the existing embedding + Chroma services.
@@ -170,11 +171,39 @@ async def rag_answer(
                 metadata=doc.metadata or {}
             ))
 
+    answer = response.answer
+    template = response.template
+    status = response.status
+    needs_search = response.needs_search
+
+    if response.needs_search:
+        papers = []
+        try:
+            papers = await rec_service.search_papers(request.question, limit=1)
+        except HTTPException:
+            papers = []
+
+        if papers:
+            paper = papers[0]
+            title = paper.get("title", "Unknown Title")
+            abstract = paper.get("abstract") or "No abstract available."
+            answer = (
+                "Looking for additional scientific information online. "
+                f"Top result: {title}. Abstract: {abstract}"
+            )
+        else:
+            answer = "Looking for additional scientific information online, but no results were found."
+
+        sources = None
+        status = "ok"
+        needs_search = False
+        template = "online"
+
     return {
-        "answer": response.answer,
-        "template": response.template,
-        "status": response.status,
-        "needs_search": response.needs_search,
+        "answer": answer,
+        "template": template,
+        "status": status,
+        "needs_search": needs_search,
         "sources": sources
     }
 

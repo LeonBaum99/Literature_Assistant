@@ -179,12 +179,18 @@ class RagPipeline:
         sources = docs if include_sources else None
         status = "insufficient" if chain_key == "insufficient" else "ok"
         needs_search = chain_key == "insufficient"
+        template = chain_key
+
+        if not needs_search and self._looks_like_needs_search(answer):
+            needs_search = True
+            status = "insufficient"
+            template = "insufficient"
         return RagResponse(
             answer=answer,
             sources=sources,
             status=status,
             needs_search=needs_search,
-            template=chain_key,
+            template=template,
         )
 
     @classmethod
@@ -220,3 +226,12 @@ class RagPipeline:
             "question": question,
             "context": self._format_context(docs)
         }
+
+    @staticmethod
+    def _looks_like_needs_search(answer: str) -> bool:
+        if not answer:
+            return False
+        cleaned = answer.strip()
+        if not cleaned.startswith("I do not know based on the provided context"):
+            return False
+        return "Would you like me to find related papers online?" in cleaned
