@@ -4,98 +4,130 @@
     "tier": 1,
     "target_tag": "liquid lenses",
     "question": "What physical quantity is the controller changing (the actuator variable) in the liquid-lens autofocus setup?",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Introduction_part5"
+    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Introduction_part5",
+    "expected_answer": "Voltage",
+    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
   },
   {
     "tier": 1,
     "target_tag": "autofocus",
     "question": "Which classic search methods are used as baselines in the DRL autofocus paper?",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Autofocus_experiment_part1"
+    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Autofocus_experiment_part1",
+    "expected_answer": "Golden section search and Fibonacci search",
+    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
   },
   {
     "tier": 1,
     "target_tag": "ptychography",
     "question": "What is the main objective of 'adaptive scanning' compared to a fixed raster grid in ptychography?",
-    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion"
+    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion",
+    "expected_answer": "To reduce electron dose while improving reconstruction quality by adaptively scanning regions with the highest information content (atomic structure), in contrast to fixed raster grid scanning",
+    "expected_papers": ["Schloz et al. - 2023 - Deep reinforcement learning for data-driven adaptive scanning in ptychography.pdf"]
   },
   {
     "tier": 1,
     "target_tag": "ptychography",
     "question": "What does the metric QSSIM represent in the ptychography evaluation?",
-    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion"
+    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion",
+    "expected_answer": "Relative reconstruction quality improvement defined as QSSIM = (SSIMa - SSIMs) / SSIMs, measuring improvement between adaptive and sparse grid scanning",
+    "expected_papers": ["Schloz et al. - 2023 - Deep reinforcement learning for data-driven adaptive scanning in ptychography.pdf"]
   },
   {
     "tier": 1,
     "target_tag": "alignment",
     "question": "What are the discrete actions available to the agent (action space) in the DQN beam alignment paper?",
-    "expected_chunk_id": "Morris_et_al.___2024___A_general_Bayesian_algorithm_for_the_autonomous_alignment_of_beamlines.pdf#4.2._Monte_Carlo_acquisition_functions"
+    "expected_chunk_id": "Morris_et_al.___2024___A_general_Bayesian_algorithm_for_the_autonomous_alignment_of_beamlines.pdf#4.2._Monte_Carlo_acquisition_functions",
+    "expected_answer": "Discrete actions defined by voltage step adjustments with different scaling - logarithm and multiple methods with base parameters to adjust mirror/magnet positions",
+    "expected_papers": ["Morris et al. - 2024 - A general Bayesian algorithm for the autonomous alignment of beamlines.pdf"]
   },
   {
     "tier": 1,
     "target_tag": "optics",
     "question": "What are the two main limitations of a well-tuned integrator controller that motivate RL for adaptive optics?",
-    "expected_chunk_id": "Nousiainen_et_al.___2024___Laboratory_experiments_of_model_based_reinforcement_learning_for_adaptive_optics_control.pdf#ABSTRACT._part1"
+    "expected_chunk_id": "Nousiainen_et_al.___2024___Laboratory_experiments_of_model_based_reinforcement_learning_for_adaptive_optics_control.pdf#ABSTRACT._part1",
+    "expected_answer": "Photon noise and temporal error (delay from detector readout, computation, and mirror correction cycles)",
+    "expected_papers": ["Nousiainen et al. - 2024 - Laboratory experiments of model-based reinforcement learning for adaptive optics control.pdf"]
   },
   {
     "tier": 2,
     "target_tag": "autofocus",
     "question": "List the reward hyperparameters (e.g., alpha, beta, mu, delta) for DRL autofocus and what each incentivizes.",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Reward_function_part1"
+    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Reward_function_part1",
+    "expected_answer": "α=100, β=30, μ=200, δ=100 where α scales sharpness, β penalizes time steps, μ rewards stopping near focus, δ enhances discrimination",
+    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
   },
   {
     "tier": 2,
     "target_tag": "autofocus",
     "question": "What are the two action-set designs in the DRL autofocus paper and how do they differ conceptually?",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0"
+    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0",
+    "expected_answer": "Logarithm method and Multiple method - differ in how they scale action control factors using different base parameters",
+    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
   },
   {
     "tier": 2,
     "target_tag": "autofocus",
     "question": "What is the reported speed improvement versus a named baseline in DRL autofocus, and what is the speed proxy?",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Autofocus_experiment_part1"
+    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Autofocus_experiment_part1",
+    "expected_answer": "79% faster than golden section search and 60.63% faster than Fibonacci search; speed proxy is 3.15 average time steps",
+    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
   },
   {
     "tier": 2,
     "target_tag": "ptychography",
     "question": "What are the ROP reconstruction settings (batch size, step size) and the approximate reconstruction time reported for ptychography?",
-    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion"
+    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion",
+    "expected_answer": "Batch size 24, step size α_ROP = 525, approximately 35 seconds per batch reconstruction time",
+    "expected_papers": ["Schloz et al. - 2023 - Deep reinforcement learning for data-driven adaptive scanning in ptychography.pdf"]
   },
   {
     "tier": 2,
     "target_tag": "ptychography",
     "question": "Summarize the encoder/feature-extractor architecture used to represent partial scans in the adaptive ptychography paper.",
-    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion"
+    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Conclusion",
+    "expected_answer": "Convolutional autoencoder with 6 convolutional layers, kernels of dimension 3, stride 1, channels ranging from 16 to 512 for encoder/decoder",
+    "expected_papers": ["Schloz et al. - 2023 - Deep reinforcement learning for data-driven adaptive scanning in ptychography.pdf"]
   },
   {
     "tier": 2,
     "target_tag": "optics",
     "question": "From the main hyperparameter table in the AO RL paper: what are episode length, warm-up episodes, replay buffer size, and planning horizon?",
-    "expected_chunk_id": "Nousiainen_et_al.___2024___Laboratory_experiments_of_model_based_reinforcement_learning_for_adaptive_optics_control.pdf#6.4_Replay_Buffers"
+    "expected_chunk_id": "Nousiainen_et_al.___2024___Laboratory_experiments_of_model_based_reinforcement_learning_for_adaptive_optics_control.pdf#6.4_Replay_Buffers",
+    "expected_answer": "Episode length 500 frames, warm-up episodes 20, replay buffer size 20 episodes, planning horizon 4 frames",
+    "expected_papers": ["Nousiainen et al. - 2024 - Laboratory experiments of model-based reinforcement learning for adaptive optics control.pdf"]
   },
   {
     "tier": 3,
     "target_tag": "FAST",
     "question": "How does FAST define 'scanning efficiency,' and in what way is this fundamentally different from raster-grid scanning?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
+    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3",
+    "expected_answer": "FAST defines scanning efficiency as the ratio of useful data to total scan time, fundamentally different because it adapts based on sample structure rather than following fixed raster patterns",
+    "expected_papers": ["Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf"]
   },
 
   {
     "tier": 3,
     "target_tag": "autofocus",
     "question": "Why might discretizing the action space improve stability or convergence compared to continuous control in the DRL autofocus setting?",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0"
+    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0",
+    "expected_answer": "Discrete action spaces improve stability by providing a finite set of discrete control options, preventing continuous oscillations and reducing sensitivity to small parameter variations near the optimal focus point",
+    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
   },
 
   {
     "tier": 3,
     "target_tag": "ptychography",
     "question": "The ptychography paper uses a particular discount factor setting (e.g., gamma = 0). Why is that choice made and what does it imply?",
-    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Deep_reinforcement_learning_fo_part0"
+    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Deep_reinforcement_learning_fo_part0",
+    "expected_answer": "Discount factor γ=0 enforces myopic behavior - the agent learns to focus only on immediate rewards, ignoring long-term future consequences, appropriate for AO where current state matters most",
+    "expected_papers": ["Schloz et al. - 2023 - Deep reinforcement learning for data-driven adaptive scanning in ptychography.pdf"]
   },
   {
     "tier": 3,
     "target_tag": "FAST",
     "question": "Where does the exploration–exploitation trade-off appear in FAST results/figures, and what mitigation strategy is proposed?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3"
+    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3",
+    "expected_answer": "Exploration-exploitation trade-off appears in adaptive scanning results where sparse vs. adaptive patterns show different coverage; mitigation strategy is using supervised learning pre-training before reinforcement learning fine-tuning",
+    "expected_papers": ["Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf"]
   }
 ]

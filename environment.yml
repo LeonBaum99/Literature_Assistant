@@ -1,20 +1,31 @@
-name: genai_env
+name: genai
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
   - defaults
 dependencies:
-  # Core Infrastructure (Stable versions)
-  - python=3.11  # 3.11 is currently the most stable for GenAI compatibility
+  # Core Infrastructure
+  - python=3.11
   - pip
-  - numpy        # Installing numpy via conda ensures it links to MKL/BLAS for speed
+  - numpy
 
-  # Python Packages
+  # GPU Support (Best Practice: Install via Conda)
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.4
+
+  # Python Packages via Pip
   - pip:
-      - chromadb
-      - tqdm
-      - docling
-      - transformers
-      - fastapi
-      - uvicorn
-      # Note: If you need GPU support, you should uncomment the line below:
-      # - torch torchvision --index-url https://download.pytorch.org/whl/cu124
+    - chromadb
+    - tqdm
+    - docling
+    - transformers
+    - fastapi
+    - uvicorn
+    - langchain-ollama
+    - langchain-core
+    - matplotlib
+    - sentence_transformers
+    - scikit-learn
+    - deepsearch-glm
