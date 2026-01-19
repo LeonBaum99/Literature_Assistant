@@ -31,3 +31,4 @@ dependencies:
     - deepsearch-glm
     - python-dotenv
     - pyzotero
+    - nest-asyncio
