@@ -1,11 +1,16 @@
 import re
+import warnings
 from difflib import SequenceMatcher
 from typing import Dict, Any, Tuple, List, Optional
 
 # Import the processors
 import docling_PDF_processor
 from zotero_integration.zotero_client import ZoteroClient
-
+"""
+########################################################
+ DEPRECATED
+########################################################
+"""
 
 class ZoteroEnrichedPDFProcessor:
     """
@@ -23,6 +28,7 @@ class ZoteroEnrichedPDFProcessor:
         """
         Initializes the Docling processor and the Zotero Client.
         """
+        warnings.warn("The ZoteroEnrichedPDFProcessor is  DEPRECATED!!")
         self.docling_processor = docling_PDF_processor.DoclingPDFProcessor()
         self.zotero_client = ZoteroClient()
 

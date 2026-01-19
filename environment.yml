@@ -29,3 +29,5 @@ dependencies:
     - sentence_transformers
     - scikit-learn
     - deepsearch-glm
+    - python-dotenv
+    - pyzotero
