@@ -1,0 +1,70 @@
+QUERY (Tier 2): List the reward hyperparameters (e.g., alpha, beta, mu, delta) for DRL autofocus and what each incentivizes.
+
+================================================================================
+RETRIEVAL RESULTS
+================================================================================
+
+
+================================================================================
+Rank 1 | Distance: 0.2574
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Reward_function_part1
+Section: Reward function
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (721 chars):
+--------------------------------------------------------------------------------
+The last term δ is an additional reward component aimed at enhancing the discriminative ability of the reward function by setting relatively large positive and negative rewards for the clearest and least clear images, respectively, thereby further reducing the focusing steps. Since achieving clear imaging, reducing the time to focus, and stopping automatically are all equally important in the autofocus task, the maximum absolute values of each term should be on the same order of magnitude. This prevents the agent from becoming overly biased toward a single term, ensuring it can complete the overall objective effectively. In this study, the /uniFB01 nal parameter values are: α ¼ 100, β ¼ 30, μ ¼ 200, and δ ¼ 100.
+
+
+================================================================================
+Rank 2 | Distance: 0.3604
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Ablation_experiments_on_the_re_part0
+Section: Ablation experiments on the reward function
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (1654 chars):
+--------------------------------------------------------------------------------
+The present study proposes a hybrid reward function design (see Methods and Materials) that enhances model performance, particularly in autofocus tasks. This is achieved by incorporating stop, time step, and additional reward components into the sharpness evaluation. To thoroughly analyze the impact of the proposed hybrid reward function design and the contribution of each reward component to the algorithm ' s performance, a series of ablation experiments were conducted. Speci /uniFB01 cally, the action space was con /uniFB01 gured with a set of 7 actions based on a base of 5, and DRLAF was trained by random sampling. The reward function variations are as follows: Reward 1: Sharpness Reward, Reward 2: Sharpness + Stop Reward, Reward 3: Sharpness + Time Step Reward, Reward 4: Sharpness + Additional Reward, Reward 5(the proposed reward): Sharpness + Time Step + Stop + Additional Reward (Table 3). Figure 5 presents the results of the ablation experiments on the reward function, showing the scaled return during the training process on different samples for both the training and testing sets. Figure 6 displays the time step results during the training process on different samples for both the training and testing sets. The /uniFB01 gures illustrate that during training, Reward 5 exhibits the best convergence across all three samples. For Reward 4, the signi /uniFB01 cant increase and substantial /uniFB02 uctuations in the return on the test set, along with the time step performance on the test set presented in Fig. 6, suggest that the model cannot terminate Zhang et al. Microsystems & Nanoengineering (2024) 10:201 Page 9 of 13 Fig.
+
+
+================================================================================
+Rank 3 | Distance: 0.3628
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Abstract
+Section: Abstract
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (1718 chars):
+--------------------------------------------------------------------------------
+Microscopic imaging is a critical tool in scienti /uniFB01 c research, biomedical studies, and engineering applications, with an urgent need for system miniaturization and rapid, precision autofocus techniques. However, traditional microscopes and autofocus methods face hardware limitations and slow software speeds in achieving this goal. In response, this paper proposes the implementation of an adaptive Liquid Lens Microscope System utilizing Deep Reinforcement Learning-based Autofocus (DRLAF). The proposed study employs a custom-made liquid lens with a rapid zoom response, which is treated as an ' agent. ' Raw images are utilized as the ' state ' , with voltage adjustments representing the ' actions. ' Deep reinforcement learning is employed to learn the focusing strategy directly from captured images, achieving end-to-end autofocus. In contrast to methodologies that rely exclusively on sharpness assessment as a model ' s labels or inputs, our approach involved the development of a targeted reward function, which has proven to markedly enhance the performance in microscope autofocus tasks. We explored various action group design methods and improved the microscope autofocus speed to an average of 3.15 time steps. Additionally, parallel ' state ' dataset lists with random sampling training are proposed which enhances the model ' s adaptability to unknown samples, thereby improving its generalization capability. The experimental results demonstrate that the proposed liquid lens microscope with DRLAF exhibits high robustness, achieving a 79% increase in speed compared to traditional search algorithms, a 97.2% success rate, and enhanced generalization compared to other deep learning methods.
+
+
+================================================================================
+Rank 4 | Distance: 0.3719
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Conclusions
+Section: Conclusions
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (2231 chars):
+--------------------------------------------------------------------------------
+This study proposes an innovative liquid lens microscope system that achieves rapid and precise autofocus by utilizing deep reinforcement learning. Firstly, a liquid lens driven by the electrical dielectric wetting principle was fabricated, offering the advantages of small volume and fast response speed, which can effectively improve the structural compactness and zoom speed of microscopes when integrated. Secondly, an end-to-end autofocus is achieved by training a deep reinforcement learning model, further enhancing the focusing speed. Concurrently, a reward function tailored for the autofocus task was designed, enabling the model to focus more rapidly and autonomously. Furthermore, several action group design methods were introduced, which effectively enhance the speed and accuracy of autofocus by adjusting key parameters. In the experiments, an average of 3.15 steps was required to achieve autofocus, representing a 79% and 60.63% improvement in speed compared to traditional search algorithms. Additionally, a novel method for random sampling from multiple ' state ' dataset lists was proposed to address the limitation of model sensitivity to only the trained data. By increasing the number of state datasets, the model ' s ability to extract common features was signi /uniFB01 cantly enhanced, enabling reliable autofocus across different samples and /uniFB01 elds of view. With the expansion of the state datasets to 50, the model achieved a 97.2% success rate, with a root mean square error (RMSE) of 2 : 85 ´ 10 /C0 3 V for the predicted voltage on the test set. This result demonstrates that the trained agent developed a robust autofocus strategy that is not dependent on the training data, thereby improving its generalization capability. The proposed liquid lens microscope system utilizing DRLAF signi /uniFB01 cantly simpli /uniFB01 es the structural complexity, enhances system compactness, reduces operational dif /uniFB01 culty, and increases focusing speed. It has broad application prospects in /uniFB01 elds such as electrooptical reconnaissance, microscopic imaging, digital lens imaging, and endoscopy, providing robust support for automation and intelligence processes in related /uniFB01 elds.
+
+
+================================================================================
+Rank 5 | Distance: 0.3719
+================================================================================
+ID:      Rebuffi_et_al.___2023___AutoFocus_AI_driven_alignment_of_nanofocusing_X_ray_mirror_systems.pdf#2._Focusing_optical_systems
+Section: 2. Focusing optical systems
+Paper:   AutoFocus: AI-driven alignment of nanofocusing X-ray mirror systems
+Authors: Luca Rebuffi, Saugat Kandel, Xianbo Shi, Runyu Zhang, Ross J. Harder, Wonsuk Cha, Matthew J. Highland, Matthew G. Frith, Lahsen Assoufid, Mathew J. Cherukara
+
+Content (568 chars):
+--------------------------------------------------------------------------------
+This  section  describes  the  two  focusing  optical  systems  employed  to  create  and  test  the automatic  AI-driven  controller.  The  34-ID-C  beamline  focusing  system  was  first  fully characterized to develop an accurate digital twin to study and identify the optimal strategy for AI implementation. We assembled a similar system at the 28-ID-B beamline for experimental validation and comprehensively characterized its digital twin. This allowed us to simulate the experiments, assess potential limitations, identify possible issues, and predict outcomes.

@@ -1,0 +1,70 @@
+QUERY (Tier 1): What physical quantity is the controller changing (the actuator variable) in the liquid-lens autofocus setup?
+
+================================================================================
+RETRIEVAL RESULTS
+================================================================================
+
+
+================================================================================
+Rank 1 | Distance: 0.2860
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Introduction_part5
+Section: Introduction
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (1250 chars):
+--------------------------------------------------------------------------------
+In addition, the integration of software algorithms and simple hardware enables end-to-end optical microscope autofocusing, reducing system complexity and cost. Fast Response: The combination of liquid lenses with millisecond focusing speeds and intelligent focusing algorithms enables the rapid autofocusing of optical microscopes. Robustness: The utilization of a random sampling training method serves to enhance the model ' s capacity for generalization, enabling it to effectively respond to a range of diverse samples. By adjusting the action space, it is possible to effectively address the disparate demands for speed and accuracy in microscope autofocus. We believe that this method could provide a novel perspective and solution for achieving more objective, rapid, and high generalization capability end-to-end liquid lens autofocusing. The proposed system, which is characterized by small size, rapid response and straightforward integration of liquid lenses, has the potential for a wide range of applications in /uniFB01 elds such as optoelectronic reconnaissance, microscopic imaging, digital lens imaging and endoscopy. It could offer robust assistance for the automation and intelligent processing of data in pertinent /uniFB01 elds.
+
+
+================================================================================
+Rank 2 | Distance: 0.3137
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Introduction_part1
+Section: Introduction
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (2252 chars):
+--------------------------------------------------------------------------------
+Consequently, the miniaturization of microscopic imaging systems and the development of rapid autofocusing techniques have been longstanding objectives in relevant /uniFB01 elds, aimed at addressing the continually evolving demands of scienti /uniFB01 c and technological advancement. The construction of traditional microscopes typically incorporates a combination of multiple /uniFB01 xed-focus lenses and mechanical structures, which are employed to achieve imaging functions such as magni /uniFB01 cation and focusing. Additionally, they necessitate an adequate optical path length to enable the requisite mechanical movement for focus adjustment. Consequently, these designs are inevitably encumbered by drawbacks including bulky volumes, sluggish focusing speeds, and dif /uniFB01 culties in enabling rapid autofocusing or operation within con /uniFB01 ned spaces 2 . In contrast, owing to the absence of mechanical components and the ability to achieve focusing by adjusting electrical Zhang et al. Microsystems & Nanoengineering (2024) 10:201 Page 2 of 13 signals, liquid lenses offer advantages such as compact size, rapid response, and low manufacturing costs 3 -10 . Microscopes equipped with liquid lenses do not require additional mechanical parts for focusing, which effectively reduces the overall volume and enhances the ef /uniFB01 ciency of autofocusing. The /uniFB01 eld of microscope autofocus technology has witnessed considerable advancements over the past few decades 11 -18 . The advent of arti /uniFB01 cial intelligence and new optical components in recent years has led to the emergence of novel research trends in this /uniFB01 eld. Active autofocus microscopes employ the transmission and reception of speci /uniFB01 c signals to measure the distance to the object and achieve focus 19,20 . For example, Bathe-Peters et al. 21 achieved autofocusing of an optical microscope without any mechanical motion by combining total internal re /uniFB02 ection infrared beam ranging with an electrically adjustable lens. Similarly, Lightley et al. 22 constructed an autofocusing system for a dual-axis optical microscope by using a superluminescent diode to emit a laser and measure the focal position of the re /uniFB02 ected light.
+
+
+================================================================================
+Rank 3 | Distance: 0.3289
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0
+Section: Effect of actions on autofocus performance
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (2241 chars):
+--------------------------------------------------------------------------------
+The autofocus adjustment actions include forward adjustments, backward adjustments, and stop actions. Moreover, the forward and backward adjustments can be divided into multiple actions depending on the size of the voltage step, collectively forming the action space. The size of the action space in DRLAF has a certain impact on the speed and accuracy of autofocusing. To determine the optimal action space size for autofocus, the performance of the model with different action space sizes was studied. Figure 3a shows the distribution of the in /uniFB02 uence of action space size on the focusing deviation of the autofocusing results. The DRLAF was trained using 50 state datasets, randomly sampled from a single sample, with the action space constructed based on a factor of 5 (see Materials and Methods for details on dataset and action processing). The results were obtained by testing the trained model 1000 times on both the training and testing datasets. The x-axis represents the deviation between the voltage selected by the model and the actual focusing voltage, while the y-axis represents the action space size. The width of each violin plot re /uniFB02 ects the density distribution of the data. It can be observed from the /uniFB01 gure that the size of the action space signi /uniFB01 cantly affects the focusing deviation of autofocusing. As the number of actions increases, the deviation distribution tends to converge to 0 V, leading to a signi /uniFB01 cant reduction in focusing deviation. At the same time, the focusing deviation on the test set also decreases signi /uniFB01 cantly. This phenomenon may be attributed to the enhanced action selectivity of the model in the vicinity of the focal point position as the number of actions increases, thereby enabling more precise actions. In this study, we de /uniFB01 ned a focusing voltage deviation less than or equal to 0.2 V as successful, and a deviation of 0 V as accurate (see S6 for the de /uniFB01 nition of ' successful ' and ' accurate ' ). Figure 3b shows the impact of the action space size on the success rate and accuracy of autofocusing. As the action space size increases, both the accuracy and success rate of autofocusing signi /uniFB01 cantly improve.
+
+
+================================================================================
+Rank 4 | Distance: 0.3310
+================================================================================
+ID:      Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Introduction_part4
+Section: Introduction
+Paper:   Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learning
+Authors: Jing Zhang, Yong-feng Fu, Hao Shen, Quan Liu, Li-ning Sun, Li-guo Chen
+
+Content (2163 chars):
+--------------------------------------------------------------------------------
+In addition, deep reinforcement learning-based autofocus methodologies typically necessitate the utilization of continuously captured images as state inputs for intelligent systems. This results in a homogeneous nature of the training data, which in turn affects the model ' s generalization ability. To address the aforementioned issues, we proposed the implementation of an adaptive Liquid Lens Microscope System that utilizes Deep Reinforcement Learning-based Zhang et al. Microsystems & Nanoengineering (2024) 10:201 Page 3 of 13 Fig. 1 Schematic of the liquid lens microscope system utilizing deep reinforcement learning-based autofocus. a Structure of the EWOD liquid lens module, powered by the voltage driving board through a /uniFB02 exible electrode, enabling seamless integration with existing microscopes (see S1.1). b Training sample images with diverse surface features. The proposed random sampling method of these samples during training effectively enhances the model ' s generalization capability(see Materials and Methods and S4) 4 1 3 2 Cutaway view of liquid lens Liquid lens module Flexible electrode Liquid lens structure diagram U Solid Liquid Liquid r R α θ Samples with different surface morphologies Polar liquid Non polar liquid Dielectric layer Teflon ITO Electrode Glass a b Autofocus (DRLAF). By leveraging the rapid response and electrical adjustment advantages of liquid lenses, this methodology employs sequential raw images as the ' state ' input for the deep reinforcement learning agent, to enable the model to discern objective focusing knowledge from them. Concurrently, different voltage adjustments are regarded as executable ' actions ' and deep reinforcement learning is employed to optimize the focusing policy. Additionally, the model is enhanced through the utilization of random sampling from parallel ' state ' datasets during the training phase, thereby facilitating its ability to generalize and adapt to unknown samples. The advantages of the proposed method are as follows. Low-cost realization: The utilization of liquid lenses in microscopes eliminates the necessity for additional, intricate zoom structures.
+
+
+================================================================================
+Rank 5 | Distance: 0.3313
+================================================================================
+ID:      Rebuffi_et_al.___2023___AutoFocus_AI_driven_alignment_of_nanofocusing_X_ray_mirror_systems.pdf#5.3_Challenges_and_Considerati_part1
+Section: 5.3 Challenges and Considerations
+Paper:   AutoFocus: AI-driven alignment of nanofocusing X-ray mirror systems
+Authors: Luca Rebuffi, Saugat Kandel, Xianbo Shi, Runyu Zhang, Ross J. Harder, Wonsuk Cha, Matthew J. Highland, Matthew G. Frith, Lahsen Assoufid, Mathew J. Cherukara
+
+Content (1420 chars):
+--------------------------------------------------------------------------------
+Secondly, if the overall goal of the experiment is to maintain a stable optical system through multiple runs of the autofocusing routine, then reusing the information acquired in one auto-alignment run could accelerate future auto-alignments on the same optical system. Alternatively, in a more sophisticated approach, we could exploit the idea of multi-fidelity optimization to create and dynamically update a complex GP-based (or NN-based) model of the optical system, then exploit this extra surrogate for accelerated optimization. Future work might also include designing a reinforcement learning procedure that  utilizes the GP-based surrogate model for data-efficient real-time beam stabilization and control [23]. In addition, directly measuring the focal spot using a 2D detector, especially when the spot size is below 100 nm, is exceptionally challenging. Presently, no detector system can provide the  necessary  spatial  resolution  for  this  task.  Potential  measurement  methods  include fluorescence  edge  scans,  ptychography,  and  wavefront  sensing.  Among  these,  wavefront sensing emerges as the only single-shot option. In this approach, the wavefront downstream of the focal plane is captured and then backpropagated to pinpoint the focal plane and determine its  associated  size  and  position.  Intensive  efforts  are  in  progress  to  refine  and  improve  the resolution of this method.
