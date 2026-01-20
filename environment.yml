@@ -29,3 +29,7 @@ dependencies:
     - sentence_transformers
     - scikit-learn
     - deepsearch-glm
+    - python-dotenv
+    - pyzotero
+    - nest-asyncio
+  - pandas
