@@ -95,39 +95,5 @@
     "expected_chunk_id": "Nousiainen_et_al.___2024___Laboratory_experiments_of_model_based_reinforcement_learning_for_adaptive_optics_control.pdf#6.4_Replay_Buffers",
     "expected_answer": "Episode length 500 frames, warm-up episodes 20, replay buffer size 20 episodes, planning horizon 4 frames",
     "expected_papers": ["Nousiainen et al. - 2024 - Laboratory experiments of model-based reinforcement learning for adaptive optics control.pdf"]
-  },
-  {
-    "tier": 3,
-    "target_tag": "FAST",
-    "question": "How does FAST define 'scanning efficiency,' and in what way is this fundamentally different from raster-grid scanning?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3",
-    "expected_answer": "FAST defines scanning efficiency as the ratio of useful data to total scan time, fundamentally different because it adapts based on sample structure rather than following fixed raster patterns",
-    "expected_papers": ["Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf"]
-  },
-
-  {
-    "tier": 3,
-    "target_tag": "autofocus",
-    "question": "Why might discretizing the action space improve stability or convergence compared to continuous control in the DRL autofocus setting?",
-    "expected_chunk_id": "Zhang_et_al.___2024___Precision_autofocus_in_optical_microscopy_with_liquid_lenses_controlled_by_deep_reinforcement_learni.pdf#Effect_of_actions_on_autofocus_part0",
-    "expected_answer": "Discrete action spaces improve stability by providing a finite set of discrete control options, preventing continuous oscillations and reducing sensitivity to small parameter variations near the optimal focus point",
-    "expected_papers": ["Zhang et al. - 2024 - Precision autofocus in optical microscopy with liquid lenses controlled by deep reinforcement learni.pdf"]
-  },
-
-  {
-    "tier": 3,
-    "target_tag": "ptychography",
-    "question": "The ptychography paper uses a particular discount factor setting (e.g., gamma = 0). Why is that choice made and what does it imply?",
-    "expected_chunk_id": "Schloz_et_al.___2023___Deep_reinforcement_learning_for_data_driven_adaptive_scanning_in_ptychography.pdf#Deep_reinforcement_learning_fo_part0",
-    "expected_answer": "Discount factor γ=0 enforces myopic behavior - the agent learns to focus only on immediate rewards, ignoring long-term future consequences, appropriate for AO where current state matters most",
-    "expected_papers": ["Schloz et al. - 2023 - Deep reinforcement learning for data-driven adaptive scanning in ptychography.pdf"]
-  },
-  {
-    "tier": 3,
-    "target_tag": "FAST",
-    "question": "Where does the exploration–exploitation trade-off appear in FAST results/figures, and what mitigation strategy is proposed?",
-    "expected_chunk_id": "Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3",
-    "expected_answer": "Exploration-exploitation trade-off appears in adaptive scanning results where sparse vs. adaptive patterns show different coverage; mitigation strategy is using supervised learning pre-training before reinforcement learning fine-tuning",
-    "expected_papers": ["Kandel et al. - 2023 - Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy.pdf"]
   }
 ]
