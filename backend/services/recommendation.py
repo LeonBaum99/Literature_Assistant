@@ -1,6 +1,7 @@
-import httpx
 import asyncio
 from typing import List, Dict, Any, Optional
+
+import httpx
 from fastapi import HTTPException
 
 
@@ -151,6 +152,42 @@ class SemanticScholarService:
                 print(f"Error: Snippet Search Failed: {e}")
                 raise HTTPException(status_code=500, detail=str(e))
 
+    async def search_papers(self, query: str, limit: int = 1) -> List[Dict[str, Any]]:
+        headers = {}
+        if self.api_key:
+            headers["x-api-key"] = self.api_key
+
+        params = {
+            "query": query,
+            "limit": limit,
+            "fields": "paperId,title,year,url,authors,abstract"
+        }
+
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.get(
+                    self.SEARCH_URL,
+                    headers=headers,
+                    params=params,
+                    timeout=10.0
+                )
+
+                if response.status_code == 403:
+                    raise HTTPException(status_code=403, detail="Semantic Scholar API Key invalid or missing.")
+
+                response.raise_for_status()
+                data = response.json()
+
+                return data.get("data", [])
+
+            except httpx.HTTPStatusError as e:
+                error_msg = f"Semantic Scholar Error {e.response.status_code}: {e.response.text}"
+                print(f"Semantic Scholar Search Error: {error_msg}")
+                raise HTTPException(status_code=e.response.status_code, detail=error_msg)
+            except Exception as e:
+                print(f"Paper Search Failed: {e}")
+                raise HTTPException(status_code=500, detail=str(e))
+
     async def get_papers_details_batch(
             self,
             paper_ids: List[str],
@@ -211,17 +248,16 @@ class SemanticScholarService:
         5. Uses those IDs to fetch full details via batch.
         """
         # 1. Try standard paper search
+        print(f"{'=' * 80}")
         print(f"Searching papers for: '{query}'")
+        print(f"{'=' * 80}\n")
         try:
             papers = await self.search_papers(query, limit=limit)
             if papers:
-                print(f"Found {len(papers)} papers via standard search.")
                 return papers
         except Exception as e:
             print(f"Error during Semantic Scholar search: {e}")
 
-        # 2. Fallback: Snippet Search
-        print("No papers found via standard search. Trying text snippets...")
         try:
             snippets = await self.search_text_snippets(query, limit=limit)
 
@@ -238,10 +274,8 @@ class SemanticScholarService:
                     titles_to_search.add(snippet["title"])
 
             if not titles_to_search:
-                print("Snippets found, but no titles could be extracted.")
+                print("Snippets found, but no titles could be extracted.\n")
                 return []
-
-            print(f"Extracted {len(titles_to_search)} titles from snippets. Verifying IDs with delays...")
 
             # 4. Search for IDs using the extracted Titles (Sequential with Sleep)
             found_ids = set()
@@ -260,10 +294,8 @@ class SemanticScholarService:
                     continue
 
             if not found_ids:
-                print("No valid paper IDs found from snippet titles.")
+                print("No valid paper IDs found from snippet titles.\n")
                 return []
-
-            print(f"Found {len(found_ids)} confirmed Paper IDs. Fetching full details...")
 
             # Short delay before the final batch call
             await asyncio.sleep(0.5)
@@ -273,8 +305,6 @@ class SemanticScholarService:
                 paper_ids=list(found_ids),
                 fields="paperId,title,year,url,authors,abstract"
             )
-
-            print(f"Retrieved details for {len(papers_data)} papers.")
             return papers_data
 
         except Exception as e:
