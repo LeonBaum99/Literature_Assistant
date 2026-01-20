@@ -32,4 +32,4 @@ dependencies:
     - python-dotenv
     - pyzotero
     - nest-asyncio
-  - pandas
+    - pandas
