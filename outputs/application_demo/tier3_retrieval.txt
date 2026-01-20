@@ -1,0 +1,70 @@
+QUERY (Tier 3): How does FAST define 'scanning efficiency,' and in what way is this fundamentally different from raster-grid scanning?
+
+================================================================================
+RETRIEVAL RESULTS
+================================================================================
+
+
+================================================================================
+Rank 1 | Distance: 0.2472
+================================================================================
+ID:      Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Discussion_part3
+Section: Discussion
+Paper:   Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy
+Authors: Saugat Kandel, Tao Zhou, Anakha V. Babu, Zichao Di, Xinxin Li, Xuedan Ma, Martin Holt, Antonino Miceli, Charudatta Phatak, Mathew J. Cherukara
+
+Content (1200 chars):
+--------------------------------------------------------------------------------
+As such, there could exist scenarios in which the time required for the motormovementeclipsesthe time required for a single measurement. We expect to address the latter challenge by explicitly including a measurement-density-based term 38 or a movement-time-based term in the candidate selection procedure 40 or by using a line-based sampling technique 41 . Nature Communications|         (2023) 14:5501 6 Article https://doi.org/10.1038/s41467-023-40339-1 Despite these considerations and challenges, we believe that the proposed FAST technique has great potential. It is an ideal tool for use cases with limited sampling or dosage budgets. It can be used to isolate regions of interest in sparse settings to prepare for pointwise scanning in these regions. More generally, it can be used to guide any scanning microscopy experiment where we do not need full pointwise information. In the future, we expect to extend this method for 3D imaging, /uniFB02 y scans, ptychography, and other imaging applications. We expect that these developments will signi /uniFB01 cantly enhance the ef /uniFB01 cacy of scanning microscopy experiments,bolstering their use for the study of dynamic physical phenomena.
+
+
+================================================================================
+Rank 2 | Distance: 0.2838
+================================================================================
+ID:      Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Numerical_demonstration_for_sc_part1
+Section: Numerical demonstration for scanning dark/uniFB01 eld microscopy
+Paper:   Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy
+Authors: Saugat Kandel, Tao Zhou, Anakha V. Babu, Zichao Di, Xinxin Li, Xuedan Ma, Martin Holt, Antonino Miceli, Charudatta Phatak, Mathew J. Cherukara
+
+Content (501 chars):
+--------------------------------------------------------------------------------
+Note that while the proposed method internally uses the fast IDW algorithm for the inpainting, the /uniFB01 nal images presented here are calculated using the Nature Communications|         (2023) 14:5501 4 Article https://doi.org/10.1038/s41467-023-40339-1 Fig. 4 | Evolution of the FAST scan. A , C , E showthe reconstruction at 5%, 15%, and 20% reconstructions, respectively, B , D , F show the corresponding actual measurement points. G shows the image obtained through a full-grid pointwise scan.
+
+
+================================================================================
+Rank 3 | Distance: 0.3283
+================================================================================
+ID:      Morris_et_al.___2024___A_general_Bayesian_algorithm_for_the_autonomous_alignment_of_beamlines.pdf#4.2._Monte_Carlo_acquisition_functions
+Section: 4.2. Monte Carlo acquisition functions
+Paper:   A general Bayesian algorithm for the autonomous alignment of beamlines
+Authors: Thomas W. Morris, Max Rakitin, Yonghua Du, Mikhail Fedurin, Abigail C. Giles, Denis Leshchev, William H. Li, Brianna Romasky, Eli Stavitski, Andrew L. Walter, Paul Moeller, Boaz Nash, Antoine Islegen-Wojdyla
+
+Content (332 chars):
+--------------------------------------------------------------------------------
+Some useful acquisition functions cannot be computed directly from the mean and variance of the posterior. Acquisition functions that involve sampling from the posterior to estimate some ensemble are more flexible and often more J. Synchrotron Rad. (2024). 31 , 1446-1456 T. W. Morris et al. � Autonomous alignment of beamlines 1449
+
+
+================================================================================
+Rank 4 | Distance: 0.3318
+================================================================================
+ID:      Kandel_et_al.___2023___Demonstration_of_an_AI_driven_workflow_for_autonomous_high_resolution_scanning_microscopy.pdf#Self-driving_scanning_microsco_part1
+Section: Self-driving scanning microscopy work /uniFB02 ow
+Paper:   Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy
+Authors: Saugat Kandel, Tao Zhou, Anakha V. Babu, Zichao Di, Xinxin Li, Xuedan Ma, Martin Holt, Antonino Miceli, Charudatta Phatak, Mathew J. Cherukara
+
+Content (1870 chars):
+--------------------------------------------------------------------------------
+The original SLADS-Net algorithm simply uses the unmeasured point with the highest ERD for the next measurement and repeats this procedure pointwise. In practice, if the measurement procedure and the motor movements are fast, then the ERD calculation also has to be commensurately fast to reduce the dead-time in the experiment. In this work, we mitigate this requirement by instead selecting a batch of points that have the highest ERD, sorted in descending order -we found that a batch of 50 points adequately minimized the experimental dead-time while still ensuring that the overall measurement was adequately sparse. The coordinates of these 50 points are passed on to a route optimization algorithm based on Google ' s OR-Tools 32 to generate the shortest path for the motors to visit all of them. This path is appended to the look-up table in the EPICS 33 scan record, which then kicks off the data acquisition. Henceforth, the scan is automatically paused after every 50 points, raising a /uniFB02 agthattriggers a callback function on the edge device. There, a new estimated dark /uniFB01 eld image of the sample is generated, and the coordinates for the next 50 prospective points are computed. The scan is resumed after the EPICS scan record receives the new coordinates for the optimized scanning path. The actual scanning of the focused X-ray beam is achieved by moving two piezoelectric linear translation motors in step mode. Nature Communications|         (2023) 14:5501 3 Article https://doi.org/10.1038/s41467-023-40339-1 Fig. 3 | Numerical comparison of sampling methods. A shows the ground truth with the color scale representing the normalized intensity, B -D show respectively the raster grid (RG), low-discrepancy random (LDR), and FAST reconstructions at 10% scan coverage, and G -I show the actual scan points that produce these reconstructions.
+
+
+================================================================================
+Rank 5 | Distance: 0.3565
+================================================================================
+ID:      Morris_et_al.___2024___A_general_Bayesian_algorithm_for_the_autonomous_alignment_of_beamlines.pdf#5.5._Composite_objectives
+Section: 5.5. Composite objectives
+Paper:   A general Bayesian algorithm for the autonomous alignment of beamlines
+Authors: Thomas W. Morris, Max Rakitin, Yonghua Du, Mikhail Fedurin, Abigail C. Giles, Denis Leshchev, William H. Li, Brianna Romasky, Eli Stavitski, Andrew L. Walter, Paul Moeller, Boaz Nash, Antoine Islegen-Wojdyla
+
+Content (411 chars):
+--------------------------------------------------------------------------------
+Even though we combine estimates of the different beam attributes into a scalar fitness to be maximized, it is still beneficial to construct and train three separate models for the flux, horizontal spread and vertical spread, a method typically referred to as composite optimization . This allows us to take J. Synchrotron Rad. (2024). 31 , 1446-1456 T. W. Morris et al. � Autonomous alignment of beamlines 1451
