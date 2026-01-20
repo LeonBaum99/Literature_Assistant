@@ -63,6 +63,54 @@ class SemanticScholarService:
                 print(f"Error: Recommendation Service Failed: {e}")
                 raise HTTPException(status_code=500, detail=str(e))
 
+    async def get_recommendations_from_docs(
+            self,
+            relevant_docs: List[Any],
+            negative_ids: List[str] = None,
+            limit: int = 10
+    ) -> List[Dict[str, Any]]:
+        """
+        Extracts titles from a list of Document objects, resolves them to Paper IDs,
+        and fetches recommendations based on those IDs.
+        """
+        # 1. Extract unique titles from relevant_docs
+        # We use a set to avoid duplicates since multiple chunks might come from the same paper
+        unique_titles = {
+            doc.metadata.get('title')
+            for doc in relevant_docs
+            if doc.metadata and doc.metadata.get('title')
+        }
+
+        if not unique_titles:
+            print("No titles found in the provided documents.")
+            return []
+
+        print(f"Extracted {len(unique_titles)} unique titles from docs.")
+
+        # 2. Resolve Titles to Paper IDs
+        positive_ids = []
+        for i, title in enumerate(unique_titles):
+            # Rate limit protection for resolving IDs
+            if i > 0:
+                await asyncio.sleep(0.8)
+
+            paper_id = await self.search_paper_id(title)
+            if paper_id:
+                positive_ids.append(paper_id)
+
+        if not positive_ids:
+            print("No valid paper IDs found to generate recommendations.")
+            return []
+
+        # 3. Get Recommendations
+        print(f"Requesting recommendations based on {len(positive_ids)} papers...")
+        await asyncio.sleep(0.8)
+        return await self.get_recommendations(
+            positive_ids=positive_ids,
+            negative_ids=negative_ids,
+            limit=limit
+        )
+
     async def search_paper_ids(self, query: str, limit: int = 1) -> List[str]:
         """
         Searches for papers by query and returns a list of paperIds.
@@ -97,9 +145,7 @@ class SemanticScholarService:
 
                 ids = [item.get("paperId") for item in results if item.get("paperId")]
 
-                if ids:
-                    print(f"Found {len(ids)} Paper IDs for query: '{query}'")
-                else:
+                if not ids:
                     print(f"No papers found for query: '{query}'")
 
                 return ids

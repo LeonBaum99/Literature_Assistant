@@ -52,61 +52,6 @@ def perform_online_search_sync(
         return "An error occurred while searching for online sources."
 
 
-def show_llm_prompt(
-        rag_pipeline: RagPipeline,
-        retriever: ChromaRagRetriever,
-        question: str,
-        top_k: int = 5,
-        template_name: str = "answer"
-):
-    """
-    Display the exact prompt that will be sent to the LLM.
-
-    Args:
-        rag_pipeline: The RAG pipeline instance
-        retriever: The retriever instance to fetch documents
-        question: User question
-        top_k: Number of chunks to retrieve
-        template_name: Which prompt template to use (answer, mode_a, mode_b, mode_c, debug)
-    """
-    if rag_pipeline is None:
-        print("✗ RAG pipeline not available")
-        return
-
-    retrieved_docs = retriever.get_relevant_documents(question, k=top_k)
-
-    context = rag_pipeline._format_context(retrieved_docs)
-
-    # Get the prompt template
-    prompt_template = rag_pipeline._prompts.get(template_name, rag_pipeline._prompts.get("answer"))
-
-    if not prompt_template:
-        print(f"✗ Template '{template_name}' not found.")
-        return
-
-    # Format the full prompt
-    formatted_prompt = prompt_template.format_messages(question=question, context=context)
-
-    # Display
-    print(f"{'=' * 80}")
-    print(f"EXACT PROMPT SENT TO LLM")
-    print(f"{'=' * 80}")
-    print(f"Template: {template_name}")
-    print(f"Retrieved chunks: {len(retrieved_docs)}")
-    print(f"Context length: {len(context)} chars\n")
-
-    for i, msg in enumerate(formatted_prompt):
-        role = msg.__class__.__name__.replace('Message', '').upper()
-        print(f"\n{'=' * 80}")
-        print(f"MESSAGE {i + 1}: {role}")
-        print(f"{'=' * 80}\n")
-        print(msg.content)
-
-    print(f"\n{'=' * 80}")
-    print(f"Total prompt length: {sum(len(m.content) for m in formatted_prompt)} chars")
-    print(f"{'=' * 80}")
-
-
 def query_rag(
         rag_pipeline: RagPipeline,
         retriever: ChromaRagRetriever,
