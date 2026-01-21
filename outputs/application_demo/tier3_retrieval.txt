@@ -1,4 +1,4 @@
-QUERY (Tier 3): How does FAST define 'scanning efficiency,' and in what way is this fundamentally different from raster-grid scanning?
+QUERY: How does FAST define 'scanning efficiency,' and in what way is this fundamentally different from raster-grid scanning?
 
 ================================================================================
 RETRIEVAL RESULTS

@@ -1,124 +1,100 @@
-# GenAI
+# GenAI Publication RAG — README
 
-# 1. Notebook only
+## Project purpose
+1. Provide a publication-based RAG (retrieval-augmented generation) pipeline for querying a Zotero publication collection in natural language.
+2. Offer a fallback external paper search via the Semantic Scholar API to expand context when the local vector DB lacks sufficient information.
+3. Support evaluation of retrieval and answer quality across curated queries.
 
-## Setup
+## Key features
+1. Grounded LLM answers with source citations (paper title, section).
+2. PDF processing, section-aware chunking and vector embedding ingestion.
+3. Vector DB storage using Chroma and configurable embedder backends (e.g., BERT).
+4. External paper recommendation via Semantic Scholar with a multistage search strategy.
+5. Evaluation tooling for chunk-level, multi-paper and answer-quality metrics.
 
-Preferable Python Version: 3.11.14
+## Requirements
+1. Python 3.11.
+2. `pip` for dependency installation.
+3. Local Chroma DB path (default `./backend/chroma_db`).
+4. Ollama running locally for the LLM endpoint when using `mistral-nemo` (or configure another supported LLM).
+5. Optional API keys for `Zotero` and `Semantic Scholar` to enable metadata loading and external search.
 
-Follow these steps to get your development environment running.
+## Installing Ollama
+1. Download Ollama from [ollama.ai](https://ollama.ai) for your operating system (Windows, macOS, or Linux).
+2. Run the installer and follow the setup wizard.
+3. After installation, start the Ollama service:
+   - **Windows/macOS**: Ollama runs as a background service automatically after installation.
+   - **Linux**: Start Ollama with `ollama serve` or configure it as a systemd service.
+4. Verify Ollama is running by checking `http://localhost:11434/api/tags` in your browser (should return available models).
+5. Pull the required model (e.g., `mistral-nemo`):
+   ```bash
+   ollama pull mistral-nemo
+   ```
+6. Confirm the model is available with `ollama list`.
 
-### 1. Install PyTorch Optional if Docker is used
+## Important files and entry points
+1. `functionalTests/application_demo.ipynb` — interactive demo and evaluation notebook.
+2. `backend/services/*` — core services: embedding, vector DB, retriever, evaluator, Semantic Scholar client.
+3. `pdfProcessing/*` — PDF extraction and chunking utilities.
+4. `llmAG/*` — RAG pipeline and LLM integration.
+5. `backend/utils.py` — `query_rag`, ingestion helpers, logging and evaluation utilities.
+6. `data/testPDFs` — example PDFs used for ingestion (local test data).
+7. `outputs/application_demo` — demo outputs and saved evaluation results.
 
-PyTorch installation varies based on your Operating System and CUDA (Graphics Card) version.
+## Environment configuration
+1. Create a `.env` file at the repo root and set values as needed:
+   - `ZOTERO_LIBRARY_ID`
+   - `ZOTERO_API_KEY`
+   - `SEMANTIC_SCHOLAR_API_KEY`
+   - `OLLAMA_BASE_URL` (default in notebook: `http://localhost:11434`)
+2. Many runtime flags are configured in the demo notebook (e.g., `EMBEDDER_TYPE`, `CLEAR_DB_ON_RUN`, `MAX_CHUNK_SIZE`).
 
-* Visit the official [PyTorch Get Started](https://pytorch.org/get-started/locally/) page.
-* Select your preferences (OS, Package, Compute Platform).
-* Run the generated install command.
-
-### 2. Install Dependencies
-
-Choose **one** of the following methods to install the remaining requirements.
-
-**Option A: Using Pip**
-
+### Quick setup
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Optional: export/use a virtual environment
+python -m venv .venv
+source .venv/Scripts/activate     # on Windows (PowerShell: .venv\Scripts\Activate.ps1)
 pip install -r requirements.txt
 ```
 
-**Option B: Using Conda**
+## Using conda (alternative)
+If you prefer conda, create the environment from the provided environment.yaml:
+```bash
+conda env create -f environment.yaml
+conda activate genai   # or the name specified in environment.yaml
+```
 
 ```bash
-conda env create -f environment.yml
-conda activate genai_env
+# Unzip demo papers (required for the application demo)
+unzip data/testPDFs.zip -d data/  # on Windows, use: expand-archive -path data/testPDFs.zip -destinationpath data/
 ```
 
-### 3. Data Preparation
+## Running the demo
+1. Ensure `OLLAMA` (or configured LLM) is running if using model `mistral-nemo`.
+2. Populate `.env` with API keys if you want Zotero/ Semantic Scholar integration.
+3. Open and run `functionalTests/application_demo.ipynb` in PyCharm or Jupyter. The notebook:
+   - Initializes services and embedder
+   - Optionally clears and re-populates the Chroma DB (`CLEAR_DB_ON_RUN`)
+   - Demonstrates three RAG queries (tiered difficulty)
+   - Runs systematic evaluation and saves results to `outputs/application_demo`
 
-To run the test suite, you must set up the local data directory.
+## Typical troubleshooting
+1. LLM connection errors: confirm `OLLAMA` is running and `OLLAMA_BASE_URL` is correct.
+2. No Zotero metadata: verify `ZOTERO_API_KEY` and `ZOTERO_LIBRARY_ID` are set in `.env`.
+3. Semantic Scholar rate limits or empty results: check `SEMANTIC_SCHOLAR_API_KEY` and be aware of API limits.
+4. Chroma DB path issues: ensure `./backend/chroma_db` is writable or adjust `CHROMA_PATH`.
 
-1. Create a folder named testPDFs inside a data directory.
-2. Populate it with sample PDF files for testing.
+## Evaluation
+- The demo notebook runs the `EnhancedRAGEvaluator` end-to-end and writes `evaluation_results.csv` to `outputs/application_demo`.
 
-Command Line Quick Setup:
-
-```bash
-mkdir -p data/testPDFs
-```
-
-**Expected Structure:**
-
-```
-├── data/ 
-│   └── testPDFs/ 
-│       ├── document1.pdf
-│       └── document2.pdf
-├── requirements.txt
-| ...
-```
-
-### 4. Run Notebook
-
-Go to `backend/pipelineTest.ipynb` and run the notebook.
-Running it for first time will take some time because the models have to be downloaded.
-
-# 2. Backend API 
-
-The project includes a FastAPI backend that serves the RAG pipeline. You can run this either locally on your machine or
-inside a Docker container.
-
-## Setup
-## 0. Add `.env` file to root folder
-Create a `.env` file in the root folder of the project with the following content:
-
-```
-SEMANTIC_SCHOLAR_API_KEY=your_openai_api_key_here
-```
-## 1. Install Docker (if not already installed)
-
-Follow the instructions on the official [Docker Installation Guide](https://docs.docker.com/get-docker/) to install
-Docker on your system.
-
-## 2a. Run Locally
-
-Follow step 1, 2 and 3 from notebook to get the backend running
-
-1. **Start the Server:**
-   Run the following command from the project root:
-
-```bash
-uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-2. **Access the API Documentation:**
-   Open your web browser and navigate to `http://localhost:8000/docs` to access the interactive API documentation.
-
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
-
-## 2b. Running in Docker (Easy method)
-
-We provide helper scripts to automatically handle GPU detection, volume mounting (for hot-reloading code), and
-cross-platform compatibility.\
-**On Windows (PowerShell):**
-
-```powershell
-.\run_container.ps1
-```
-
-**On Linux / macOS / Git Bash:**
-
-```bash
-./run_container.sh
-```
-
-\
-**Common Flags:**
-
-- **Force Rebuild:** Use if you changed `requirements.txt` or the `Dockerfile`.
-    - PowerShell: `.\run_container.ps1 -Rebuild`
-    - Bash: `./run_container.sh -Rebuild`
-
-\
-The container will automatically mount your source code, so changes you make in backend/ will trigger a server
-restart (Hot Reload) without needing to rebuild the image.
+## Project structure (high level)
+1. `backend/` \- services, retriever, evaluator, vector DB adapter
+2. `pdfProcessing/` \- PDF extraction and chunking utilities
+3. `zotero_integration/` \- Zotero client and metadata loader
+4. `llmAG/` \- LLM wrappers and RAG pipeline
+5. `functionalTests/` \- demo notebooks and usage examples
+6. `data/` \- sample PDFs and test data
+7. `outputs/` \- demo outputs and saved artifacts

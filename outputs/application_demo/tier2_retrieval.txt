@@ -1,4 +1,4 @@
-QUERY (Tier 2): List the reward hyperparameters (e.g., alpha, beta, mu, delta) for DRL autofocus and what each incentivizes.
+QUERY: List the reward hyperparameters (e.g., alpha, beta, mu, delta) for DRL autofocus and what each incentivizes.
 
 ================================================================================
 RETRIEVAL RESULTS
