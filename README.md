@@ -58,7 +58,16 @@ pip install -r requirements.txt
 python -m venv .venv
 source .venv/Scripts/activate     # on Windows (PowerShell: .venv\Scripts\Activate.ps1)
 pip install -r requirements.txt
+```
 
+## Using conda (alternative)
+If you prefer conda, create the environment from the provided environment.yaml:
+```bash
+conda env create -f environment.yaml
+conda activate genai   # or the name specified in environment.yaml
+```
+
+```bash
 # Unzip demo papers (required for the application demo)
 unzip data/testPDFs.zip -d data/  # on Windows, use: expand-archive -path data/testPDFs.zip -destinationpath data/
 ```
