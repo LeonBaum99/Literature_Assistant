@@ -1,8 +1,14 @@
 import asyncio
+import json
+from pathlib import Path
+from typing import Callable, Any, List, Dict
 
 from backend.services.rag_answer_service import ChromaRagRetriever
 from backend.services.recommendation import SemanticScholarService
+from backend.services.vector_db import VectorDBService
 from llmAG.rag import RagPipeline
+from pdfProcessing.docling_PDF_processor import DoclingPDFProcessor
+from zotero_integration.zotero_client import ZoteroClient
 
 
 def perform_online_search_sync(
@@ -131,3 +137,199 @@ def query_rag(
     except Exception as e:
         print(f"✗ Error: {e}")
         return None
+
+
+def ingest_pdf(
+        pdf_path: Path,
+        processor: DoclingPDFProcessor,
+        db_service: VectorDBService,
+        embedder: Any,
+        create_chunks_func: Callable,
+        model_key: str = "bert",
+        zotero_loader: ZoteroClient = None,
+        max_chunk_size: int = 500,
+        overlap_size: int = 50
+) -> int:
+    """
+    Ingest single PDF: Process → Chunk → Embed → Store.
+
+    Args:
+        pdf_path: Path to the PDF file.
+        processor: Service to process/read PDF content.
+        db_service: Service to interact with the Vector DB.
+        embedder: Service to encode text into embeddings.
+        create_chunks_func: Function to split text sections into chunks.
+        model_key: Key for the model version in the DB (default 'bert').
+        zotero_loader: Optional service to fetch Zotero metadata.
+        max_chunk_size: Maximum characters per chunk.
+        overlap_size: Overlap characters between chunks.
+
+    Returns:
+        int: Number of chunks ingested.
+    """
+    print(f"\nProcessing: {pdf_path.name}")
+
+    # Try Zotero metadata first
+    zotero_meta = None
+    if zotero_loader:
+        zotero_meta = zotero_loader.get_metadata_by_filename(pdf_path.name)
+        if zotero_meta:
+            print(f"  Using Zotero metadata: '{zotero_meta['title'][:50]}...'")
+        else:
+            print(f"  Warning: No Zotero match - using Docling extraction")
+
+    # Process PDF
+    # Note: Ensure the processor passed in has a process_pdf method
+    metadata, sections = processor.process_pdf(str(pdf_path), zotero_metadata=zotero_meta)
+    print(f"  Extracted {len(sections)} sections")
+
+    # Create chunks
+    docs, metas, ids = create_chunks_func(
+        filename=pdf_path.name,
+        metadata=metadata,
+        sections=sections,
+        max_chunk_size=max_chunk_size,
+        overlap_size=overlap_size
+    )
+    print(f"  Created {len(docs)} chunks")
+
+    if not docs:
+        print("  Error: No chunks created")
+        return 0
+
+    # Embed and store
+    embeddings = embedder.encode(docs)
+    db_service.upsert_chunks(
+        model_key=model_key,
+        ids=ids,
+        documents=docs,
+        embeddings=embeddings.tolist(),
+        metadata=metas
+    )
+
+    print(f"  Ingested {len(docs)} chunks")
+    return len(docs)
+
+
+def load_eval_dataset(filename: str = "eval_dataset.json") -> List[Dict[str, Any]]:
+    """
+    Loads evaluation dataset from current or parent directory.
+    """
+    potential_dirs = [Path.cwd(), Path.cwd().parent]
+    for directory in potential_dirs:
+        file_path = directory / filename
+        if file_path.exists():
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                print(f"Loaded {len(data)} questions from {file_path}")
+                return data
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON from {file_path}: {e}")
+                return []
+
+    print(f"Warning: {filename} not found in {potential_dirs}")
+    return []
+
+
+def show_llm_prompt(
+        rag_pipeline: RagPipeline,
+        retriever: ChromaRagRetriever,
+        question: str,
+        top_k: int = 5,
+        template_name: str = "answer"
+):
+    """
+    Display the exact prompt that will be sent to the LLM.
+    """
+    if not rag_pipeline or not retriever:
+        print("Error: Pipeline or Retriever not initialized.")
+        return
+
+    retrieved_docs = retriever.get_relevant_documents(question, k=top_k)
+    context = rag_pipeline._format_context(retrieved_docs)
+
+    # Retrieve template safely with fallback
+    prompt_template = rag_pipeline._prompts.get(template_name)
+    if not prompt_template:
+        prompt_template = rag_pipeline._prompts.get("answer")
+
+    if not prompt_template:
+        print(f"Error: Template '{template_name}' not found.")
+        return
+
+    formatted_prompt = prompt_template.format_messages(question=question, context=context)
+
+    print(f"{'=' * 80}")
+    print(f"EXACT PROMPT SENT TO LLM")
+    print(f"{'=' * 80}")
+    print(f"Template: {template_name} | Retrieved chunks: {len(retrieved_docs)} | Context: {len(context)} chars\n")
+
+    for i, msg in enumerate(formatted_prompt):
+        role = msg.__class__.__name__.replace('Message', '').upper()
+        print(f"\n{'=' * 80}")
+        print(f"MESSAGE {i + 1}: {role}")
+        print(f"{'=' * 80}\n")
+        print(msg.content)
+
+    print(f"\n{'=' * 80}")
+    print(f"Total prompt length: {sum(len(m.content) for m in formatted_prompt)} chars")
+    print(f"{'=' * 80}")
+
+
+def log_retrieval_results(
+        results: Dict[str, Any],
+        query: str,
+        output_file: Optional[Path] = None
+) -> str:
+    """
+    Formats retrieval results, prints them to console, and optionally saves to a file.
+    """
+    # Initialize output with header
+    output_lines = [f"QUERY: {query}\n", "=" * 80 + "\nRETRIEVAL RESULTS\n" + "=" * 80 + "\n"]
+
+    # Check if results exist
+    if not results.get('ids') or not results['ids'][0]:
+        msg = "No results found."
+        print(msg)
+        return msg
+
+    # Loop through results
+    for i in range(len(results['ids'][0])):
+        chunk_id = results['ids'][0][i]
+        distance = results['distances'][0][i]
+        content = results['documents'][0][i]
+        # Handle None metadata safely
+        meta = results['metadatas'][0][i] if results['metadatas'][0][i] else {}
+
+        chunk_output = f"""
+{'=' * 80}
+Rank {i + 1} | Distance: {distance:.4f}
+{'=' * 80}
+ID:      {chunk_id}
+Section: {meta.get('section', 'N/A')}
+Paper:   {meta.get('title', 'N/A')}
+Authors: {meta.get('authors', 'N/A')}
+
+Content ({len(content)} chars):
+{'-' * 80}
+{content}
+"""
+        print(chunk_output)
+        output_lines.append(chunk_output)
+
+    full_output = "\n".join(output_lines)
+
+    # Save to file if path provided
+    if output_file:
+        try:
+            if not output_file.parent.exists():
+                output_file.parent.mkdir(parents=True, exist_ok=True)
+
+            with open(output_file, "w", encoding="utf-8") as f:
+                f.write(full_output)
+            print(f"\nFull retrieval output saved to {output_file}")
+        except Exception as e:
+            print(f"Error saving to file: {e}")
+
+    return full_output
