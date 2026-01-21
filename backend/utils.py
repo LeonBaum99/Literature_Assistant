@@ -1,7 +1,7 @@
 import asyncio
 import json
 from pathlib import Path
-from typing import Callable, Any, List, Dict
+from typing import Callable, Any, List, Dict, Optional
 
 from backend.services.rag_answer_service import ChromaRagRetriever
 from backend.services.recommendation import SemanticScholarService
