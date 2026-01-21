@@ -1,4 +1,4 @@
-QUERY (Tier 1): What physical quantity is the controller changing (the actuator variable) in the liquid-lens autofocus setup?
+QUERY: What physical quantity is the controller changing (the actuator variable) in the liquid-lens autofocus setup?
 
 ================================================================================
 RETRIEVAL RESULTS
