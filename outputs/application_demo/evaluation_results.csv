@@ -1,13 +1,13 @@
 Tier,Question,Target_Tag,Exact_Chunk_Match,Chunk_Rank,Semantic_Chunk_Hit,Best_Chunk_Similarity,Num_Papers,Multi_Paper_Match,Paper_Recall,Paper_Precision,Answer_Similarity,Papers,Latency
-1,What physical quantity is the controller changing (the actua...,liquid lenses,True,1,,,2,,1.0,0.5,0.226,Zhang et al. | Rebuffi et al.,2.37
-1,Which classic search methods are used as baselines in the DR...,autofocus,True,1,,,2,,1.0,0.5,0.458,Zhang et al. | Rebuffi et al.,3.03
-1,What is the main objective of 'adaptive scanning' compared t...,ptychography,True,1,,,1,,1.0,1.0,0.565,Schloz et al.,4.96
-1,What does the metric QSSIM represent in the ptychography eva...,ptychography,True,1,,,2,,1.0,0.5,0.39,Schloz et al. | Morris et al.,1.8
-1,What are the discrete actions available to the agent (action...,alignment,True,1,,,3,,1.0,0.333,0.311,Morris et al. | Kuprikov et al.,4.67
-1,What are the two main limitations of a well-tuned integrator...,optics,True,1,,,2,,1.0,0.5,0.37,Kuprikov et al. | Nousiainen et al.,4.31
-2,"List the reward hyperparameters (e.g., alpha, beta, mu, delt...",autofocus,True,1,,,2,,1.0,0.5,0.552,Zhang et al. | Rebuffi et al.,7.28
-2,What are the two action-set designs in the DRL autofocus pap...,autofocus,True,1,,,2,,1.0,0.5,0.376,Zhang et al. | Rebuffi et al.,7.24
-2,What is the reported speed improvement versus a named baseli...,autofocus,True,1,,,2,,1.0,0.5,0.479,Zhang et al. | Rebuffi et al.,4.04
-2,"What are the ROP reconstruction settings (batch size, step s...",ptychography,True,1,,,2,,1.0,0.5,0.619,Schloz et al. | Kandel et al.,4.74
-2,Summarize the encoder/feature-extractor architecture used to...,ptychography,True,1,,,3,,1.0,0.333,0.225,Schloz et al. | Kandel et al.,5.02
-2,From the main hyperparameter table in the AO RL paper: what ...,optics,True,1,,,1,,1.0,1.0,0.662,Nousiainen et al.,8.45
+1,What physical quantity is the controller changing (the actua...,liquid lenses,True,1,,,2,,1.0,0.5,0.257,Zhang et al. | Rebuffi et al.,2.24
+1,Which classic search methods are used as baselines in the DR...,autofocus,True,1,,,2,,1.0,0.5,0.458,Zhang et al. | Rebuffi et al.,2.95
+1,What is the main objective of 'adaptive scanning' compared t...,ptychography,True,1,,,1,,1.0,1.0,0.646,Schloz et al.,4.43
+1,What does the metric QSSIM represent in the ptychography eva...,ptychography,True,1,,,2,,1.0,0.5,0.373,Schloz et al. | Morris et al.,1.83
+1,What are the discrete actions available to the agent (action...,alignment,True,1,,,3,,1.0,0.333,0.344,Kuprikov et al. | Morris et al.,2.02
+1,What are the two main limitations of a well-tuned integrator...,optics,True,1,,,2,,1.0,0.5,0.407,Nousiainen et al. | Kuprikov et al.,4.31
+2,"List the reward hyperparameters (e.g., alpha, beta, mu, delt...",autofocus,True,1,,,2,,1.0,0.5,0.552,Zhang et al. | Rebuffi et al.,7.24
+2,What are the two action-set designs in the DRL autofocus pap...,autofocus,True,1,,,2,,1.0,0.5,0.376,Zhang et al. | Rebuffi et al.,6.94
+2,What is the reported speed improvement versus a named baseli...,autofocus,True,1,,,2,,1.0,0.5,0.485,Zhang et al. | Rebuffi et al.,3.72
+2,"What are the ROP reconstruction settings (batch size, step s...",ptychography,True,1,,,2,,1.0,0.5,0.609,Schloz et al. | Kandel et al.,2.56
+2,Summarize the encoder/feature-extractor architecture used to...,ptychography,True,1,,,3,,1.0,0.333,0.226,Schloz et al. | Morris et al.,3.92
+2,From the main hyperparameter table in the AO RL paper: what ...,optics,True,1,,,1,,1.0,1.0,0.68,Nousiainen et al.,7.76
