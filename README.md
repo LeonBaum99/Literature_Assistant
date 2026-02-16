@@ -1,4 +1,4 @@
-# GenAI Publication RAG — README
+# Literature Assistant — README
 
 ## Project purpose
 1. Provide a publication-based RAG (retrieval-augmented generation) pipeline for querying a Zotero publication collection in natural language.
